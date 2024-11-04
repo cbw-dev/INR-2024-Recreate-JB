@@ -3,7 +3,24 @@
 
 format: jb-book
 root: intro
-chapters:
-- file: markdown
-- file: notebooks
-- file: markdown-notebooks
+parts:
+  - caption: Introduction
+    chapters:
+    - file: Meet-Your-Faculty
+    - file: Course-Schedule
+    - file: Course-Materials
+      sections:
+      - file: Day-1-Data
+      - file: Day-2-Data
+    - file: Class-Photo
+    
+  - caption: Day 1
+    chapters:
+    - file: Day-1
+
+  - caption: Day 2
+    chapters:
+    - file: Day-2
+    - file: markdown
+    - file: notebooks
+    - file: markdown-notebooks
