@@ -1,14 +1,12 @@
 # Meet Your Faculty
 
-<!--- ![fishy](../images/fun-fish.png) --->
-
 ## Meet Your Faculty {#prework}
 
 Here's the team!
 
-### Frances Wong <font size="3"> (she/her) </font> {-}
+### Frances Wong <font size="3"> (she/her) </font>
 
-![fishy](./logo.png)
+![One of our wonderful bioinformatics.ca faulty members!](./images/blank-person.jpg)
 
 >Assistant Professor, Teaching Stream,
 University of Toronto Missisauga
@@ -24,9 +22,9 @@ development. Currently, Frances incorporates computational literacy as a core co
 objective in biology courses she teaches to empower over 1000 students to analyze the data
 they collect each semester.
 
-### Andrés Melani <font size="3"> (he/him) </font> {-}
+### Andrés Melani <font size="3"> (he/him) </font>
 
-![fishy](./logo.png)
+![One of our wonderful bioinformatics.ca faulty members!](./images/blank-person.jpg)
 
 
 >Ph.D. student, Courtot Lab
@@ -44,9 +42,9 @@ Processing, Large Language Models and Knowledge Representation and Reasoning, to
 healthcare scenarios.
 
 
-### Amin Noorani <font size="3"> (he/him) </font> {-}
+### Amin Noorani <font size="3"> (he/him) </font>
 
-![fishy](./logo.png)
+![One of our wonderful bioinformatics.ca faulty members!](./images/blank-person.jpg)
 
 
 >Master Student | Bioinformatician
@@ -64,9 +62,9 @@ epigenomics and genomics, from raw data to visualization. His master's project f
 exploring gene expression data in ovarian cancer cell lines, as well as image classification to
 determine whether cell images have been treated with various compounds.
 
-### Zoe Klein <font size="3"> (she/her) </font> {-}
+### Zoe Klein <font size="3"> (she/her) </font>=
 
-![fishy](./logo.png)
+![One of our wonderful bioinformatics.ca faulty members!](./images/blank-person.jpg)
 
 
 >PhD Candidate, Reimand Lab
@@ -78,9 +76,9 @@ Zoe Klein is a PhD candidate at the University of Toronto and the Ontario Instit
 Research. She uses large-scale data analytics and machine learning to study the role of
 non-coding RNA transcripts in cancer.
 
-### Michelle Brazas, PhD <font size="3"> (she/her) </font> {-}
+### Michelle Brazas, PhD <font size="3"> (she/her) </font>
 
-![fishy](./logo.png)
+![One of our wonderful bioinformatics.ca faulty members!](./images/blank-person.jpg)
 
 
 >Scientific Director
@@ -96,9 +94,9 @@ Biotechnology at BCIT. Michelle co-founded and runs the Toronto Bioinformatics U
 (TorBUG) now in its 11th season, and plays an active role in the International Society of
 Computational Biology where she sits on the Board of Directors and Executive Board.
 
-### Nia Hughes <font size="3"> (she/her) </font> {-}
+### Nia Hughes <font size="3"> (she/her) </font>
 
-![fishy](./logo.png)
+![One of our wonderful bioinformatics.ca faulty members!](./images/blank-person.jpg)
 
 
 >Program Manager, Bioinformatics.ca
@@ -110,4 +108,4 @@ Toronto, ON, Canada
 Nia is the Program Manager for Bioinformatics.ca, where she coordinates the Canadian
 Bioinformatics Workshop Series. Prior to starting at OICR, she completed her M.Sc. in
 Bioinformatics from the University of Guelph in 2020 before working there as a
-bioinformatician studying epigenetic and transcriptomic patterns across maize varieties. -->
+bioinformatician studying epigenetic and transcriptomic patterns across maize varieties.
