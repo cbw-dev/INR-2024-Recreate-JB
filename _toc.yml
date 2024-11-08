@@ -21,9 +21,16 @@ parts:
   - caption: Day 2
     chapters:
     - file: Day-2
-    - file: markdown
-    - file: notebooks
-    - file: markdown-notebooks
+
+  - caption: POC Pages
+    chapters:
     - file: test
     - file: test2
     - file: test3
+    - file: R-jupyter-test
+
+  - caption: Extra Template Pages
+    chapters:
+    - file: markdown
+    - file: notebooks
+    - file: markdown-notebooks

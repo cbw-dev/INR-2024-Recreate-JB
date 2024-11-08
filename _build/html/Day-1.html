@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Day 1 &#8212; INR 2024 - JB Version</title>
+    <title>Lecture Recording and Files &#8212; INR 2024 - JB Version</title>
   
   
   
@@ -60,6 +60,8 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Day-1';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -181,17 +183,25 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 1</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Day 1</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Lecture Recording and Files</a></li>
+
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 2</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Day-2.html">Day 2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks.html">Content with notebooks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">POC Pages</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="test.html">yipppppeeeeee</a></li>
 <li class="toctree-l1"><a class="reference internal" href="test2.html">test 2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="test3.html">My simple notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="R-jupyter-test.html">test 4 - Jupyter Notebook that runs R</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Extra Template Pages</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks.html">Content with notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
 </ul>
 
     </div>
@@ -293,7 +303,7 @@
       
       
       
-      <li><a href="_sources/Day-1.md" target="_blank"
+      <li><a href="_sources/Day-1.Rmd" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -303,7 +313,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.Rmd</span>
 </a>
 </li>
       
@@ -356,7 +366,9 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -367,11 +379,46 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Day 1</h1>
+    <h1>Lecture Recording and Files</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Lecture Recording and Files</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-r">Introduction to R</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-syntax">General syntax</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-started-with-data">Getting started with data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-data">Importing data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-10-mins">Exercise 1 (10 mins)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#revising-the-r-environment">Revising the R environment</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-packages-from-cran">Installing packages from CRAN</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-wrangling">Data Wrangling</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise">Exercise</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-new-columns-of-data">Adding new columns of data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tidyverse">Tidyverse</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Exercise</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting-with-base-r">Plotting with Base R</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scatterplot-with-ggplot">Scatterplot with ggplot</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Exercise</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multi-panel-plots-with-ggplot">Multi-panel plots with ggplot</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exporting-plots">Exporting plots</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#day-1-project">Day 1 Project</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -381,8 +428,1348 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="day-1">
-<h1>Day 1<a class="headerlink" href="#day-1" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="lecture-recording-and-files">
+<h1>Lecture Recording and Files<a class="headerlink" href="#lecture-recording-and-files" title="Link to this heading">#</a></h1>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Re3Lricv7o4" title="CBW Introduction to R 2024 | 01: Getting To Know R" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<!-- Copy the embed code from YouTube, right click, edit the width/height -->
+<p><em>Below is the rendered and completed version of Day 1’s R Markdown file.</em>
+<em>Begin with the empty version <a class="reference external" href="https://drive.google.com/file/d/19fsvDHPj74MIdHhL7slZ3jfqkTfper2O/view?usp=sharing">here</a>. You will also need to download the following</em></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://drive.google.com/file/d/1GrbvNDjUdf8mzY0mr0YD2fb-_2GnnnHb/view?usp=sharing"><em>Abalone dataset</em></a></p></li>
+<li><p><a class="reference external" href="https://drive.google.com/file/d/1ZOTY43EyPoNBltGedDfOdsKzq9HSA77e/view?usp=sharing"><em>Water Potability dataset</em></a></p></li>
+</ul>
+<p>All Introduction to R (2024) course materials are available <a class="reference internal" href="Course-Materials.html"><span class="doc std std-doc">here</span></a>.</p>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="introduction-to-r">
+<h1>Introduction to R<a class="headerlink" href="#introduction-to-r" title="Link to this heading">#</a></h1>
+<p>We will be learning the programming language of R using the RStudio IDE interface.</p>
+<p>R studio allows for working in many different file types. For this workshop, we will be using R Markdown files. They have a <code class="docutils literal notranslate"><span class="pre">.Rmd</span></code> file extension. In this current file, you will find two types of areas. This current area is for <em>markdown</em> text. Code will not be executed here and you can use markdown formatting such as <strong>bold</strong> and <em>italics</em>.</p>
+<p>I encourage you to take advantage of this space to take notes throughout the lessons, feel free to add/edit any of the text in this document! Markdown text will not affect how the code is run.</p>
+<p>The second area will is call code chucks such as the one immediately below this. Code chunks always start with three ``` followed by the name of the language you are using in the chunk. You can press the green play button in the top right corner within each chunk or the run the cell.</p>
+<p>Edit</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">123</span>
+<span class="n">x</span>
+
+<span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span>
+<span class="n">y</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">123</div><div class="output text_html">2</div></div>
+</div>
+<p>The put arrow is used to assign value in objects. While a single equal sign can work as well, it is not good coding practice for R and should be saved for specifying parameters within functions (we’ll get back to this)</p>
+<p>Some common keyboard shortcuts that may be useful:</p>
+<p>cntl/cmd + alt + i - insert a new code cell (or press the green c with a + in the console toolbar)
+cntl/cmd + enter - run only the line your cursor is on
+cntl/cmd + shift + enter - run all lines in the cell (or press the green play button)</p>
+<p>Feel free to try editing the code above, perhaps by multiply the value of x by 2.</p>
+<p>Within code cells, you can also add comments by starting a line with a hashtag <code class="docutils literal notranslate"><span class="pre">#</span></code> to indicate lines you do not want to run. I will use this often for guidance or instructions, this is another great way to take notes throughout the workshop</p>
+<p>Follow the instructions to write your first script!</p>
+<p>math can only be done on numerics</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># Save the value of 12 to an object called &quot;dozen&quot;</span>
+<span class="n">dozen</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">12</span>
+<span class="c1">#dozen</span>
+
+<span class="c1"># Use this object to calculate how many eggs are in 14 dozen eggs</span>
+<span class="n">dozen</span><span class="o">*</span><span class="m">14</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">168</div></div>
+</div>
+<section id="general-syntax">
+<h2>General syntax<a class="headerlink" href="#general-syntax" title="Link to this heading">#</a></h2>
+<p>Multiple values can be stored into an object using the function <code class="docutils literal notranslate"><span class="pre">c()</span></code> for combine or concatenate</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">prime</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">7</span><span class="p">)</span>
+<span class="n">prime</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>1</li><li>3</li><li>5</li><li>7</li></ol>
+</div></div>
+</div>
+<p>Functions act on objects and can have additional parameters within the round brackets to specify how the command is carried out</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">prime_mean</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">mean</span><span class="p">(</span><span class="n">prime</span><span class="p">)</span>
+<span class="n">prime_mean</span>
+
+<span class="c1">#mean() NOTE: BUG IN COMPLETED CODE, MEAN() REQUIRES PARAMETERS</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">4</div></div>
+</div>
+<p>All functions have default parameters that you can access using the help panel (same area as the “Files” and “Plots” panel) or using a <code class="docutils literal notranslate"><span class="pre">?</span></code> before the function name</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="o">?</span><span class="n">mean</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="getting-started-with-data">
+<h2>Getting started with data<a class="headerlink" href="#getting-started-with-data" title="Link to this heading">#</a></h2>
+<p>Data can be created <em>de novo</em> from within R or read in from an external object. Either way, there are a few broad categories of data types that you will encounter:</p>
+<ol class="arabic simple">
+<li><p><em>Vectors</em> - 1 dimensional, for example the string of numbers in our <code class="docutils literal notranslate"><span class="pre">prime</span></code> object</p></li>
+<li><p><em>Data frames</em> - 2 dimensional, for example a table with rows of patients and columns for clinical characteristics</p></li>
+<li><p><em>Lists</em> - complex 1 dimensional, can store data of different types within a single object</p></li>
+</ol>
+<p>Vectors can only hold one type of data within a single object</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># Numeric</span>
+<span class="n">first5</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">5</span><span class="p">)</span>
+<span class="n">first5</span>
+
+<span class="c1"># Character</span>
+<span class="n">fruits</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&#39;orange&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;apple&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;banana&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;grapefruit&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;starfruit&quot;</span><span class="p">)</span>
+<span class="n">fruits</span>
+
+<span class="c1"># Logical</span>
+
+<span class="n">evaluate</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">64</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">46</span>
+<span class="n">evaluate</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li></ol>
+</div><div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>'orange'</li><li>'apple'</li><li>'banana'</li><li>'grapefruit'</li><li>'starfruit'</li></ol>
+</div><div class="output text_html">FALSE</div></div>
+</div>
+<p>1 dimensional vectors can be used by themselves or used as the foundation for creating data frames</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">firstDF</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">data.frame</span><span class="p">(</span><span class="n">first5</span><span class="p">,</span><span class="w"> </span><span class="n">fruits</span><span class="p">)</span>
+<span class="n">firstDF</span>
+
+<span class="nf">class</span><span class="p">(</span><span class="n">firstDF</span><span class="p">)</span>
+
+<span class="nf">colnames</span><span class="p">(</span><span class="n">firstDF</span><span class="p">)</span>
+<span class="nf">rownames</span><span class="p">(</span><span class="n">firstDF</span><span class="p">)</span>
+
+<span class="nf">dim</span><span class="p">(</span><span class="n">firstDF</span><span class="p">)</span><span class="w"> </span><span class="c1"># ALWAYS rows then columns</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A data.frame: 5 × 2</caption>
+<thead>
+	<tr><th scope=col>first5</th><th scope=col>fruits</th></tr>
+	<tr><th scope=col>&lt;int&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>1</td><td>orange    </td></tr>
+	<tr><td>2</td><td>apple     </td></tr>
+	<tr><td>3</td><td>banana    </td></tr>
+	<tr><td>4</td><td>grapefruit</td></tr>
+	<tr><td>5</td><td>starfruit </td></tr>
+</tbody>
+</table>
+</div><div class="output text_html">'data.frame'</div><div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>'first5'</li><li>'fruits'</li></ol>
+</div><div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>'1'</li><li>'2'</li><li>'3'</li><li>'4'</li><li>'5'</li></ol>
+</div><div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>5</li><li>2</li></ol>
+</div></div>
+</div>
+<p>Dataframes are the most common way of storing information. One of their major strengths is that you can access piece of information independently. Square brackets <code class="docutils literal notranslate"><span class="pre">[]</span></code> are used to access data within an object, always in the format of <code class="docutils literal notranslate"><span class="pre">[rows,columns]</span></code>. If you want to grab a specific row but all the columns of that row, you can leave the column specifier blank - but you always need the comma there regardless.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">prime</span><span class="p">[</span><span class="m">2</span><span class="p">]</span>
+
+<span class="n">firstDF</span><span class="w"> </span><span class="p">[</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">]</span><span class="w"> </span><span class="c1"># [rows,col]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">3</div><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>NULL
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="importing-data">
+<h2>Importing data<a class="headerlink" href="#importing-data" title="Link to this heading">#</a></h2>
+<p>Rather than entering you data manually, you are more likely to read in data from an external source such as an output file from a machine or data stored in an excel table. R is pretty flexible with the files that it can accept, but there are differences to how it is read in.</p>
+<p>The recommended format is a <code class="docutils literal notranslate"><span class="pre">.csv</span></code> file. This stands for “comma separated values”. This means columns are separated by commas and rows are separated by hard enters.</p>
+<p>In this module, we will be working with an dataset measuring categorical and integral characteristics of abalone gathered in Australia</p>
+<p><strong>Source:</strong></p>
+<p>Data comes from an original (non-machine-learning) study:
+Warwick J Nash, Tracy L Sellers, Simon R Talbot, Andrew J Cawthorn and Wes B Ford (1994)
+“The Population Biology of Abalone (<em>Haliotis</em> species) in Tasmania. I. Blacklip Abalone (<em>H. rubra</em>) from the North Coast and Islands of Bass Strait”,
+Sea Fisheries Division, Technical Report No. 48 (ISSN 1034-3288)
+<a class="reference external" href="https://archive.ics.uci.edu/ml/datasets/abalone">https://archive.ics.uci.edu/ml/datasets/abalone</a></p>
+<p><strong>Data Set Information:</strong></p>
+<p>Predicting the age of abalone from physical measurements. The age of abalone is determined by cutting the shell through the cone, staining it, and counting the number of rings through a microscope – a boring and time-consuming task. Other measurements, which are easier to obtain, are used to predict the age. Further information, such as weather patterns and location (hence food availability) may be required to solve the problem.</p>
+<p><strong>Attribute Information:</strong></p>
+<p>Given is the attribute name, attribute type, the measurement unit and a brief description. The number of rings is the value to predict: either as a continuous value or as a classification problem.</p>
+<p><em>Name / Data Type / Measurement Unit / Description</em></p>
+<ul class="simple">
+<li><p>Sex / nominal / – / M, F, and I (infant)</p></li>
+<li><p>Length / continuous / mm / Longest shell measurement</p></li>
+<li><p>Diameter / continuous / mm / perpendicular to length</p></li>
+<li><p>Height / continuous / mm / with meat in shell</p></li>
+<li><p>Whole weight / continuous / grams / whole abalone</p></li>
+<li><p>Shucked weight / continuous / grams / weight of meat</p></li>
+<li><p>Viscera weight / continuous / grams / gut weight (after bleeding)</p></li>
+<li><p>Shell weight / continuous / grams / after being dried</p></li>
+<li><p>Rings / integer / – / +1.5 gives the age in years</p></li>
+</ul>
+<p>As this is a csv file, we will be using the aptly named function “read.csv()” to import the file into R. Make sure your abalone.csv file is in the same directory/folder as your .Rmd file. The first parameter the read.csv() function requires is the path to the file. This will just be the file name since they are both within the same folder.</p>
+<p>If the dataset your working with is not in the same folder, you can modify the path to navigate through your directories to locate the file or use the <code class="docutils literal notranslate"><span class="pre">Import</span> <span class="pre">Dataset</span></code> button.</p>
+<p>Notice when we open the abalone dataset that the first row holds the column names rather than the first set of observations. We will need to let R know that there is a <em>header</em> in the parameters of the read.csv() function.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1">#abalone &lt;- read.csv(&quot;anotherfolder//abalone.csv&quot;, header = TRUE)</span>
+<span class="c1">#abalone &lt;- read.csv(&quot;C:/Users/Frances/Downloads/BioinformaticsWorkshop_INR_June2024-20240611T023701Z-001/BioinformaticsWorkshop_INR_June2024/abalone.csv&quot;)</span>
+
+<span class="c1">#abalone &lt;- read.csv(&quot;datasets/abalone.csv&quot;, header = TRUE)</span>
+<span class="n">abalone</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read.csv</span><span class="p">(</span><span class="s">&quot;/Users/jqiu/Documents/CBWgithub/cbw-dev-test-pages/jupyter-book/INR-2024-Recreate-JB/datasets/abalone.csv&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">header</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span>
+
+<span class="c1">#abalone - commented out since it is a massive file</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>It is almost never useful to print out the whole table because humans are not good at inspecting numbers. Built in summary statistics are helpful for us to get an overview of the data.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">str</span><span class="p">(</span><span class="n">abalone</span><span class="p">)</span>
+
+<span class="nf">summary</span><span class="p">(</span><span class="n">abalone</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;data.frame&#39;:	4177 obs. of  9 variables:
+ $ Sex           : chr  &quot;M&quot; &quot;M&quot; &quot;F&quot; &quot;M&quot; ...
+ $ Length        : num  0.455 0.35 0.53 0.44 0.33 0.425 0.53 0.545 0.475 0.55 ...
+ $ Diameter      : num  0.365 0.265 0.42 0.365 0.255 0.3 0.415 0.425 0.37 0.44 ...
+ $ Height        : num  0.095 0.09 0.135 0.125 0.08 0.095 0.15 0.125 0.125 0.15 ...
+ $ Whole.weight  : num  0.514 0.226 0.677 0.516 0.205 ...
+ $ Shucked.weight: num  0.2245 0.0995 0.2565 0.2155 0.0895 ...
+ $ Viscera.weight: num  0.101 0.0485 0.1415 0.114 0.0395 ...
+ $ Shell.weight  : num  0.15 0.07 0.21 0.155 0.055 0.12 0.33 0.26 0.165 0.32 ...
+ $ Rings         : int  15 7 9 10 7 8 20 16 9 19 ...
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     Sex                Length         Diameter          Height      
+ Length:4177        Min.   :0.075   Min.   :0.0550   Min.   :0.0000  
+ Class :character   1st Qu.:0.450   1st Qu.:0.3500   1st Qu.:0.1150  
+ Mode  :character   Median :0.545   Median :0.4250   Median :0.1400  
+                    Mean   :0.524   Mean   :0.4079   Mean   :0.1395  
+                    3rd Qu.:0.615   3rd Qu.:0.4800   3rd Qu.:0.1650  
+                    Max.   :0.815   Max.   :0.6500   Max.   :1.1300  
+  Whole.weight    Shucked.weight   Viscera.weight    Shell.weight   
+ Min.   :0.0020   Min.   :0.0010   Min.   :0.0005   Min.   :0.0015  
+ 1st Qu.:0.4415   1st Qu.:0.1860   1st Qu.:0.0935   1st Qu.:0.1300  
+ Median :0.7995   Median :0.3360   Median :0.1710   Median :0.2340  
+ Mean   :0.8287   Mean   :0.3594   Mean   :0.1806   Mean   :0.2388  
+ 3rd Qu.:1.1530   3rd Qu.:0.5020   3rd Qu.:0.2530   3rd Qu.:0.3290  
+ Max.   :2.8255   Max.   :1.4880   Max.   :0.7600   Max.   :1.0050  
+     Rings       
+ Min.   : 1.000  
+ 1st Qu.: 8.000  
+ Median : 9.000  
+ Mean   : 9.934  
+ 3rd Qu.:11.000  
+ Max.   :29.000  
+</pre></div>
+</div>
+</div>
+</div>
+<p>Notice for the sex of the observations, the summary is returning that there are characters in this column but not much else. Let’s take a look at the data in this column closer</p>
+<p>The sting <code class="docutils literal notranslate"><span class="pre">$</span></code> operator is used to access a column within a dataframe.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">head</span><span class="p">(</span><span class="n">abalone</span><span class="o">$</span><span class="n">Sex</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="o">=</span><span class="m">20</span><span class="p">)</span><span class="w"> </span><span class="c1"># object$columnName</span>
+
+<span class="nf">class</span><span class="p">(</span><span class="n">abalone</span><span class="o">$</span><span class="n">Sex</span><span class="p">)</span>
+
+<span class="n">abalone</span><span class="o">$</span><span class="n">Sex</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">as.character</span><span class="p">(</span><span class="n">abalone</span><span class="o">$</span><span class="n">Sex</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>'M'</li><li>'M'</li><li>'F'</li><li>'M'</li><li>'I'</li><li>'I'</li><li>'F'</li><li>'F'</li><li>'M'</li><li>'F'</li><li>'F'</li><li>'M'</li><li>'M'</li><li>'F'</li><li>'F'</li><li>'M'</li><li>'I'</li><li>'F'</li><li>'M'</li><li>'M'</li></ol>
+</div><div class="output text_html">'character'</div></div>
+</div>
+<p>As a column of character values, the relationship between the observations being recorded as “M”, “F’, or “I” are not being recognized. We will need convert this column to factor.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">head</span><span class="p">(</span><span class="nf">as.factor</span><span class="p">(</span><span class="n">abalone</span><span class="o">$</span><span class="n">Sex</span><span class="p">))</span>
+
+<span class="nf">summary</span><span class="p">(</span><span class="nf">as.factor</span><span class="p">(</span><span class="n">abalone</span><span class="o">$</span><span class="n">Sex</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>M</li><li>M</li><li>F</li><li>M</li><li>I</li><li>I</li></ol>
+
+<details>
+	<summary style=display:list-item;cursor:pointer>
+		<strong>Levels</strong>:
+	</summary>
+	<style>
+	.list-inline {list-style: none; margin:0; padding: 0}
+	.list-inline>li {display: inline-block}
+	.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+	</style>
+	<ol class=list-inline><li>'F'</li><li>'I'</li><li>'M'</li></ol>
+</details></div><div class="output text_html"><style>
+.dl-inline {width: auto; margin:0; padding: 0}
+.dl-inline>dt, .dl-inline>dd {float: none; width: auto; display: inline-block}
+.dl-inline>dt::after {content: ":\0020"; padding-right: .5ex}
+.dl-inline>dt:not(:first-of-type) {padding-left: .5ex}
+</style><dl class=dl-inline><dt>F</dt><dd>1307</dd><dt>I</dt><dd>1342</dd><dt>M</dt><dd>1528</dd></dl>
+</div></div>
+</div>
+<p>Now that we understand factors, let’s overwrite the column in the original dataset. <strong>Remember, there is no undo button in programming. Double check your work before you overwrite objects</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">abalone</span><span class="o">$</span><span class="n">Sex</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">as.factor</span><span class="p">(</span><span class="n">abalone</span><span class="o">$</span><span class="n">Sex</span><span class="p">)</span>
+
+<span class="nf">head</span><span class="p">(</span><span class="n">abalone</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A data.frame: 6 × 9</caption>
+<thead>
+	<tr><th></th><th scope=col>Sex</th><th scope=col>Length</th><th scope=col>Diameter</th><th scope=col>Height</th><th scope=col>Whole.weight</th><th scope=col>Shucked.weight</th><th scope=col>Viscera.weight</th><th scope=col>Shell.weight</th><th scope=col>Rings</th></tr>
+	<tr><th></th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;int&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>1</th><td>M</td><td>0.455</td><td>0.365</td><td>0.095</td><td>0.5140</td><td>0.2245</td><td>0.1010</td><td>0.150</td><td>15</td></tr>
+	<tr><th scope=row>2</th><td>M</td><td>0.350</td><td>0.265</td><td>0.090</td><td>0.2255</td><td>0.0995</td><td>0.0485</td><td>0.070</td><td> 7</td></tr>
+	<tr><th scope=row>3</th><td>F</td><td>0.530</td><td>0.420</td><td>0.135</td><td>0.6770</td><td>0.2565</td><td>0.1415</td><td>0.210</td><td> 9</td></tr>
+	<tr><th scope=row>4</th><td>M</td><td>0.440</td><td>0.365</td><td>0.125</td><td>0.5160</td><td>0.2155</td><td>0.1140</td><td>0.155</td><td>10</td></tr>
+	<tr><th scope=row>5</th><td>I</td><td>0.330</td><td>0.255</td><td>0.080</td><td>0.2050</td><td>0.0895</td><td>0.0395</td><td>0.055</td><td> 7</td></tr>
+	<tr><th scope=row>6</th><td>I</td><td>0.425</td><td>0.300</td><td>0.095</td><td>0.3515</td><td>0.1410</td><td>0.0775</td><td>0.120</td><td> 8</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<section id="exercise-1-10-mins">
+<h3>Exercise 1 (10 mins)<a class="headerlink" href="#exercise-1-10-mins" title="Link to this heading">#</a></h3>
+<p>Explore the abalone dataset.</p>
+<p>A. Determine the sex of abalone (col) number 65, 85, and 99 (rows)
+B. Out of these three abalone, determine which of the three oysters is largest diameter
+C. Use the “mean()” function to determine the mean abalone diameter overall (not just the three)</p>
+<p>Remember: error messages are normal and part of the troubleshooting process. This is R’s way of communicating where to double check - not an indication of your ability to code! You’re doing great!</p>
+<p><em>Take down your green stickies at the start of this activity and put them up when you’re done and ready to re-group!</em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># Hints to get you started:</span>
+<span class="c1"># Square brackets are used to access position: object[row,columns]</span>
+<span class="c1"># The function c() for combine or concatenate is needed when there are multiple inputs</span>
+<span class="c1"># Numeric values should not be enclosed in quotations, but character values require quotations.</span>
+
+<span class="n">abalone</span><span class="o">$</span><span class="n">Diameter</span><span class="p">[</span><span class="nf">c</span><span class="p">(</span><span class="m">65</span><span class="p">,</span><span class="w"> </span><span class="m">85</span><span class="p">,</span><span class="w"> </span><span class="m">99</span><span class="p">)]</span>
+
+<span class="nf">colnames</span><span class="p">(</span><span class="n">abalone</span><span class="p">)</span>
+<span class="n">abalone</span><span class="p">[</span><span class="nf">c</span><span class="p">(</span><span class="m">65</span><span class="p">,</span><span class="w"> </span><span class="m">85</span><span class="p">,</span><span class="w"> </span><span class="m">99</span><span class="p">),</span><span class="w"> </span><span class="m">3</span><span class="p">]</span><span class="w"> </span><span class="c1">#&quot;Diameter&quot;]</span>
+
+<span class="n">abalone_diameter</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">abalone</span><span class="p">[</span><span class="nf">c</span><span class="p">(</span><span class="m">65</span><span class="p">,</span><span class="w"> </span><span class="m">85</span><span class="p">,</span><span class="w"> </span><span class="m">99</span><span class="p">),</span><span class="w"> </span><span class="m">3</span><span class="p">]</span>
+<span class="n">abalone_diameter</span>
+
+<span class="nf">mean</span><span class="p">(</span><span class="n">abalone</span><span class="o">$</span><span class="n">Diameter</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>0.4</li><li>0.45</li><li>0.37</li></ol>
+</div><div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>'Sex'</li><li>'Length'</li><li>'Diameter'</li><li>'Height'</li><li>'Whole.weight'</li><li>'Shucked.weight'</li><li>'Viscera.weight'</li><li>'Shell.weight'</li><li>'Rings'</li></ol>
+</div><div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>0.4</li><li>0.45</li><li>0.37</li></ol>
+</div><div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>0.4</li><li>0.45</li><li>0.37</li></ol>
+</div><div class="output text_html">0.407881254488868</div></div>
+</div>
+<p>Good job writing your first investigative pieces of code! Woo hoo!</p>
+</section>
+</section>
+<section id="revising-the-r-environment">
+<h2>Revising the R environment<a class="headerlink" href="#revising-the-r-environment" title="Link to this heading">#</a></h2>
+<p>Let’s take a moment to revisit the Rstudio interface and the environment panel.</p>
+<p>We’ve worked with a few objects at this point. The environment panel can give us an overview of the objects in the environment and allow us to preview dataframes.</p>
+<p>If you would like to remove any objects, perhaps you made two objects that are very close in spelling and want to remove the incorrect object, you can use the function <code class="docutils literal notranslate"><span class="pre">rm()</span></code> for remove.</p>
+<p>Again, this is an irreversible action - double check your work. If you’ve documented your code properly, you can always re-read in the object in case you mistakenly deleted anything you wanted to keep.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1">#ABalone &lt;- &quot;blank&quot;</span>
+
+<span class="c1">#rm(ABalone)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The “object not found” error is a common one. In case you get this, you can refer to this environment tab to double check if it exists. Some common reasons this error message is triggered include:</p>
+<ul class="simple">
+<li><p>Typo mistakes (ex. firstDf vs firstDF)</p></li>
+<li><p>Empty environment (ex. object need to be created everytime you open the document. If you save and close RStudio, the text in the .Rmd file will be preserved but not the virtual objects in the environment.)</p></li>
+</ul>
+<p>As an overview of our environment, we can also use the <code class="docutils literal notranslate"><span class="pre">sessionInfo()</span></code> command. This is a good practice to have at the end of your code to document which packages you used and what version they were.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">sessionInfo</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>R version 4.4.1 (2024-06-14)
+Platform: aarch64-apple-darwin20
+Running under: macOS Sonoma 14.7
+
+Matrix products: default
+BLAS:   /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRblas.0.dylib 
+LAPACK: /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRlapack.dylib;  LAPACK version 3.12.0
+
+locale:
+[1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+
+time zone: America/Toronto
+tzcode source: internal
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+loaded via a namespace (and not attached):
+ [1] digest_0.6.37       IRdisplay_1.1       utf8_1.2.4         
+ [4] base64enc_0.1-3     fastmap_1.2.0       glue_1.8.0         
+ [7] htmltools_0.5.8.1   repr_1.1.7          lifecycle_1.0.4    
+[10] cli_3.6.3           fansi_1.0.6         vctrs_0.6.5        
+[13] pbdZMQ_0.3-13       compiler_4.4.1      tools_4.4.1        
+[16] evaluate_1.0.1      pillar_1.9.0        crayon_1.5.3       
+[19] rlang_1.1.4         jsonlite_1.8.9      IRkernel_1.3.2.9000
+[22] uuid_1.2-1         
+</pre></div>
+</div>
+</div>
+</div>
+<p>Notice that we have some base packages active even though we did not explicitly call for them.</p>
+</section>
+<section id="installing-packages-from-cran">
+<h2>Installing packages from CRAN<a class="headerlink" href="#installing-packages-from-cran" title="Link to this heading">#</a></h2>
+<p>Before we move on to a break, let’s revisit functions and packages. Functions are the commands we use to act on objects. As an open source software, anyone can develop new functions and package them into … packages to share with the community! Virtually anything you want to do - so does someone else!</p>
+<p>Referring back to my introduction presentation, R includes many pre-installed functions like <code class="docutils literal notranslate"><span class="pre">c()</span></code> and <code class="docutils literal notranslate"><span class="pre">summary()</span></code> that we’ve been using. But this is just the tip of the iceberg. We’ll be exploring a package called tidyverse developed to wrangle and reshape data. We will need to install this package only the first time we’re using it, similar to how we need to download a new app to our phones or computers before using it. Every time we want to use it, we still need to open it.</p>
+<p>Most general use packages are hosted on the CRAN network. Another package repository you will encounter specifically for biological applications is called Bioconductor (we won’t be using this for now). To download and install a package from CRAN, we will use another aptly named packaged called <code class="docutils literal notranslate"><span class="pre">install.packages()</span></code></p>
+<p>Since R has not encountered the package before, we will need to use brackets around the name of the package we want to install</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1">#install.packages(&quot;tidyverse&quot;)</span>
+
+<span class="nf">library</span><span class="p">(</span><span class="n">tidyverse</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Attaching core tidyverse packages</span> ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────── tidyverse 2.0.0 ──
+<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">dplyr    </span> 1.1.4     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">readr    </span> 2.1.5
+<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">forcats  </span> 1.0.0     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">stringr  </span> 1.5.1
+<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">ggplot2  </span> 3.5.1     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">tibble   </span> 3.2.1
+<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">lubridate</span> 1.9.3     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">tidyr    </span> 1.3.1
+<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">purrr    </span> 1.0.2     
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Conflicts</span> ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
+<span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">dplyr</span>::<span class=" -Color -Color-Green">filter()</span> masks <span class=" -Color -Color-Blue">stats</span>::filter()
+<span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">dplyr</span>::<span class=" -Color -Color-Green">lag()</span>    masks <span class=" -Color -Color-Blue">stats</span>::lag()
+<span class=" -Color -Color-Cyan">ℹ</span> Use the conflicted package (<span class=" -Color -Color-Blue">&lt;http://conflicted.r-lib.org/&gt;</span>) to force all conflicts to become errors
+</pre></div>
+</div>
+</div>
+</div>
+<p>Once you have it installed, you can “open” them. You need to activate the library every new session of R.</p>
+<p>You will likely see some warning messages – warnings are not error messages.</p>
+<ul class="simple">
+<li><p>Error messages mean that R could not do what you asked it to and tries to explain the problem</p></li>
+<li><p>Warning messages mean that R did what it think you wanted to do but wants to caution you to double check some parameters</p></li>
+</ul>
+<p>In this case, the “Attaching packages” indicates the tidyverse package in opening other accompanying packages as well that it needs to function. “Conflicts” indicate that there are separate packages with functions of the same name and which one takes priority. To access a function from a specific package, you can use the syntax <code class="docutils literal notranslate"><span class="pre">package::function()</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">tidyverse</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="data-wrangling">
+<h2>Data Wrangling<a class="headerlink" href="#data-wrangling" title="Link to this heading">#</a></h2>
+<p>Most of the raw data we work with starts off as what the computer considers messy. Perhaps there are some observations with incomplete data (columns are missing data) or there are multiple observations stored in each row (imagine a table with countries in the rows and a column for life expectancy in 1990 in one column and life expectancy in 2010 in the adjacent column).</p>
+<p>Data wrangling is the process of data cleaning and reshaping the raw data into a more usable form. This can be a lengthy process, and can often not feel as rewarding as generating statistical analysis or beautiful plots. But this is the foundation of your analysis so it is worth the investment! Data wrangling can also be an intimidating task because there is no straight forward formula to follow. How you clean up your data depends on what you’re starting with, what research question you are trying to address, and which packages you’re using in your analysis.</p>
+<p>In this section, we are going to get comfortable subseting the data and re-shaping dataframes. We’ll start by reminding ourselves how our dataset looks:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">head</span><span class="p">(</span><span class="n">abalone</span><span class="p">)</span>
+
+<span class="n">abalone</span><span class="o">$</span><span class="n">Sex</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">as.factor</span><span class="p">(</span><span class="n">abalone</span><span class="o">$</span><span class="n">Sex</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A data.frame: 6 × 9</caption>
+<thead>
+	<tr><th></th><th scope=col>Sex</th><th scope=col>Length</th><th scope=col>Diameter</th><th scope=col>Height</th><th scope=col>Whole.weight</th><th scope=col>Shucked.weight</th><th scope=col>Viscera.weight</th><th scope=col>Shell.weight</th><th scope=col>Rings</th></tr>
+	<tr><th></th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;int&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>1</th><td>M</td><td>0.455</td><td>0.365</td><td>0.095</td><td>0.5140</td><td>0.2245</td><td>0.1010</td><td>0.150</td><td>15</td></tr>
+	<tr><th scope=row>2</th><td>M</td><td>0.350</td><td>0.265</td><td>0.090</td><td>0.2255</td><td>0.0995</td><td>0.0485</td><td>0.070</td><td> 7</td></tr>
+	<tr><th scope=row>3</th><td>F</td><td>0.530</td><td>0.420</td><td>0.135</td><td>0.6770</td><td>0.2565</td><td>0.1415</td><td>0.210</td><td> 9</td></tr>
+	<tr><th scope=row>4</th><td>M</td><td>0.440</td><td>0.365</td><td>0.125</td><td>0.5160</td><td>0.2155</td><td>0.1140</td><td>0.155</td><td>10</td></tr>
+	<tr><th scope=row>5</th><td>I</td><td>0.330</td><td>0.255</td><td>0.080</td><td>0.2050</td><td>0.0895</td><td>0.0395</td><td>0.055</td><td> 7</td></tr>
+	<tr><th scope=row>6</th><td>I</td><td>0.425</td><td>0.300</td><td>0.095</td><td>0.3515</td><td>0.1410</td><td>0.0775</td><td>0.120</td><td> 8</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<p>If we wanted to take a look at the summary statistics independently for infant vs mature, we can create multiple objects by subseting the original one.</p>
+<p>Remember for square brackets are indexing an object. For data frames, it is expecting two specifications separated by a comma, which rows followed by which columns.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">abalone_infants</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">abalone</span><span class="p">[</span><span class="n">abalone</span><span class="o">$</span><span class="n">Sex</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;I&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="c1">#object[rows, col]</span>
+
+<span class="nf">summary</span><span class="p">(</span><span class="n">abalone_infants</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Sex          Length          Diameter          Height       Whole.weight   
+ F:   0   Min.   :0.0750   Min.   :0.0550   Min.   :0.000   Min.   :0.0020  
+ I:1342   1st Qu.:0.3600   1st Qu.:0.2700   1st Qu.:0.085   1st Qu.:0.2055  
+ M:   0   Median :0.4350   Median :0.3350   Median :0.110   Median :0.3840  
+          Mean   :0.4277   Mean   :0.3265   Mean   :0.108   Mean   :0.4314  
+          3rd Qu.:0.5100   3rd Qu.:0.3900   3rd Qu.:0.130   3rd Qu.:0.5994  
+          Max.   :0.7250   Max.   :0.5500   Max.   :0.220   Max.   :2.0495  
+ Shucked.weight   Viscera.weight     Shell.weight         Rings      
+ Min.   :0.0010   Min.   :0.00050   Min.   :0.00150   Min.   : 1.00  
+ 1st Qu.:0.0900   1st Qu.:0.04250   1st Qu.:0.06413   1st Qu.: 6.00  
+ Median :0.1698   Median :0.08050   Median :0.11300   Median : 8.00  
+ Mean   :0.1910   Mean   :0.09201   Mean   :0.12818   Mean   : 7.89  
+ 3rd Qu.:0.2704   3rd Qu.:0.13000   3rd Qu.:0.17850   3rd Qu.: 9.00  
+ Max.   :0.7735   Max.   :0.44050   Max.   :0.65500   Max.   :21.00  
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can select for multiple values as well.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1">#abalone_infants &lt;- abalone[abalone$Sex == &quot;I&quot;, ]</span>
+
+<span class="n">abalone_mature</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">abalone</span><span class="p">[</span><span class="n">abalone</span><span class="o">$</span><span class="n">Sex</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;F&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;M&quot;</span><span class="p">),</span><span class="w"> </span><span class="p">]</span>
+<span class="nf">summary</span><span class="p">(</span><span class="n">abalone_mature</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning message in `==.default`(abalone$Sex, c(&quot;F&quot;, &quot;M&quot;)):
+“longer object length is not a multiple of shorter object length”
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning message in is.na(e1) | is.na(e2):
+“longer object length is not a multiple of shorter object length”
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Sex         Length          Diameter          Height        Whole.weight   
+ F:659   Min.   :0.1550   Min.   :0.1150   Min.   :0.0150   Min.   :0.0230  
+ I:  0   1st Qu.:0.5150   1st Qu.:0.4000   1st Qu.:0.1350   1st Qu.:0.7127  
+ M:763   Median :0.5800   Median :0.4600   Median :0.1550   Median :1.0100  
+         Mean   :0.5699   Mean   :0.4469   Mean   :0.1543   Mean   :1.0220  
+         3rd Qu.:0.6350   3rd Qu.:0.5000   3rd Qu.:0.1750   3rd Qu.:1.2971  
+         Max.   :0.8150   Max.   :0.6500   Max.   :0.5150   Max.   :2.8255  
+ Shucked.weight   Viscera.weight    Shell.weight        Rings      
+ Min.   :0.0085   Min.   :0.0050   Min.   :0.0050   Min.   : 3.00  
+ 1st Qu.:0.2941   1st Qu.:0.1535   1st Qu.:0.2050   1st Qu.: 9.00  
+ Median :0.4300   Median :0.2150   Median :0.2870   Median :10.00  
+ Mean   :0.4430   Mean   :0.2232   Mean   :0.2928   Mean   :10.88  
+ 3rd Qu.:0.5725   3rd Qu.:0.2874   3rd Qu.:0.3699   3rd Qu.:12.00  
+ Max.   :1.3485   Max.   :0.7600   Max.   :0.8970   Max.   :29.00  
+</pre></div>
+</div>
+</div>
+</div>
+<section id="exercise">
+<h3>Exercise<a class="headerlink" href="#exercise" title="Link to this heading">#</a></h3>
+<p>Create a new object called <code class="docutils literal notranslate"><span class="pre">abalone_small</span></code> with only abalone with <code class="docutils literal notranslate"><span class="pre">Whole.weight</span></code> less than 1. Include only the columns <code class="docutils literal notranslate"><span class="pre">Sex</span></code>, <code class="docutils literal notranslate"><span class="pre">Length</span></code>, <code class="docutils literal notranslate"><span class="pre">Diameter</span></code>, and <code class="docutils literal notranslate"><span class="pre">Whole.weight</span></code>.</p>
+<p>You can do this in one line or multiple lines, whichever you are most comfortable with! Take your time and check your work along the way using the <code class="docutils literal notranslate"><span class="pre">summary()</span></code> function.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># object[rows, col]</span>
+
+<span class="nf">colnames</span><span class="p">(</span><span class="n">abalone</span><span class="p">)</span>
+
+<span class="n">abalone_small</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">abalone</span><span class="p">[</span><span class="n">abalone</span><span class="o">$</span><span class="n">`Whole.weight`</span><span class="w"> </span><span class="o">&lt;</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">)]</span>
+<span class="n">abalone_small</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">abalone</span><span class="p">[</span><span class="n">abalone</span><span class="o">$</span><span class="n">Whole.weight</span><span class="w"> </span><span class="o">&lt;</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;Sex&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Length&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Diameter&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Whole.weight&quot;</span><span class="p">)]</span>
+
+
+<span class="nf">summary</span><span class="p">(</span><span class="n">abalone_small</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>'Sex'</li><li>'Length'</li><li>'Diameter'</li><li>'Height'</li><li>'Whole.weight'</li><li>'Shucked.weight'</li><li>'Viscera.weight'</li><li>'Shell.weight'</li><li>'Rings'</li></ol>
+</div><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Sex          Length          Diameter      Whole.weight   
+ F: 614   Min.   :0.0750   Min.   :0.055   Min.   :0.0020  
+ I:1293   1st Qu.:0.4000   1st Qu.:0.305   1st Qu.:0.3040  
+ M: 798   Median :0.4800   Median :0.375   Median :0.5420  
+          Mean   :0.4613   Mean   :0.356   Mean   :0.5358  
+          3rd Qu.:0.5400   3rd Qu.:0.420   3rd Qu.:0.7800  
+          Max.   :0.6350   Max.   :0.510   Max.   :0.9995  
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="adding-new-columns-of-data">
+<h2>Adding new columns of data<a class="headerlink" href="#adding-new-columns-of-data" title="Link to this heading">#</a></h2>
+<p>New columns can also be created if you wanted to add more information to the dataset</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">abalone</span><span class="o">$</span><span class="n">maturity</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s">&quot;mature&quot;</span>
+
+<span class="nf">table</span><span class="p">(</span><span class="n">abalone</span><span class="o">$</span><span class="n">maturity</span><span class="p">)</span>
+
+<span class="n">abalone</span><span class="p">[</span><span class="n">abalone</span><span class="o">$</span><span class="n">Sex</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;I&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;maturity&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s">&quot;infant&quot;</span>
+
+<span class="nf">table</span><span class="p">(</span><span class="n">abalone</span><span class="o">$</span><span class="n">maturity</span><span class="p">)</span>
+<span class="nf">table</span><span class="p">(</span><span class="n">abalone</span><span class="o">$</span><span class="n">maturity</span><span class="p">,</span><span class="w"> </span><span class="n">abalone</span><span class="o">$</span><span class="n">Sex</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>mature 
+  4177 
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>infant mature 
+  1342   2835 
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        
+            F    I    M
+  infant    0 1342    0
+  mature 1307    0 1528
+</pre></div>
+</div>
+</div>
+</div>
+<p>Remember that operations can be done on whole columns as well!!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">abalone</span><span class="o">$</span><span class="n">Percent.weight</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">abalone</span><span class="o">$</span><span class="n">Shucked.weight</span><span class="o">/</span><span class="n">abalone</span><span class="o">$</span><span class="n">Shell.weight</span>
+
+<span class="nf">head</span><span class="p">(</span><span class="n">abalone</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A data.frame: 6 × 11</caption>
+<thead>
+	<tr><th></th><th scope=col>Sex</th><th scope=col>Length</th><th scope=col>Diameter</th><th scope=col>Height</th><th scope=col>Whole.weight</th><th scope=col>Shucked.weight</th><th scope=col>Viscera.weight</th><th scope=col>Shell.weight</th><th scope=col>Rings</th><th scope=col>maturity</th><th scope=col>Percent.weight</th></tr>
+	<tr><th></th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>1</th><td>M</td><td>0.455</td><td>0.365</td><td>0.095</td><td>0.5140</td><td>0.2245</td><td>0.1010</td><td>0.150</td><td>15</td><td>mature</td><td>1.496667</td></tr>
+	<tr><th scope=row>2</th><td>M</td><td>0.350</td><td>0.265</td><td>0.090</td><td>0.2255</td><td>0.0995</td><td>0.0485</td><td>0.070</td><td> 7</td><td>mature</td><td>1.421429</td></tr>
+	<tr><th scope=row>3</th><td>F</td><td>0.530</td><td>0.420</td><td>0.135</td><td>0.6770</td><td>0.2565</td><td>0.1415</td><td>0.210</td><td> 9</td><td>mature</td><td>1.221429</td></tr>
+	<tr><th scope=row>4</th><td>M</td><td>0.440</td><td>0.365</td><td>0.125</td><td>0.5160</td><td>0.2155</td><td>0.1140</td><td>0.155</td><td>10</td><td>mature</td><td>1.390323</td></tr>
+	<tr><th scope=row>5</th><td>I</td><td>0.330</td><td>0.255</td><td>0.080</td><td>0.2050</td><td>0.0895</td><td>0.0395</td><td>0.055</td><td> 7</td><td>infant</td><td>1.627273</td></tr>
+	<tr><th scope=row>6</th><td>I</td><td>0.425</td><td>0.300</td><td>0.095</td><td>0.3515</td><td>0.1410</td><td>0.0775</td><td>0.120</td><td> 8</td><td>infant</td><td>1.175000</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+</section>
+<section id="tidyverse">
+<h2>Tidyverse<a class="headerlink" href="#tidyverse" title="Link to this heading">#</a></h2>
+<p>Tidyverse is a collection of packages, or an “umbrella-package” the installs tidyr, dplyr, ggplot2, and several other related packages for tidying up your data.</p>
+<p>Keep in mind that tidyverse creates their own rules for R and their functions work well with their own functions, but may not translate to work well with other packages build by different developers. For example, the core developer strongly believes that rownames are not useful and all the information should be stored in columns within the table so converting your data frame to their object variation called tibbles will automatically remove rownames without warnings.</p>
+<p>Rather than using square brackets to subset columns, we can <em>select</em> the rows that we want</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1">#select(abalone, Diameter, Length, Whole.weight) #Tidyverse selecting columns       - COMMENTED OUT DUE TO SIZE ON WINDOW</span>
+
+<span class="c1">#abalone$Diameter #base R      - COMMENTED OUT DUE TO SIZE ON WINDOW</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><em>select</em> can also be used to exclude specific columns</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1">#select(abalone, -Length, -Diameter)      - COMMENTED OUT DUE TO SIZE ON WINDOW</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Select only works on columns. We can use a similar function to <em>filter</em> for the rows that we want</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># Filter indexes rows</span>
+
+<span class="c1">#filter(abalone, Sex == &quot;I&quot;) # abalone[abalone$Sex == &quot;I&quot;, ]      - COMMENTED OUT DUE TO SIZE ON WINDOW</span>
+<span class="nf">summary</span><span class="p">(</span><span class="nf">filter</span><span class="p">(</span><span class="n">abalone</span><span class="p">,</span><span class="w"> </span><span class="n">Sex</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;I&quot;</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Sex          Length          Diameter          Height       Whole.weight   
+ F:   0   Min.   :0.0750   Min.   :0.0550   Min.   :0.000   Min.   :0.0020  
+ I:1342   1st Qu.:0.3600   1st Qu.:0.2700   1st Qu.:0.085   1st Qu.:0.2055  
+ M:   0   Median :0.4350   Median :0.3350   Median :0.110   Median :0.3840  
+          Mean   :0.4277   Mean   :0.3265   Mean   :0.108   Mean   :0.4314  
+          3rd Qu.:0.5100   3rd Qu.:0.3900   3rd Qu.:0.130   3rd Qu.:0.5994  
+          Max.   :0.7250   Max.   :0.5500   Max.   :0.220   Max.   :2.0495  
+ Shucked.weight   Viscera.weight     Shell.weight         Rings      
+ Min.   :0.0010   Min.   :0.00050   Min.   :0.00150   Min.   : 1.00  
+ 1st Qu.:0.0900   1st Qu.:0.04250   1st Qu.:0.06413   1st Qu.: 6.00  
+ Median :0.1698   Median :0.08050   Median :0.11300   Median : 8.00  
+ Mean   :0.1910   Mean   :0.09201   Mean   :0.12818   Mean   : 7.89  
+ 3rd Qu.:0.2704   3rd Qu.:0.13000   3rd Qu.:0.17850   3rd Qu.: 9.00  
+ Max.   :0.7735   Max.   :0.44050   Max.   :0.65500   Max.   :21.00  
+   maturity         Percent.weight   
+ Length:1342        Min.   : 0.1641  
+ Class :character   1st Qu.: 1.2585  
+ Mode  :character   Median : 1.4563  
+                    Mean   : 1.5092  
+                    3rd Qu.: 1.6752  
+                    Max.   :15.7143  
+</pre></div>
+</div>
+</div>
+</div>
+<p>Functions within the tidyverse universe do not require quotations around column names - this is unique to tidyverse packages and does not translate to other applications!</p>
+<p>Another unique aspect of tidyverse is that their commands can be chained together using the pipe <code class="docutils literal notranslate"><span class="pre">%&gt;%</span></code>. This cumbersome chain of characters can be inserted with the shortcut cnt/cmd + shift + M.</p>
+<p>Let’s recreate the same object of abalone_small first with intermediate objects</p>
+<p>Reminder of the object requirements:</p>
+<ul class="simple">
+<li><p>Whole.weight under 1</p></li>
+<li><p>Columns Length, Diameter, and Whole.weight</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">abalone_sub1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">filter</span><span class="p">(</span><span class="n">abalone</span><span class="p">,</span><span class="w"> </span><span class="n">Whole.weight</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">1</span><span class="p">)</span>
+
+<span class="n">abalone_sub2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">select</span><span class="p">(</span><span class="n">abalone_sub1</span><span class="p">,</span><span class="w"> </span><span class="n">Length</span><span class="p">,</span><span class="w"> </span><span class="n">Diameter</span><span class="p">,</span><span class="w"> </span><span class="n">Whole.weight</span><span class="p">)</span>
+
+<span class="nf">summary</span><span class="p">(</span><span class="n">abalone_sub2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     Length          Diameter      Whole.weight   
+ Min.   :0.0750   Min.   :0.055   Min.   :0.0020  
+ 1st Qu.:0.4000   1st Qu.:0.305   1st Qu.:0.3040  
+ Median :0.4800   Median :0.375   Median :0.5420  
+ Mean   :0.4613   Mean   :0.356   Mean   :0.5358  
+ 3rd Qu.:0.5400   3rd Qu.:0.420   3rd Qu.:0.7800  
+ Max.   :0.6350   Max.   :0.510   Max.   :0.9995  
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now we’re going to combine this all together into one call</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">abalone_sub3</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">abalone</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">  </span><span class="nf">filter</span><span class="p">(</span><span class="n">Whole.weight</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">  </span><span class="nf">select</span><span class="p">(</span><span class="n">Length</span><span class="p">,</span><span class="w"> </span><span class="n">Diameter</span><span class="p">,</span><span class="w"> </span><span class="n">Whole.weight</span><span class="p">)</span>
+
+<span class="nf">head</span><span class="p">(</span><span class="n">abalone_sub3</span><span class="p">)</span>
+
+<span class="nf">summary</span><span class="p">(</span><span class="n">abalone_sub3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A data.frame: 6 × 3</caption>
+<thead>
+	<tr><th></th><th scope=col>Length</th><th scope=col>Diameter</th><th scope=col>Whole.weight</th></tr>
+	<tr><th></th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>1</th><td>0.455</td><td>0.365</td><td>0.5140</td></tr>
+	<tr><th scope=row>2</th><td>0.350</td><td>0.265</td><td>0.2255</td></tr>
+	<tr><th scope=row>3</th><td>0.530</td><td>0.420</td><td>0.6770</td></tr>
+	<tr><th scope=row>4</th><td>0.440</td><td>0.365</td><td>0.5160</td></tr>
+	<tr><th scope=row>5</th><td>0.330</td><td>0.255</td><td>0.2050</td></tr>
+	<tr><th scope=row>6</th><td>0.425</td><td>0.300</td><td>0.3515</td></tr>
+</tbody>
+</table>
+</div><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     Length          Diameter      Whole.weight   
+ Min.   :0.0750   Min.   :0.055   Min.   :0.0020  
+ 1st Qu.:0.4000   1st Qu.:0.305   1st Qu.:0.3040  
+ Median :0.4800   Median :0.375   Median :0.5420  
+ Mean   :0.4613   Mean   :0.356   Mean   :0.5358  
+ 3rd Qu.:0.5400   3rd Qu.:0.420   3rd Qu.:0.7800  
+ Max.   :0.6350   Max.   :0.510   Max.   :0.9995  
+</pre></div>
+</div>
+</div>
+</div>
+<p>The functions are the same but since we are piping the results of the previous line to the next command, you do not need to (and should not) specify the object as the first argument in the function.</p>
+<p><code class="docutils literal notranslate"><span class="pre">group_by()</span></code> and <code class="docutils literal notranslate"><span class="pre">summarize()</span></code> functions can be used to get summary statistics without the need to create intermediate objects</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">abalone_sub3</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">abalone</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">  </span><span class="nf">filter</span><span class="p">(</span><span class="n">Whole.weight</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">  </span><span class="nf">select</span><span class="p">(</span><span class="n">Length</span><span class="p">,</span><span class="w"> </span><span class="n">Diameter</span><span class="p">,</span><span class="w"> </span><span class="n">Whole.weight</span><span class="p">,</span><span class="w"> </span><span class="n">Sex</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">  </span><span class="nf">group_by</span><span class="p">(</span><span class="n">Sex</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">  </span><span class="nf">summarize</span><span class="p">(</span><span class="n">my_own_function</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">median</span><span class="p">(</span><span class="n">Whole.weight</span><span class="p">))</span>
+
+<span class="n">abalone_sub3</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A tibble: 3 × 2</caption>
+<thead>
+	<tr><th scope=col>Sex</th><th scope=col>my_own_function</th></tr>
+	<tr><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>F</td><td>0.70675</td></tr>
+	<tr><td>I</td><td>0.37050</td></tr>
+	<tr><td>M</td><td>0.69375</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<section id="id1">
+<h3>Exercise<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<p>Using the base abalone object and tidyverse functions, investigate whether the mean length of male or females (group_by) are longer  of abalone with a <code class="docutils literal notranslate"><span class="pre">Shucked.weight</span></code> greater than 0.3 AND a <code class="docutils literal notranslate"><span class="pre">Shell.weight</span></code> less than 0.3 (filtering rows) .</p>
+<p>Include a checkpoint in your summarize call to make sure your filter worked.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">abalone</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">  </span><span class="nf">filter</span><span class="p">(</span><span class="n">Shucked.weight</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">0.3</span><span class="p">,</span><span class="w"> </span><span class="n">Shell.weight</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">0.3</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">  </span><span class="nf">group_by</span><span class="p">(</span><span class="n">Sex</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">  </span><span class="nf">summarize</span><span class="p">(</span><span class="n">mean_Length</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">mean</span><span class="p">(</span><span class="n">Length</span><span class="p">),</span>
+<span class="w">            </span><span class="n">min_Shucked</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">min</span><span class="p">(</span><span class="n">Shucked.weight</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A tibble: 3 × 3</caption>
+<thead>
+	<tr><th scope=col>Sex</th><th scope=col>mean_Length</th><th scope=col>min_Shucked</th></tr>
+	<tr><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>F</td><td>0.5694706</td><td>0.3005</td></tr>
+	<tr><td>I</td><td>0.5469953</td><td>0.3005</td></tr>
+	<tr><td>M</td><td>0.5665934</td><td>0.3010</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<p>Lastly, we can also use <code class="docutils literal notranslate"><span class="pre">mutate()</span></code> to add a new column of information based on existing data.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">abalone</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">  </span><span class="nf">mutate</span><span class="p">(</span><span class="n">Whole.weight.oz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Whole.weight</span><span class="o">*</span><span class="m">0.035</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">  </span><span class="nf">head</span><span class="p">()</span>
+
+<span class="c1"># abalone$Whole.weight.oz &lt;- abalone$whole.weight*0.035</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A data.frame: 6 × 12</caption>
+<thead>
+	<tr><th></th><th scope=col>Sex</th><th scope=col>Length</th><th scope=col>Diameter</th><th scope=col>Height</th><th scope=col>Whole.weight</th><th scope=col>Shucked.weight</th><th scope=col>Viscera.weight</th><th scope=col>Shell.weight</th><th scope=col>Rings</th><th scope=col>maturity</th><th scope=col>Percent.weight</th><th scope=col>Whole.weight.oz</th></tr>
+	<tr><th></th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>1</th><td>M</td><td>0.455</td><td>0.365</td><td>0.095</td><td>0.5140</td><td>0.2245</td><td>0.1010</td><td>0.150</td><td>15</td><td>mature</td><td>1.496667</td><td>0.0179900</td></tr>
+	<tr><th scope=row>2</th><td>M</td><td>0.350</td><td>0.265</td><td>0.090</td><td>0.2255</td><td>0.0995</td><td>0.0485</td><td>0.070</td><td> 7</td><td>mature</td><td>1.421429</td><td>0.0078925</td></tr>
+	<tr><th scope=row>3</th><td>F</td><td>0.530</td><td>0.420</td><td>0.135</td><td>0.6770</td><td>0.2565</td><td>0.1415</td><td>0.210</td><td> 9</td><td>mature</td><td>1.221429</td><td>0.0236950</td></tr>
+	<tr><th scope=row>4</th><td>M</td><td>0.440</td><td>0.365</td><td>0.125</td><td>0.5160</td><td>0.2155</td><td>0.1140</td><td>0.155</td><td>10</td><td>mature</td><td>1.390323</td><td>0.0180600</td></tr>
+	<tr><th scope=row>5</th><td>I</td><td>0.330</td><td>0.255</td><td>0.080</td><td>0.2050</td><td>0.0895</td><td>0.0395</td><td>0.055</td><td> 7</td><td>infant</td><td>1.627273</td><td>0.0071750</td></tr>
+	<tr><th scope=row>6</th><td>I</td><td>0.425</td><td>0.300</td><td>0.095</td><td>0.3515</td><td>0.1410</td><td>0.0775</td><td>0.120</td><td> 8</td><td>infant</td><td>1.175000</td><td>0.0123025</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+</section>
+</section>
+<section id="plotting-with-base-r">
+<h2>Plotting with Base R<a class="headerlink" href="#plotting-with-base-r" title="Link to this heading">#</a></h2>
+<p>Just like how there are multiple ways of wrangling data (base R functions vs Tidyverse functions), there are also multiple ways of generating plots. We will start with base R plots.</p>
+<p>Before we get started, it is always good to take a peek at the data and remind ourselves of what we’re working with</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">head</span><span class="p">(</span><span class="n">abalone</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A data.frame: 6 × 11</caption>
+<thead>
+	<tr><th></th><th scope=col>Sex</th><th scope=col>Length</th><th scope=col>Diameter</th><th scope=col>Height</th><th scope=col>Whole.weight</th><th scope=col>Shucked.weight</th><th scope=col>Viscera.weight</th><th scope=col>Shell.weight</th><th scope=col>Rings</th><th scope=col>maturity</th><th scope=col>Percent.weight</th></tr>
+	<tr><th></th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>1</th><td>M</td><td>0.455</td><td>0.365</td><td>0.095</td><td>0.5140</td><td>0.2245</td><td>0.1010</td><td>0.150</td><td>15</td><td>mature</td><td>1.496667</td></tr>
+	<tr><th scope=row>2</th><td>M</td><td>0.350</td><td>0.265</td><td>0.090</td><td>0.2255</td><td>0.0995</td><td>0.0485</td><td>0.070</td><td> 7</td><td>mature</td><td>1.421429</td></tr>
+	<tr><th scope=row>3</th><td>F</td><td>0.530</td><td>0.420</td><td>0.135</td><td>0.6770</td><td>0.2565</td><td>0.1415</td><td>0.210</td><td> 9</td><td>mature</td><td>1.221429</td></tr>
+	<tr><th scope=row>4</th><td>M</td><td>0.440</td><td>0.365</td><td>0.125</td><td>0.5160</td><td>0.2155</td><td>0.1140</td><td>0.155</td><td>10</td><td>mature</td><td>1.390323</td></tr>
+	<tr><th scope=row>5</th><td>I</td><td>0.330</td><td>0.255</td><td>0.080</td><td>0.2050</td><td>0.0895</td><td>0.0395</td><td>0.055</td><td> 7</td><td>infant</td><td>1.627273</td></tr>
+	<tr><th scope=row>6</th><td>I</td><td>0.425</td><td>0.300</td><td>0.095</td><td>0.3515</td><td>0.1410</td><td>0.0775</td><td>0.120</td><td> 8</td><td>infant</td><td>1.175000</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<p>Remember that the first column of abalone Sex was originally were character values but we wrangled this data into factors to recognize that there are relationships between observations with the same values (ie. all the abalone with a value “M” in the Sex column share the same biological Sex)</p>
+<p>Base R plots are great for taking a quick peek at your data</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">plot</span><span class="p">(</span><span class="n">abalone</span><span class="o">$</span><span class="n">Length</span><span class="p">,</span><span class="w"> </span><span class="n">abalone</span><span class="o">$</span><span class="n">Whole.weight</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="_images/2237c0cd6117a74d2a4db181140a1630edaae6416b30c6d98306fd75211d0b93.png"><img alt="_images/2237c0cd6117a74d2a4db181140a1630edaae6416b30c6d98306fd75211d0b93.png" src="_images/2237c0cd6117a74d2a4db181140a1630edaae6416b30c6d98306fd75211d0b93.png" style="width: 420px; height: 420px;" /></a>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">plot</span><span class="p">(</span><span class="n">abalone</span><span class="o">$</span><span class="n">Length</span><span class="p">,</span><span class="w"> </span><span class="n">abalone</span><span class="o">$</span><span class="n">Whole.weight</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">abalone</span><span class="o">$</span><span class="n">Sex</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="_images/bfdef633ae7b01a08e697a5bbb968caad653705407630221fd16e7376a50568b.png"><img alt="_images/bfdef633ae7b01a08e697a5bbb968caad653705407630221fd16e7376a50568b.png" src="_images/bfdef633ae7b01a08e697a5bbb968caad653705407630221fd16e7376a50568b.png" style="width: 420px; height: 420px;" /></a>
+</div>
+</div>
+<p>Note that you cannot color on a column of categorical data if it is not a factor because each entry is considered unique, there are no shared characteristics between the observations.</p>
+<p>It can be confusing to figure out which color corresponds to which category in base R.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">class</span><span class="p">(</span><span class="n">abalone</span><span class="o">$</span><span class="n">Sex</span><span class="p">)</span>
+<span class="nf">levels</span><span class="p">(</span><span class="n">abalone</span><span class="o">$</span><span class="n">Sex</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">'factor'</div><div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>'F'</li><li>'I'</li><li>'M'</li></ol>
+</div></div>
+</div>
+<p>Let’s make a table to specify the color we want each level to be</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">plot</span><span class="p">(</span><span class="n">abalone</span><span class="o">$</span><span class="n">Length</span><span class="p">,</span><span class="w"> </span><span class="n">abalone</span><span class="o">$</span><span class="n">Whole.weight</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="o">=</span><span class="n">abalone</span><span class="o">$</span><span class="n">Sex</span><span class="p">,</span>
+<span class="w">     </span><span class="n">main</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Abalone weight increases with length&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="n">xlab</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Length (mm)&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="n">ylab</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Whole weight (g)&quot;</span><span class="p">)</span>
+
+<span class="nf">legend</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s">&quot;bottomright&quot;</span><span class="p">,</span>
+<span class="w">       </span><span class="n">legend</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">levels</span><span class="p">(</span><span class="n">abalone</span><span class="o">$</span><span class="n">Sex</span><span class="p">),</span>
+<span class="w">       </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="m">3</span><span class="p">,</span>
+<span class="w">       </span><span class="n">pch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">5</span>
+<span class="w">       </span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="_images/d86bbf8fed4b83e1792bee70cbcffc452beae19d645df5e6e5230debab5004e0.png"><img alt="_images/d86bbf8fed4b83e1792bee70cbcffc452beae19d645df5e6e5230debab5004e0.png" src="_images/d86bbf8fed4b83e1792bee70cbcffc452beae19d645df5e6e5230debab5004e0.png" style="width: 420px; height: 420px;" /></a>
+</div>
+</div>
+<p>Base R plots use layers so the base <code class="docutils literal notranslate"><span class="pre">plot()</span></code> must be created first, before the <code class="docutils literal notranslate"><span class="pre">legend()</span></code> layer is added on top.</p>
+<p>I stands for infant so it makes sense that they would be smaller in weight and length compared to the mature abalone.</p>
+<p>Before we move on to the next type of plot, let’s customize it a bit more by cleaning up the axis</p>
+</section>
+<section id="scatterplot-with-ggplot">
+<h2>Scatterplot with ggplot<a class="headerlink" href="#scatterplot-with-ggplot" title="Link to this heading">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">ggplot()</span></code> was created to support customizable and reproducible plots. The way that the <code class="docutils literal notranslate"><span class="pre">ggplot()</span></code> function accepts the data is much different from the base R <code class="docutils literal notranslate"><span class="pre">plot()</span></code> function.</p>
+<p>The both columns of data must be in the same dataframe and specified in the <em>data</em> parameter. Then, the x and y axis must be specified using the aesthetic <em>aes</em> parameter. The base <code class="docutils literal notranslate"><span class="pre">ggplot()</span></code> call only holds the data, the geometry or format of the plot must be further specified by a separate call.</p>
+<p>While commas <code class="docutils literal notranslate"><span class="pre">,</span></code> separate the parameters in a function, plus signs <code class="docutils literal notranslate"><span class="pre">+</span></code> are used to specify different layers of the plot.</p>
+<p>This is the basic template for ggplots:</p>
+<blockquote>
+<div><p>ggplot(data = <DATA>, mapping = aes(<MAPPINGS>)) +  &lt;GEOM_FUNCTION&gt;()</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>A single continuous variable can be displayed using a histogram.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">(</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">abalone</span><span class="p">,</span><span class="w"> </span><span class="n">mapping</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">Length</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_histogram</span><span class="p">()</span>
+
+<span class="nf">nrow</span><span class="p">(</span><span class="n">abalone</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+</pre></div>
+</div>
+<div class="output text_html">4177</div><a class="reference internal image-reference" href="_images/0ecd9ac21f64a5eaf5ee9f3bd9462f5a74ed4fd0c337d88404992c9afaa29b06.png"><img alt="_images/0ecd9ac21f64a5eaf5ee9f3bd9462f5a74ed4fd0c337d88404992c9afaa29b06.png" src="_images/0ecd9ac21f64a5eaf5ee9f3bd9462f5a74ed4fd0c337d88404992c9afaa29b06.png" style="width: 420px; height: 420px;" /></a>
+</div>
+</div>
+<p>Two continuous variables can be contrasted using a point or scatter plot.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">(</span><span class="n">abalone</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Length</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Whole.weight</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_point</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="_images/6fad40be8bcd16fc19ea8f2815e393eb68fbd3c1228c960b02213bbc03d72956.png"><img alt="_images/6fad40be8bcd16fc19ea8f2815e393eb68fbd3c1228c960b02213bbc03d72956.png" src="_images/6fad40be8bcd16fc19ea8f2815e393eb68fbd3c1228c960b02213bbc03d72956.png" style="width: 420px; height: 420px;" /></a>
+</div>
+</div>
+<p>It is a lot simpler to add color to ggplots</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">(</span><span class="n">abalone</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Length</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Whole.weight</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Sex</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_point</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="_images/a9b596c3833524ddc4dab42ff99e107873d12d3a8a2609f46d2b016fc1211c56.png"><img alt="_images/a9b596c3833524ddc4dab42ff99e107873d12d3a8a2609f46d2b016fc1211c56.png" src="_images/a9b596c3833524ddc4dab42ff99e107873d12d3a8a2609f46d2b016fc1211c56.png" style="width: 420px; height: 420px;" /></a>
+</div>
+</div>
+<p>There’s a lot of dots that are piling up on top of each other so we can change the alpha value to modify the transparency. Remember, you can always look up more information about each function using the <code class="docutils literal notranslate"><span class="pre">?</span></code> or looking online! No need to memorize everything!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">(</span><span class="n">abalone</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Length</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Whole.weight</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Sex</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_point</span><span class="p">(</span><span class="n">alpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="_images/d32804381741d9b552ae5a96b87c6cb001c7daee2f305f0da0bef9dc7bc363b2.png"><img alt="_images/d32804381741d9b552ae5a96b87c6cb001c7daee2f305f0da0bef9dc7bc363b2.png" src="_images/d32804381741d9b552ae5a96b87c6cb001c7daee2f305f0da0bef9dc7bc363b2.png" style="width: 420px; height: 420px;" /></a>
+</div>
+</div>
+</section>
+<section id="id2">
+<h2>Exercise<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>Create a plot to investigate the relationship between the shucked weight and the shell weight of ONLY adult abalone (exclude the infant abalones). Color the plot by Sex, do you notice any difference between the two?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">abalone_MF</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">abalone</span><span class="p">[</span><span class="n">abalone</span><span class="o">$</span><span class="n">Sex</span><span class="w"> </span><span class="o">%in%</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;M&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;F&quot;</span><span class="p">),</span><span class="w"> </span><span class="p">]</span>
+
+<span class="nf">ggplot</span><span class="p">(</span><span class="n">abalone_MF</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">Shucked.weight</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Shell.weight</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Sex</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_point</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="_images/0235a3515863e237d0a1a7fc1650b9cdfafb3463a5d9b47896403cf7e7828b4c.png"><img alt="_images/0235a3515863e237d0a1a7fc1650b9cdfafb3463a5d9b47896403cf7e7828b4c.png" src="_images/0235a3515863e237d0a1a7fc1650b9cdfafb3463a5d9b47896403cf7e7828b4c.png" style="width: 420px; height: 420px;" /></a>
+</div>
+</div>
+<p>Let’s take a closer look at categorical data. One categorical data can be displayed with a bar plot. This is helpful when we are looking to see if we have equal representation in each of the sample groups.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">(</span><span class="n">abalone</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="w"> </span><span class="n">Sex</span><span class="p">,</span><span class="w"> </span><span class="n">fill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Sex</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_bar</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="_images/df07d53d8df24650c1a95def2135436ab1573a6341b2dea95c95a2bcdb3a74fa.png"><img alt="_images/df07d53d8df24650c1a95def2135436ab1573a6341b2dea95c95a2bcdb3a74fa.png" src="_images/df07d53d8df24650c1a95def2135436ab1573a6341b2dea95c95a2bcdb3a74fa.png" style="width: 420px; height: 420px;" /></a>
+</div>
+</div>
+<p>Bar plots can also be easily modified.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">(</span><span class="n">abalone</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="w"> </span><span class="n">Sex</span><span class="p">,</span><span class="w"> </span><span class="n">fill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Sex</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_bar</span><span class="p">(</span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.5</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">coord_flip</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="_images/41a3d30c9f5551fe51f79c42169865f8b36fbb978943d2f9b0c150c26e402901.png"><img alt="_images/41a3d30c9f5551fe51f79c42169865f8b36fbb978943d2f9b0c150c26e402901.png" src="_images/41a3d30c9f5551fe51f79c42169865f8b36fbb978943d2f9b0c150c26e402901.png" style="width: 420px; height: 420px;" /></a>
+</div>
+</div>
+<p>Lastly, boxplots are used to describe the relationship between a continuous and a categorical variable.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">(</span><span class="n">abalone</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Sex</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Whole.weight</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_boxplot</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="_images/68cc33924aa2a952ffac0302552d93ffb38ee3da5bcd68473d50a2c1a3f4d0aa.png"><img alt="_images/68cc33924aa2a952ffac0302552d93ffb38ee3da5bcd68473d50a2c1a3f4d0aa.png" src="_images/68cc33924aa2a952ffac0302552d93ffb38ee3da5bcd68473d50a2c1a3f4d0aa.png" style="width: 420px; height: 420px;" /></a>
+</div>
+</div>
+<p>This more clearly shows that the weight distribution is comparable between the males and females. However, it would be clearer to have the F and M bars adjacent for comparison.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">levels</span><span class="p">(</span><span class="n">abalone</span><span class="o">$</span><span class="n">Sex</span><span class="p">)</span>
+
+<span class="n">abalone</span><span class="o">$</span><span class="n">Sex</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">factor</span><span class="p">(</span><span class="n">abalone</span><span class="o">$</span><span class="n">Sex</span><span class="p">,</span><span class="w"> </span><span class="n">levels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;I&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;F&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;M&quot;</span><span class="p">))</span>
+
+<span class="nf">ggplot</span><span class="p">(</span><span class="n">abalone</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Sex</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Whole.weight</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_boxplot</span><span class="p">()</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">theme_classic</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>'F'</li><li>'I'</li><li>'M'</li></ol>
+</div><a class="reference internal image-reference" href="_images/dab4432e6b4ff81657f9c69a33e44af2ac1f6035739666f9b5391841be1eff1a.png"><img alt="_images/dab4432e6b4ff81657f9c69a33e44af2ac1f6035739666f9b5391841be1eff1a.png" src="_images/dab4432e6b4ff81657f9c69a33e44af2ac1f6035739666f9b5391841be1eff1a.png" style="width: 420px; height: 420px;" /></a>
+</div>
+</div>
+</section>
+<section id="multi-panel-plots-with-ggplot">
+<h2>Multi-panel plots with ggplot<a class="headerlink" href="#multi-panel-plots-with-ggplot" title="Link to this heading">#</a></h2>
+<p>Plots can be saved as objects</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">p1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">ggplot</span><span class="p">(</span><span class="n">abalone_MF</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">Shucked.weight</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Shell.weight</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Sex</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_point</span><span class="p">()</span>
+
+<span class="n">p2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">ggplot</span><span class="p">(</span><span class="n">abalone</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Sex</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Whole.weight</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_boxplot</span><span class="p">()</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">theme_classic</span><span class="p">()</span>
+
+<span class="n">p1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="_images/0235a3515863e237d0a1a7fc1650b9cdfafb3463a5d9b47896403cf7e7828b4c.png"><img alt="_images/0235a3515863e237d0a1a7fc1650b9cdfafb3463a5d9b47896403cf7e7828b4c.png" src="_images/0235a3515863e237d0a1a7fc1650b9cdfafb3463a5d9b47896403cf7e7828b4c.png" style="width: 420px; height: 420px;" /></a>
+</div>
+</div>
+<p>Rather than flipping between separating plots and stitching them together afterwards in a photo editor, we can arrange them into a figure panel all together in R</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1">#install.packages(&quot;cowplot&quot;)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">cowplot</span><span class="p">)</span>
+
+<span class="nf">plot_grid</span><span class="p">(</span><span class="n">p1</span><span class="p">,</span><span class="w"> </span><span class="n">p2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Attaching package: ‘cowplot’
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The following object is masked from ‘package:lubridate’:
+
+    stamp
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="_images/5e1754a2f0dd6483858133c67325ae63783e99e9adad28c013cd7fabd6f06a44.png"><img alt="_images/5e1754a2f0dd6483858133c67325ae63783e99e9adad28c013cd7fabd6f06a44.png" src="_images/5e1754a2f0dd6483858133c67325ae63783e99e9adad28c013cd7fabd6f06a44.png" style="width: 420px; height: 420px;" /></a>
+</div>
+</div>
+<p>Let’s clean this up a bit</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">top_row</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">plot_grid</span><span class="p">(</span><span class="n">p1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">theme_classic</span><span class="p">(),</span>
+<span class="w">          </span><span class="n">p2</span><span class="p">,</span>
+<span class="w">          </span><span class="n">labels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;A&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;B&quot;</span><span class="p">),</span>
+<span class="w">          </span><span class="n">label_size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">20</span><span class="p">)</span>
+
+<span class="n">top_row</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="_images/7f3cd62e85327b31930e0038a38d7dcaf5c39dfa9b29e48593ab7dd8ad4a3ca6.png"><img alt="_images/7f3cd62e85327b31930e0038a38d7dcaf5c39dfa9b29e48593ab7dd8ad4a3ca6.png" src="_images/7f3cd62e85327b31930e0038a38d7dcaf5c39dfa9b29e48593ab7dd8ad4a3ca6.png" style="width: 420px; height: 420px;" /></a>
+</div>
+</div>
+<p>Adding a third plot to play around with the distribution between panels</p>
+<p>We want p1 to be larger by itself in the top row and then p2 and p3 split in the bottom row.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">p3</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">ggplot</span><span class="p">(</span><span class="n">abalone</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">Sex</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">geom_bar</span><span class="p">()</span>
+
+<span class="nf">plot_grid</span><span class="p">(</span><span class="n">top_row</span><span class="p">,</span><span class="w"> </span><span class="n">p3</span><span class="p">,</span><span class="w"> </span><span class="n">ncol</span><span class="o">=</span><span class="m">1</span><span class="p">,</span>
+<span class="w">          </span><span class="n">labels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;C&quot;</span><span class="p">),</span>
+<span class="w">          </span><span class="n">label_size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">20</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="_images/2210094cc4477b17e678f5d155517ae85deff03ef0aa0951eabb12521bbc75b5.png"><img alt="_images/2210094cc4477b17e678f5d155517ae85deff03ef0aa0951eabb12521bbc75b5.png" src="_images/2210094cc4477b17e678f5d155517ae85deff03ef0aa0951eabb12521bbc75b5.png" style="width: 420px; height: 420px;" /></a>
+</div>
+</div>
+</section>
+<section id="exporting-plots">
+<h2>Exporting plots<a class="headerlink" href="#exporting-plots" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">getwd</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">'/Users/jqiu/Documents/CBWgithub/cbw-dev-test-pages/jupyter-book/INR-2024-Recreate-JB'</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># ok originally this was png(file = &quot;./INR_fig1.png&quot;, bg = &quot;transparent&quot;), but I don&#39;t think we should have random images in the main folders, so we should tell</span>
+<span class="c1"># instructors to make any produced files go to a specific directory</span>
+<span class="nf">png</span><span class="p">(</span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;./images/INR_fig1.png&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">bg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;transparent&quot;</span><span class="p">)</span>
+<span class="n">top_row</span>
+<span class="nf">dev.off</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><strong>pdf:</strong> 2</div></div>
+</div>
+</section>
+<section id="day-1-project">
+<h2>Day 1 Project<a class="headerlink" href="#day-1-project" title="Link to this heading">#</a></h2>
+<p>For this mini guided project, we will be working with a dataset quantifying water quality that is publicly available at: <a class="reference external" href="https://www.kaggle.com/datasets/adityakadiwal/water-potability?resource=download">https://www.kaggle.com/datasets/adityakadiwal/water-potability?resource=download</a></p>
+<p>Here is some description of the data:</p>
+<p>Access to safe drinking-water is essential to health, a basic human right and a component of effective policy for health protection. This is important as a health and development issue at a national, regional and local level. In some regions, it has been shown that investments in water supply and sanitation can yield a net economic benefit, since the reductions in adverse health effects and health care costs outweigh the costs of undertaking the interventions.
+Content</p>
+<p>The water_potability.csv file contains water quality metrics for 3276 different water bodies. More information about each of the columns can be found in the link above</p>
+<p>pH value
+Hardness
+Solids (Total dissolved solids - TDS)
+Chloramines
+Sulfate
+Conductivity
+Organic_carbon
+Trihalomethanes
+Turbidity
+Potability</p>
+<p>Insert a code chunk underneath each step to carry out the instruction.</p>
+<ol class="arabic simple">
+<li><p>Read in the “water_potability.csv” data into an object called data Check the object you created by printing out the first 10 rows and applying the summary function.</p></li>
+<li><p>Notice that the pH column contains a couple hundred NA values. NA are special values in R (like how “pi” is preset to a value of 3.14159…) to indicate that there is missing data, or it is not available. There are also some NAs in the Sulfate and Trihalomethanes columns.</p></li>
+</ol>
+<p>Create new object called water_df that only contains complete observations.</p>
+<p>Hint: take a look at the function called <code class="docutils literal notranslate"><span class="pre">na.omit()</span></code>. In most cases, someone’s already done what you’ve wanted to do so there may already be code or functions that you can adapt and use!</p>
+<ol class="arabic simple" start="3">
+<li><p>The Potability column has two possible values: 1 means Potable and 0 means Not potable.</p></li>
+</ol>
+<p>It is read in by default as a character vector. Convert this column to a factor.</p>
+<ol class="arabic simple" start="4">
+<li><p>WHO has recommended maximum permissible limit of pH in drinking water from 6.5 to 8.5.</p></li>
+</ol>
+<p>Create a new column within the <code class="docutils literal notranslate"><span class="pre">water_df</span></code> object called <code class="docutils literal notranslate"><span class="pre">ph_category</span></code> in which:</p>
+<ul class="simple">
+<li><p>Observations with a pH less than 6.5 have a value of <code class="docutils literal notranslate"><span class="pre">acidic</span></code> in the <code class="docutils literal notranslate"><span class="pre">ph_category</span></code></p></li>
+<li><p>Observations with a pH betwee 6.5 - 8.5 have a value of <code class="docutils literal notranslate"><span class="pre">permissible</span></code> in the <code class="docutils literal notranslate"><span class="pre">ph_category</span></code></p></li>
+<li><p>Observations with a pH greater than 8.5 have a value of <code class="docutils literal notranslate"><span class="pre">basic</span></code> in the <code class="docutils literal notranslate"><span class="pre">ph_category</span></code></p></li>
+</ul>
+<p>There are multiple ways to do this, give it a go! You can’t break the object - if you ever feel like you need a reset, you can always repeat step 1 to read in the object again.</p>
+<p>Use <code class="docutils literal notranslate"><span class="pre">table()</span></code> or <code class="docutils literal notranslate"><span class="pre">summary()</span></code> to check the values in the <code class="docutils literal notranslate"><span class="pre">ph_category</span></code> column</p>
+<ol class="arabic simple" start="5">
+<li><p>Create a plot to double check if the annotations in the <code class="docutils literal notranslate"><span class="pre">ph_category</span></code> column were applied correctly. Make sure to represent both the <code class="docutils literal notranslate"><span class="pre">ph</span></code> and <code class="docutils literal notranslate"><span class="pre">ph_category</span></code> columns.</p></li>
+</ol>
+<p>You’re welcome to use base R or ggplot functions. There are multiple ways of representing these two columns. ggplot is slightly preferred because of its increased customization so it’s good to get some practice with it!</p>
+<ol class="arabic simple" start="6">
+<li><p>The levels of sulfates and water hardness cause by salts should be minimized in order to be safe for consumption.</p></li>
+</ol>
+<p>Create a plot with the level of water hardness on the x axis and sulphate on the y axis colored by the Potability column.</p>
+<p>Try applying the <code class="docutils literal notranslate"><span class="pre">facet_grid()</span></code> layer to the plot in order to group the plots by a factor. Make sure to use the <code class="docutils literal notranslate"><span class="pre">~</span></code> before the column name!</p>
+<p>(Note - the data is quite messy so don’t worry if the results do not separate as much as you would like - real data is messy!)</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -394,16 +1781,16 @@
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "python"
+            mode: "r"
         },
         kernelOptions: {
-            name: "python3",
+            name: "ir",
             path: "./."
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'python3'</script>
+    <script>kernelName = 'ir'</script>
 
                 </article>
               
@@ -439,6 +1826,49 @@
             </div>
             
             
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Lecture Recording and Files</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-r">Introduction to R</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-syntax">General syntax</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-started-with-data">Getting started with data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-data">Importing data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-10-mins">Exercise 1 (10 mins)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#revising-the-r-environment">Revising the R environment</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-packages-from-cran">Installing packages from CRAN</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-wrangling">Data Wrangling</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise">Exercise</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-new-columns-of-data">Adding new columns of data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tidyverse">Tidyverse</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Exercise</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting-with-base-r">Plotting with Base R</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scatterplot-with-ggplot">Scatterplot with ggplot</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Exercise</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multi-panel-plots-with-ggplot">Multi-panel plots with ggplot</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exporting-plots">Exporting plots</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#day-1-project">Day 1 Project</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
               
             
           </div>
