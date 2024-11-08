@@ -1,7 +1,5 @@
 # Meet Your Faculty
 
-## Meet Your Faculty {#prework}
-
 Here's the team!
 
 ### Frances Wong <font size="3"> (she/her) </font>
@@ -62,7 +60,7 @@ epigenomics and genomics, from raw data to visualization. His master's project f
 exploring gene expression data in ovarian cancer cell lines, as well as image classification to
 determine whether cell images have been treated with various compounds.
 
-### Zoe Klein <font size="3"> (she/her) </font>=
+### Zoe Klein <font size="3"> (she/her) </font>
 
 ![One of our wonderful bioinformatics.ca faulty members!](./images/blank-person.jpg)
 

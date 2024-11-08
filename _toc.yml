@@ -26,3 +26,4 @@ parts:
     - file: markdown-notebooks
     - file: test
     - file: test2
+    - file: test3

@@ -63,6 +63,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'test2';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="My simple notebook" href="test3.html" />
     <link rel="prev" title="yipppppeeeeee" href="test.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -190,6 +191,7 @@
 <li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
 <li class="toctree-l1"><a class="reference internal" href="test.html">yipppppeeeeee</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">test 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test3.html">My simple notebook</a></li>
 </ul>
 
     </div>
@@ -354,7 +356,9 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -370,6 +374,15 @@
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-jupytext">Using Jupytext</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convert-a-jupytext-file-into-a-myst-notebook">Convert a Jupytext file into a MyST notebook</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -380,7 +393,108 @@
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="test-2">
-<h1>test 2<a class="headerlink" href="#test-2" title="Link to this heading">#</a></h1>
+<span id="file-types-custom"></span><h1>test 2<a class="headerlink" href="#test-2" title="Link to this heading">#</a></h1>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">4</span>
+<span class="n">x</span>
+</pre></div>
+</div>
+<p>You can designate additional file types to be converted to notebooks and then executed/parsed in the same manner as regular notebooks.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>This page itself is written as an <a class="reference external" href="https://rmarkdown.rstudio.com/">RMarkdown</a> notebook!</p>
+</div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">sphinx</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">config</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">nb_custom_formats</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">.mysuffix</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mylibrary.converter_function</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>The string should be a Python function that will be loaded by <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">mylibrary.converter_function</span></code></p></li>
+<li><p>The function should take a file’s contents (as a <code class="docutils literal notranslate"><span class="pre">str</span></code>) and return an </p></li>
+</ul>
+<p>If the function takes additional keyword arguments, then you can specify these as a dictionary in a second argument.
+For example this is what the default conversion would look like:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">sphinx</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">config</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">nb_custom_formats</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">.ipynb</span><span class="p">:</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nbformat.reads</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">as_version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span>
+</pre></div>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>By default, Markdown cells in the notebook will be parsed using the same MyST parser configuration as for other Markdown files.</p>
+<p>But, if this is incompatible with your file format, then you can specify for the Markdown to be parsed as <strong>strictly CommonMark</strong>, using a third argument:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">sphinx</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">config</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">nb_custom_formats</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">.ipynb</span><span class="p">:</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nbformat.reads</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">as_version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</pre></div>
+</div>
+</div>
+<p>Finally, for text-based formats, MyST-NB also searches for an optional <code class="docutils literal notranslate"><span class="pre">source_map</span></code> key in the output notebook’s metadata.
+This key should be a list mapping each cell to the starting line number in the original source file, for example for a notebook with three cells:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;metadata&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;source_map&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">21</span><span class="p">,</span><span class="w"> </span><span class="mi">53</span><span class="p">]</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>This mapping allows for “true” error reporting, as described in .</p>
+<section id="using-jupytext">
+<h2>Using Jupytext<a class="headerlink" href="#using-jupytext" title="Link to this heading">#</a></h2>
+<p><a class="reference external" href="https://jupytext.readthedocs.io/en/latest/">Jupytext</a> is an excellent Python tool for two-way conversion
+between Jupyter Notebook <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> files and
+<a class="reference external" href="https://jupytext.readthedocs.io/en/latest/formats-markdown.html">a variety of text-based files</a>.</p>
+<p>Jupyter Book natively supports the Jupytext file format: <a class="reference internal" href="#./myst-notebooks.md"><span class="xref myst">notebooks with MyST Markdown</span></a>.</p>
+<p>You can also add other formats like <a class="reference external" href="https://rmarkdown.rstudio.com/">RMarkdown</a> or Python files.
+To do so, first ensure Jupytext is installed:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>pip<span class="w"> </span>install<span class="w"> </span>jupytext
+</pre></div>
+</div>
+<p>Then configure Jupyter book like so:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">sphinx</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">config</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">nb_custom_formats</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">.Rmd</span><span class="p">:</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">jupytext.reads</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">fmt</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Rmd</span>
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Note that some execution features (such as in-line code execution in RMarkdown) are not available in Jupyter Book.</p>
+</div>
+<p>Now you can use RMarkdown blocks:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>```{python echo=TRUE}
+print(&quot;Hallo I&#39;m an RMarkdown block!&quot;)
+```
+</pre></div>
+</div>
+<div class="highlight-{python notranslate"><div class="highlight"><pre><span></span>print(&quot;Hallo I&#39;m an RMarkdown block!&quot;)
+</pre></div>
+</div>
+</section>
+<section id="convert-a-jupytext-file-into-a-myst-notebook">
+<span id="file-types-custom-jupytext"></span><h2>Convert a Jupytext file into a MyST notebook<a class="headerlink" href="#convert-a-jupytext-file-into-a-myst-notebook" title="Link to this heading">#</a></h2>
+<p>Alternatively, if you’d like to convert your pre-existing Jupytext files into the MyST notebook format,
+to use directly in your book, install Jupytext and then run the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupytext<span class="w"> </span>--to<span class="w"> </span>myst<span class="w"> </span>path/to/yourfile
+</pre></div>
+</div>
+<p>Note that you may also pass a wildcard that will be used to convert multiple
+files. For example:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupytext<span class="w"> </span>--to<span class="w"> </span>myst<span class="w"> </span>./*.py
+</pre></div>
+</div>
+<p>See <a class="reference external" href="https://jupytext.readthedocs.io/en/latest/using-cli.html">the Jupytext CLI documentation</a> for more information.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -422,12 +536,38 @@
         <p class="prev-next-title">yipppppeeeeee</p>
       </div>
     </a>
+    <a class="right-next"
+       href="test3.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">My simple notebook</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
             </div>
             
             
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-jupytext">Using Jupytext</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convert-a-jupytext-file-into-a-myst-notebook">Convert a Jupytext file into a MyST notebook</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
