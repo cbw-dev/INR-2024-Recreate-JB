@@ -1,11 +1,903 @@
 ---
-jupytext:
-  formats: md:myst
-  text_representation:
-    extension: .Rmd
-    format_name: myst
-    format_version: 0.13
-    jupytext_version: 1.11.5
+jupyter:
+  kernelspec:
+    display_name: R
+    language: R
+    name: ir
 ---
 
-# Day 2
+# Lecture Files
+
+*Below is the rendered and completed version of Day 2's R Markdown file.*
+*Begin with the empty version [here](https://drive.google.com/file/d/1047GdyOYBlXu3fPHaALMYfy9Tb9o7Tu9/view?usp=sharing).*
+*You will also need to download the following datasets:*
+
+- [*Healthcare dataset*](https://drive.google.com/file/d/1d78J0MhMYQj2BpqFwXldZVbonzkTrKCI/view?usp=sharing)
+- [*Diamonds dataset*](https://drive.google.com/file/d/1CIxMafo6EVWo_Nk0efmfN4m44_gs217A/view?usp=sharing)
+
+All Introduction to R (2024) course materials are available [here](#course-materials).
+
+## Day 1 Project  
+
+For this mini guided project, we will be working with a dataset quantifying water quality that is publicly available at: https://www.kaggle.com/datasets/adityakadiwal/water-potability?resource=download
+
+
+Here is some description of the data: 
+
+Access to safe drinking-water is essential to health, a basic human right and a component of effective policy for health protection. This is important as a health and development issue at a national, regional and local level. In some regions, it has been shown that investments in water supply and sanitation can yield a net economic benefit, since the reductions in adverse health effects and health care costs outweigh the costs of undertaking the interventions.
+Content
+
+The water_potability.csv file contains water quality metrics for 3276 different water bodies. More information about each of the columns can be found in the link above
+
+pH value
+Hardness
+Solids (Total dissolved solids - TDS)
+Chloramines
+Sulfate
+Conductivity
+Organic_carbon
+Trihalomethanes
+Turbidity
+Potability
+
+Insert a code chunk underneath each step to carry out the instruction. 
+
+1. Read in the "water_potability.csv" data into an object called data Check the object you created by printing out the first 10 rows and applying the summary function.
+
+```{r}
+data <- read.csv("datasets/water_potability.csv")
+
+head(data, n=10)
+
+data[1:10, ]
+```
+
+
+2. Notice that the pH column contains a couple hundred NA values. NA are special values in R (like how "pi" is preset to a value of 3.14159...) to indicate that there is missing data, or it is not available. There are also some NAs in the Sulfate and Trihalomethanes columns.
+
+Create new object called water_df that only contains complete observations.
+
+Hint: take a look at the function called `na.omit()`. In most cases, someone's already done what you've wanted to do so there may already be code or functions that you can adapt and use!
+
+```{r}
+water_df <- na.omit(data)
+summary(data)
+summary(water_df)
+
+```
+
+```{r}
+dim(data)
+dim(water_df)
+```
+
+
+3. The Potability column has two possible values: 1 means Potable and 0 means Not potable.
+
+It is read in by default as a character vector. Convert this column to a factor.
+
+```{r}
+water_df$Potability <- as.factor(water_df$Potability)
+head(water_df)
+table(water_df$Potability)
+```
+
+
+4. WHO has recommended maximum permissible limit of pH in drinking water from 6.5 to 8.5.
+
+Create a new column within the `water_df` object called `ph_category` in which:
+
+- Observations with a pH less than 6.5 have a value of `acidic` in the `ph_category`
+- Observations with a pH betwee 6.5 - 8.5 have a value of `permissible` in the `ph_category`
+- Observations with a pH greater than 8.5 have a value of `basic` in the `ph_category`
+
+There are multiple ways to do this, give it a go! You can't break the object - if you ever feel like you need a reset, you can always repeat step 1 to read in the object again.
+
+Use `table()` or `summary()` to check the values in the `ph_category` column
+
+```{r}
+water_df$ph_category <- "permissible"
+
+water_df$ph_category[water_df$ph < 6.5] <- "acidic"
+
+water_df$ph_category[water_df$ph > 8.5] <- "basic"
+
+table(water_df$ph_category)
+nrow(water_df[water_df$ph <6.5, ])
+```
+
+
+5. Create a plot to double check if the annotations in the `ph_category` column were applied correctly. Make sure to represent both the `ph` and `ph_category` columns.
+
+You're welcome to use base R or ggplot functions. There are multiple ways of representing these two columns. ggplot is slightly preferred because of its increased customization so it's good to get some practice with it!
+
+```{r}
+library(ggplot2)
+ggplot(water_df, aes(x=ph_category, y=ph)) +
+  geom_boxplot()
+```
+
+
+6. The levels of sulfates and water hardness cause by salts should be minimized in order to be safe for consumption.
+
+Create a plot with the level of water hardness on the x axis and sulphate on the y axis colored by the Potability column.
+
+Try applying the `facet_grid()` layer to the plot in order to group the plots by a factor. Make sure to use the `~` before the column name!
+
+(Note - the data is quite messy so don't worry if the results do not separate as much as you would like - real data is messy!)
+
+```{r}
+ggplot(water_df, aes(x = Hardness, y = Sulfate, col = Potability)) +
+  geom_point() +
+  facet_wrap(~ph_category) + theme_bw()
+```
+
+
+
+
+## Review with Datasaurus Dozen
+
+The Datasaurus Dozen dataset is a handful of data points that complement the `dplyr` package. Aside from functions, packages can also import objects.
+
+```{r}
+#install.packages("datasauRus")
+library(datasauRus)
+library(tidyverse)
+```
+
+```{r}
+summary(datasaurus_dozen)
+
+datasaurus_dozen$dataset <- as.factor(datasaurus_dozen$dataset)
+
+tail(datasaurus_dozen)
+
+table(datasaurus_dozen$dataset)
+```
+
+There are 13 different datasets in this one object. We will use tidyverse functions to take an overview look at the object, grouped by the datasets.
+
+```{r}
+datasaurus_dozen %>%
+  group_by(dataset) %>%
+  summarize(mean_x = mean(x),
+            mean_y = mean(y),
+            std_dev_x = sd(x),
+            std_dev_y = sd(y))
+```
+
+All of the datasets have roughly the same mean and standard deviation along both the x and y axis.
+
+Let's take a look the data graphically. We will use `filter` to extract the rows belonging to one dataset and then pipe that directly into a ggplot. Both dplyr and ggplot are developed within "the Tidyverse" and can use pipes, but you may not be able to pipe in base R functions or functions from different packages.
+
+```{r}
+datasaurus_dozen %>%
+  filter(dataset == "star") %>%
+  ggplot(aes(x=x, y=y)) + # PLUS SIGN, NOT PIPE FOR THIS ONE
+  geom_point()
+```
+
+Tidyverse's data wranging packages use the pipe ` %>% ` to move the previous output to the next line, where as ggplot uses the plus sign `+`
+
+Try editing the code above to display different datasets. Notice how different groups of data points can all give similar statistical summaries - so it's always a good choice to visualize your data rather than relying on just numbers.
+
+If we wanted to take a look at all of the datasets at once, we can also use the `facet_wrap()` function.
+
+```{r}
+datasaurus_dozen %>%
+  #filter(dataset == "star") %>%  REMOVE THIS ROW
+  ggplot(aes(x=x, y=y)) +
+  geom_point() +
+  facet_wrap(~dataset)+ theme_void() # ADD THIS LINE
+
+head(datasaurus_dozen)
+```
+
+### Genearlizable code
+
+A major strength of programming is the ability to automate repetitive tasks. As a general rule of thumb, if you need to do a task more than three times (ex. analyzing multiple PCR plates or integrating clinical data from multiple days), it is worth it to invest time to write generalizable code or a custom function.
+
+Now that we're getting comfortable writing code, we will spend some time revisiting code that we wrote to make them generalizable and even better! Generalizable means that the code is flexible and can be applied to multiple similar objects. For example, if we're running a clinical study and we have patient demographic data from multiple sites, we want to check that the mean patient demographic is comparable between sites by creating similar plots of each hospital site to compare. If we write code for one location and then copy and paste it into another code chunk to apply to the next location, the code may require some modification before it works.
+
+Generalizable code begins at data collection. Depending on your workflow, you may or may not be able to influence this stage of the analysis. If possible, it is best practice to keep the column names and entries for categorical variables consistent. For example, when recording the age of patients, "6", "6 ", "six", and "Six" are all considered different levels of the factor so you will need to either make sure data collection is consistent or check and correct these inconsistencies in your code. Get into a habit of checking your work. Whether it is code you've written yourself, code you you've been sent by a collaborator, or published data from a biobank - never assume the data is as you predicted.
+
+## Generalizable plots
+
+Remember when we edited our code to test out multiple datasets in the datasaurus dozen object? Perhaps you copy and pasted the code several time and changed the column name? This is not optimal because if you need to change the code in one instance (for example changing the x-axis label), you'll need to revisit ever instance that you copy and pasted to code to. This approach leads you vulnerable to errors when copy and pasting.
+
+One way to make your code robust is to bring all the factors that need editing to the start of the data. This may seem cumbersome for such a simple example where we are only changing the dataset name, but we'll return to this concept later with more complicated examples.
+
+Let's grab the code we used to make one plot earlier and modify it to be more generalizable
+
+```{r}
+levels(datasaurus_dozen$dataset)
+```
+
+```{r}
+dataset_name <- "dino" # ADD THIS LINE
+
+datasaurus_dozen %>%
+  filter(dataset == dataset_name) %>% # Remove comment # CHANGE VARIABLE NAME
+  ggplot(aes(x=x, y=y)) +
+  geom_point() # REMOVE THE + at the end of the line
+
+```
+
+Once we have converted our code to a generalized format, we can convert it into a more versatile custom function!
+
+Curly brackets are used for inputting multiple lines of code. It is generally attached to the function that proceeds it.
+
+```{r}
+# dataset_name <- "dino" # ADD THIS LINE
+
+dino_plot <- function(data_name) {
+  datasaurus_dozen %>%
+    filter(dataset == data_name) %>% # CHANGE ARGUMENT NAME
+
+    ggplot(aes(x=x, y=y)) +
+    geom_point() +
+    theme_bw()
+}
+
+dino_plot("dino")
+dino_plot("circle")
+
+```
+
+### Exercise
+
+We've now encountered round brackets `()`, square brackets `[]`, and curly brackets`{}` - each have their own distinct functions! Take a few moments to chat with your neighbors and outline cases in which we've used each bracket and what is their role in R syntax.
+
+round brackets ()
+come after a function, function will apply to whatever is in the brackets
+functionName(what is being acted on)
+
+square brackets []
+Indexing, locations
+object[position]
+dataframe[rows, cols]
+
+curly brackets {}
+Used in function, indicate multiple lines of related code
+Rmd -- indicates language in code chunk
+
+
+### Dataset - Heart Stroke Preduction
+
+The dataset we will be working with for today's workshop contains clinical data collected with the aim of predicting whether a patient is likely to suffer a stroke.
+
+The dataset can be found: https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset
+
+Here is some more information about the columns in this dataset:
+
+1) id: unique identifier
+2) gender: "Male", "Female" or "Other"
+3) age: age of the patient
+4) hypertension: 0 if the patient doesn't have hypertension, 1 if the patient has hypertension
+5) heart_disease: 0 if the patient doesn't have any heart diseases, 1 if the patient has a heart disease
+6) ever_married: "No" or "Yes"
+7) work_type: "children", "Govt_jov", "Never_worked", "Private" or "Self-employed"
+8) Residence_type: "Rural" or "Urban"
+9) avg_glucose_level: average glucose level in blood
+10) bmi: body mass index
+11) smoking_status: "formerly smoked", "never smoked", "smokes" or "Unknown"*
+12) stroke: 1 if the patient had a stroke or 0 if not
+*Note: "Unknown" in smoking_status means that the information is unavailable for this patient
+
+Let's get started!
+
+### Exercise
+
+Reading in the dataset can be an intimidating step when you're just starting out with programming. Since this is a csv file, we can use the appropriately named `read.csv()` function. In cases when you have other file types such as .txt or .tab files that are tab deliminated, there is also a `read.table()` function that is more universal (but requires more parameters to let R know how your data is stored).
+
+Read in the `healthcare-dataset-stroke-data.csv` into an object called `heart`. Check your object using head and/or summary functions. Toggle a parameter called `stringsAsFactors` to `TRUE` in order to automatically import character values as factors rather than characters
+
+Hint: make sure the dataset is in the same directory or folder as this .Rmd file for ease of import
+
+```{r}
+heart <- read.csv("datasets/healthcare-dataset-stroke-data.csv", stringsAsFactors=TRUE)
+
+head(heart)
+str(heart)
+
+# Hypertension has values that are typos, need to be removed
+table(heart$hypertension)
+
+# Stroke and heart.disease need to be categorical
+summary(heart$stroke)
+
+# Gender has some variability
+table(heart$gender)
+
+# Abnormal BMI value AND convert from factor to numeric
+summary(heart$bmi)
+
+# Age, very low value of 0.08
+str(heart)
+```
+
+Before we dive into this dataset, we get a very limited indication that the object is read in correctly by checking the Environment panel - you'll notice the new `heart` appears under Data and it lets us know that there are 5110 observations (number of patients) and 12 variables (number of clinical features with entries). You can also double click the name of the object here to open up a view of the whole dataset - caution that this can cause your machine to stall if the dataset is exceptionally large and/or your machine is running on minimal memory.
+
+### Exercise
+
+Explore the dataset! Take a look at the columns and identify some potential issues with this dataset that either warrant further investigation or correction.
+
+There is no universally right or wrong way to do this. Perhaps the only truly incorrect way of doing this is going through the dataset which is thousands of observations line by line.
+
+```{r}
+
+```
+
+## Factors
+
+The `stringsAsFactors` parameter takes care of the character values but we still have some integer values that should be interpreted as factors.
+
+When deciding on whether a number is a factor or should be kept numeric, consider if decimals/numbers-in-between make sense. The first two entries for `avg_glucose_level` are 229 and 202 - a glucose level in between would be reasonable. In contrast, the first to entries for `heart_disease` are 1 and 0 - as these are coding for having or not having the disorder, an entry of 1.2 does not make sense.
+
+Recall from the introduction to the dataset from above:
+4) hypertension: 0 if the patient doesn't have hypertension, 1 if the patient has hypertension
+5) heart_disease: 0 if the patient doesn't have any heart diseases, 1 if the patient has a heart disease
+12) stroke: 1 if the patient had a stroke or 0 if not
+
+```{r}
+heart$hypertension <- as.factor(heart$hypertension)
+heart$heart_disease <- as.factor(heart$heart_disease)
+heart$stroke <- as.factor(heart$stroke)
+
+summary(heart)
+```
+
+
+### Incomplete data
+
+Firstly, we have to make a decision on how to handle missing values. We can either accept that some of the columns are incomplete or eliminate rows that do not have full data. Let's evaluate which columns this affects
+
+If you ever encounter missing data when you are entering data, use `NA`.
+
+```{r}
+ggplot(heart, aes(x = smoking_status, fill = hypertension)) +
+  geom_bar()
+
+prop.table(table(heart$smoking_status, heart$hypertension))
+```
+
+Let's use tidyverse to remove the rows in the `smoking_status` column with a value of `Unknown`.
+
+```{r}
+dim(heart) # original 5110 rows
+
+table(heart$smoking_status) #1544 unknowns
+
+dim(filter(heart, !(smoking_status == "Unknown")))
+
+heart <- filter(heart, !(smoking_status == "Unknown"))
+summary(heart$smoking_status)
+```
+
+After double checking, we can see that the smoking status has an empty level, we'll clean this up before moving on
+
+```{r}
+heart$smoking_status <- droplevels(heart$smoking_status)
+
+summary(heart$smoking_status)
+
+heart_checkpoint <- heart
+```
+
+Great! Now let's tackle the typos in the gender column.
+
+```{r}
+table(heart$gender)
+```
+
+We need to fix the typos that happened during data entry and the single observation of `Other` will not be enough data for us to draw any statistical conclusion so we'll remove this row while we're at it.
+
+We can use `str_replace_all()` as a search and replace tool
+
+```{r}
+table(str_replace_all(heart$gender, "female", "Female"))
+# str_replace_all(data, what we're search, what to replace with)
+```
+Remember that this only displays the output, it does not replace the columns in the dataset.
+
+Before we apply it globally, we can set up a quick double check to make sure that the right values are changed.
+
+```{r}
+# document which rows have the error "female"
+wrong_entry <- which(heart$gender == "female")
+wrong_entry
+heart$gender[wrong_entry]
+
+# apply the search and replace
+heart$gender <- str_replace_all(heart$gender, c("female" = "Female",
+                                                "male" = "Male",
+                                                "meal" = "Male"))
+
+heart$gender[wrong_entry]
+
+table(heart$gender)
+```
+
+There's an issue with the "male" search grabbing from the "female" word!! Good thing we made a checkpoint earlier. Let's bring this back to our main heart object - it's a good habit to make some objects to checkpoint your work. In case you have not had this set up, you can always back track in your code and re-read in the object and re-run some earlier code to catch up.
+
+```{r}
+heart <- heart_checkpoint
+
+table(heart$gender)
+```
+
+Let's try this again:
+
+```{r}
+# From previous code
+
+# add ^ (carrot) to the start of the search term to make sure it's only found at the start of the word
+heart$gender <- str_replace_all(heart$gender, c("^female" = "Female",
+                                                "^male" = "Male",
+                                                "^meal" = "Male"))
+
+heart$gender[wrong_entry]
+
+table(heart$gender)
+```
+
+The `^` is a special character that indicates the start of a word.
+
+Lastly, we'll the one `Other` entry
+
+```{r}
+heart <- heart[!heart$gender == "Other", ] # object[rows, col]
+table(heart$gender)
+```
+
+Overall, the data is looking much cleaner than when we started!
+
+### Exercise
+
+Investigate the `work_type` column and correct the data entry problems! Also, remove any "N/A" entries under `bmi`
+
+```{r}
+table(heart$work_type)
+levels(heart$work_type)
+
+heart$work_type <- str_replace_all(heart$work_type, c("Govt_job " = "Govt_job",
+                                                      "Private " = "Private",
+                                                      "Self-employed " = "Self-employed"))
+
+class(heart$work_type)
+
+heart$work_type <- as.factor(heart$work_type)
+```
+```{r}
+summary(heart$bmi)
+
+heart$bmi <- as.numeric(heart$bmi)
+summary(heart$bmi)
+```
+
+
+### Loops
+
+"For loops" allow R to apply highly automated tasks. It will cycle through a range of inputs and "for" each of them, it will carry out your custom task.
+
+Here's a very simple example to show you the structure of for loops
+
+```{r}
+fruits <- c("strawberry", "banana", "orange")
+
+for(x in fruits) {
+  print(x)
+}
+
+```
+The `for()` function accepts firstly the name of a temporary object that exists only within the curly brackets of the for loop, the `in` is a special R syntax specification, and `fruit` is the object that we are applying the for loop on.
+
+The for loop will take each entry of the fruits object, store it in the temporary object `x`, and apply the code written written within the curly bracket before repeating with the next entry.
+
+I recommend testing your code outside the `for()` loop before moving it into the loop to make sure it is robust and if you are applying the loop to a long vector or large dataset, consider trying it on a truncated version first as a proof of principle.
+
+```{r}
+levels(heart$smoking_status)
+
+heart %>%
+  filter(smoking_status == "never smoked") %>%
+  ggplot(aes(x=avg_glucose_level, y=bmi)) +
+  geom_point() +
+  ggtitle("never smoked") +
+  theme_classic()
+```
+
+If we wanted to save a pdf of every category of `smoking_status`, we can convert our code into a loop. When working on a larger section of code, it is helpful to sketch out the steps you need to do with `#` comments to keep you focused.
+
+
+```{r}
+smoke_cat <- levels(heart$smoking_status)
+smoke_cat
+
+getwd() # get working directory
+
+for(cat in smoke_cat) {
+
+  # Specify file name
+  filename_cat <- paste0("bmi_glucose_", cat, ".png")
+  print(filename_cat)
+
+  # Making plot (based on code from above)
+
+  plot_cat <- heart %>% # SAVE OUTPUT TO OBJECT
+  filter(smoking_status == cat) %>% # CHANGE TO cat
+  ggplot(aes(x=avg_glucose_level, y=bmi)) +
+  geom_point() +
+  ggtitle(cat) + # CHANGE TO cat
+  theme_classic()
+
+  #print(plot_cat) # PRINT OUT PLOT
+
+  # Saving the plot to file
+  png(filename_cat, width = 700, height= 500, res=120) # Start saving whatever I make now to this file
+  print(plot_cat)
+  dev.off() # Stop saving
+}
+```
+
+
+
+### Exercise
+
+Copy and paste the loop from  above and modify it so that the range of values on the x and y axis are the same for all plots.
+
+Hint: the limits of the x axis can be specified by adding a layer called `xlim(lower, upper)` where it takes two numbers - the lower limit followed by the upper limit. These numbers can be stored in objects or inputted directly . Similarly, there is a parallel function called `ylim()` which also takes the same two parameters
+
+When working through the code, you can temporarily remove the code removing the axis labels by commenting out the lines with a hashtag.
+
+```{r}
+
+```
+Great! Now the y-axis does not change between the plots and they are directly comparable.
+
+### Conditional for loops
+
+Boolean statements can be used to write conditional statements. If we do not want the loop to be applied to every item, we can add a condition.
+
+```{r}
+food <- "pineapple"
+
+if(food == "pineapple") {
+  print("This indeed is a pineapple.")
+}
+```
+
+This will only output if the condition is met. We can also modify this statement to do something in case the condition is not met.
+
+```{r}
+food <- "orange"
+
+if(food == "pineapple") {
+  print("This indeed is a pineapple.")
+} else {
+  print("This is NOT a pineapple.")
+}
+```
+Using `if else` statements will allow more customizability in our code. Let's use this to add a new column called `ever_smoked` based on the value in the `smoking_status` column.
+
+```{r}
+table(heart$stroke)
+
+heart$stroke_history <- NA
+head(heart)
+
+for(row in 1:nrow(heart)) {
+  if(heart$stroke[row] == "1") {
+    heart$stroke_history[row] <- "confirmed_stroke"
+  } else {
+    heart$stroke_history[row] <- "no_history"
+    }
+  # else >> "no_history"
+
+}
+table(heart$stroke, heart$stroke_history)
+```
+
+### Exercise
+
+Expected fasting blood glucose concentrations defined by the WHO are between 70 - 100 mg/dL. Create a new column called `glucose_WHO` in which:
+
+- `avg_glucose_levels` less than 70 are annotated as `followup`
+- `avg_glucose_levels` between 70-100 are annotated as `average`
+- `avg_glucose_levels` over 100 are annotated as `followup`
+
+Hint: conditions can be combined using the `&` for `and` where as `|` is used for `or` statements.
+
+```{r}
+colnames(heart) # SHOULD BE 'avg_glucose_level' WITHOUT THE S AT THE END
+
+# Sorry!
+
+heart$glucose_WHO <- NA
+
+for(row in 1:nrow(heart)) {
+  if(heart$avg_glucose_level[row] > 70 & heart$avg_glucose_level[row] < 100) {
+  heart$glucose_WHO[row] <- "average"
+  } else {
+    heart$glucose_WHO[row] <- "followup"}
+}
+
+table(heart$glucose_WHO)
+```
+
+
+
+### Countinous variables
+
+In the heart dataset, we have three continuous variables. In R, continuous variables will be `numeric` values. Continuous variable have a wide range of ordered values. For example, the `age` values have a range of 10 to 82 - any value in between is possible.
+
+```{r}
+#heart$bmi <- as.numeric(heart$bmi)
+
+ggplot(heart, aes(x=bmi)) +
+  geom_histogram()
+```
+
+Staticians commonly prefer working with normally distributed data because this is a heavily studied and predictable distribution. Confirming that the variable is normally distributed opens up options for robust statistical approaches to be applied.
+
+Is this heart dataset normally distributed?
+
+QQ plots, or quantile-quantile plots, are unique scatterplots that help us determine the distribution. Rather than black and white diagnostic tool, this is a visualization tool for inform our analysis. The `qqnorm()` sorts the values in the vector and compares it to a theoretical normal distribution (the `norm` part of `qqnorm`).
+
+```{r}
+qqnorm(heart$bmi)
+```
+
+For a normal distribution, we ideally want a straight diagonal line. Notice the slight curve on the right end, we can see the tail is also on the right side of this histogram. Curves indicate deviation away from normality. This looks faily normal, we can check to see if a transformation improves the distribution.
+
+```{r}
+ggplot(heart, aes(x = log2(bmi))) +
+  geom_histogram()
+
+qqnorm(log2(heart$bmi))
+
+```
+
+The tail is exaggerated. Since all transformations add some artificial noise, we avoid applying them when it does not significantly improve the shape of our data.
+
+We will proceed with the non-transformed data.
+
+### Linear models
+
+Linear regression models allow us to investigate the relationship between two continuous variables. For simple linear models, we have one independent and one dependent variable. The independent variable is the one that is being controlled or manipulated in the experiment, and the dependent variable will change respectively.
+
+For example, if we are investigating if a high fat diet affects sleep quality, the diet is the independent variable (changing or is different between participants) while the sleep quality is the dependent variable (depending on the diet, the sleep quality will change).
+
+Here, we are investigating the relation between bmi and avg_glucose_level
+
+We'll first visualize the two variables
+
+```{r}
+ggplot(heart)+
+  geom_point(aes(x=bmi, y=avg_glucose_level, alpha=0.3))
+```
+
+Notice here the aes is specified in the `geom_point()` call rather than the parent `ggplot()` call. This is helpful if your plots have multiple layers and you want the aes to apply only to one layer. Parameters in the `ggplot()` call will apply to all layers in the plot where as parameters specified in the `geom_point()` will only affect this specific layer.
+
+For this plot with only one layer, this has no functional impact on the plot made, but this will be important if you make more complex and layered plots.
+
+```{r}
+fit <- lm(avg_glucose_level ~ bmi, data = heart)
+```
+
+This can be read as `avg_glucose_level` as a function of `bmi`
+
+Use the function summary() on fit1 object to obtain more details of the model.
+
+```{r}
+summary
+```
+This overall looks like a good model. The p-value is very low and statistically significant. However, the Multiple R-squared values is small and the slope of bmi is low.
+
+From the results, we could conclude that changes in bmi are associated to the average glucose level as the p-value is less than 0.05. We can also state that as bmi increases, there will be an increase in the average glucose level as the slope is weakly positive 0.11.
+
+Now that our model has given us the intercept and slope, we can use this information to build a formula in the format of
+
+> dependent = (m)(independent) + b
+
+> avg_glucose_level = (0.097800)(bmi) + 90.823324
+
+We can use our knowledge of writing functions to calculate the predict the glucose level from the patient's bmi
+
+```{r}
+calc_gluc <- function(bmi_value) {
+  (0.097800*bmi_value) + 90.823324 # Change from brackets to * for multiply, bmi to bmi_value
+}
+
+heart[3, c("bmi", "avg_glucose_level")]
+calc_gluc(119)
+```
+
+
+Next, let's visualize this using ggplot
+
+```{r}
+# Start with code from previous point plot
+
+ggplot(heart, aes(x=bmi, y=avg_glucose_level, alpha=0.3, col = stroke))+
+  geom_point() + # ADD PLUS SIGN
+  geom_abline(intercept = 90.823324, slope = 0.097800, color = "purple") # ADD THIS LINE
+
+
+```
+
+
+### Exercise
+
+Hmm, this looks like there are two densities of data in this image. Let's try to investigate if we can figure it out.
+
+I've started you off by creating two new objects, an object called `heart_stroke` that contains only patents who experienced a stroke (stroke == 1) and a second object called `heart_nostroke` that contains only patents who have not experienced a stroke (stroke == 0).
+
+Next, create two separate linear models called `fit_stroke` and `fit_nostroke` - are they different? How will you visualize the data?
+
+```{r}
+heart_stroke <- filter(heart, stroke == 1)
+table(heart_stroke$stroke)
+
+heart_nostroke <- filter(heart, stroke == 0)
+table(heart_nostroke$stroke)
+```
+
+```{r}
+# From above:
+# fit <- lm(avg_glucose_level ~ bmi, data = heart)
+
+fit_stroke <- lm(avg_glucose_level ~ bmi, data = heart_stroke)
+fit_nostroke <- lm(avg_glucose_level ~ bmi, data = heart_nostroke)
+
+summary(fit_stroke)
+
+summary(fit_nostroke)
+fit_nostroke$coefficients
+
+ggplot(heart, aes(x=bmi, y=avg_glucose_level, alpha=0.3, col = stroke))+
+  geom_point() + # ADD PLUS SIGN
+  geom_abline(intercept = 90.823324, slope = 0.097800, color = "purple") +
+  geom_abline(intercept = fit_nostroke$coefficients[1], slope = fit_nostroke$coefficients[2], color = "red") +
+  xlim(100, 200)+
+  ylim(100, 200)
+
+
+```
+
+### Demo detour to function for lm plots
+
+```{r}
+# The variables
+which_data <- heart_stroke
+variable_call <- "avg_glucose_level ~ bmi"
+custom_col <- "blue"
+
+
+
+# The actual task
+
+lm_gluc_bmi <- function(which_data = heart_stroke, variable_call = "avg_glucose_level ~ bmi", custom_col = "blue") {
+
+  # Run liner model
+
+  # Make plot
+
+fit_stroke <- lm(variable_call, data = which_data)
+
+ggplot(heart, aes(x=bmi, y=avg_glucose_level, alpha=0.3, col = stroke))+
+  geom_point() + # ADD PLUS SIGN
+  geom_abline(intercept = fit_nostroke$coefficients[1], slope = fit_nostroke$coefficients[2], color = custom_col)
+
+}
+
+lm_gluc_bmi(custom_col = "green3")
+```
+
+
+### Notes on data types
+
+Numeric
+-dbl doublets, int integers
+
+Character
+-char or fact factor
+	- characters are independent words
+	- factors have relations between identical entries
+
+-categorical
+	- require factor
+
+Logical
+
+>> Differences are apparent when using a summary call
+
+## Day 2 project
+
+For this mini guided project, we will be working with a dataset that contains the prices and other attributes of almost 54,000 diamonds and is publicly available at: https://www.kaggle.com/datasets/shivam2503/diamonds
+
+Here is some more information about each column:
+
+price price in US dollars (\$326--\$18,823)
+carat weight of the diamond (0.2--5.01)
+cut quality of the cut (Fair, Good, Very Good, Premium, Ideal)
+color diamond colour, from J (worst) to D (best)
+clarity a measurement of how clear the diamond is (I1 (worst), SI2, SI1, VS2, VS1, VVS2, VVS1, IF (best))
+x length in mm (0--10.74)
+y width in mm (0--58.9)
+z depth in mm (0--31.8)
+depth total depth percentage = z / mean(x, y) = 2 * z / (x + y) (43--79)
+table width of top of diamond relative to widest point (43--95)
+
+Insert a code chunk underneath each step to carry out the instruction.
+
+1. Read in the "diamonds.csv" data into an object called data. Use the `strongAsFactors` parameter to automatically import the character values as a factor. Check the object you created by printing out the first 10 rows and applying the summary function.
+
+```{r}
+diamonds <- read.csv("datasets/diamonds.csv", header = T, stringsAsFactors = T)
+
+head(diamonds)
+summary(diamonds)
+```
+
+2. We'll start investigating the relationship between different variables with price. Create a boxplot using ggplot with the cut on the x axis and the price on the y axis.
+
+```{r}
+ggplot(data = diamonds, aes(x = cut, y = price)) +
+  geom_boxplot()
+```
+
+3. Using the code in the previous step as foundation, create an object called `diamonds_categorical` that contains the name of all the categorical columns. Then, write a loop to print out a separate plot with each of the different categorical variables on the x axis and price on the y-axis.
+
+Hint: remember how aes can be specified in both the `ggplot()` or `geom_xx()` layer? You will need to use this because we are string the name of a column as a variable in our loop and in order for R to know that it is looking for a column name rather than an object, you will need to use the `aes_string()` parameter for just the `geom_boxplot()` layer to specify the changing x axis. The y axis can remain with `aes()` in the parent `ggplot()` layer.
+
+```{r}
+str(diamonds)
+
+diamonds_categorical <- c("cut", "color", "clarity")
+
+for(cat in diamonds_categorical) {
+  diaplot <- ggplot(data = diamonds, aes(y = price)) +
+    geom_boxplot(aes_string(x = cat))
+
+  print(diaplot)
+}
+
+
+```
+
+4. Write a function called `diamond_continous` that allows you to make a scatterplot that accepts one variable to plot on the x-axis as well as another variable to color the plot by as the inputs. Price will remain on the y-axis.
+
+Hint: Start out by making one plot, make it generalized, and then convert this into a function.
+
+```{r}
+
+diamond_continous <- function(contV, colV) {
+
+  diaPlot <- ggplot(data = diamonds, aes(y = price)) +
+    geom_point(aes_string(x = contV, color = colV), alpha = 0.4)
+
+  print(diaPlot)
+
+}
+
+diamond_continous("carat", "clarity")
+```
+
+5. Based on your plots from the previous step, pick a continuous variable to compare with price and create a linear model. Make sure the price is the dependent variable. Add a layer to your plot generated by the function to include the equation of the line.
+
+Is the relationship significant?
+
+```{r}
+fit_diamond <- lm(price ~ carat, data = diamonds)
+
+fit_diamond$coefficients
+
+diamond_continous("carat", "clarity") +
+  geom_abline(intercept = fit_diamond$coefficients[1], slope = fit_diamond$coefficients[2], color = "red", size = 2)
+```
+
+
+
+
+

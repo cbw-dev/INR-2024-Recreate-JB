@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Day 2 &#8212; INR 2024 - JB Version</title>
+    <title>Lecture Files &#8212; INR 2024 - JB Version</title>
   
   
   
@@ -60,6 +60,8 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Day-2';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -186,7 +188,7 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 2</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Day 2</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Lecture Files</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">POC Pages</span></p>
 <ul class="nav bd-sidenav">
@@ -364,7 +366,9 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -375,11 +379,45 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Day 2</h1>
+    <h1>Lecture Files</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#day-1-project">Day 1 Project</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#review-with-datasaurus-dozen">Review with Datasaurus Dozen</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#genearlizable-code">Genearlizable code</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generalizable-plots">Generalizable plots</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise">Exercise</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-heart-stroke-preduction">Dataset - Heart Stroke Preduction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Exercise</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Exercise</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#factors">Factors</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#incomplete-data">Incomplete data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Exercise</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#loops">Loops</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Exercise</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conditional-for-loops">Conditional for loops</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Exercise</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#countinous-variables">Countinous variables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-models">Linear models</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Exercise</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#demo-detour-to-function-for-lm-plots">Demo detour to function for lm plots</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#notes-on-data-types">Notes on data types</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#day-2-project">Day 2 project</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -389,8 +427,1693 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="day-2">
-<h1>Day 2<a class="headerlink" href="#day-2" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="lecture-files">
+<h1>Lecture Files<a class="headerlink" href="#lecture-files" title="Link to this heading">#</a></h1>
+<p><em>Below is the rendered and completed version of Day 2’s R Markdown file.</em>
+<em>Begin with the empty version <a class="reference external" href="https://drive.google.com/file/d/1047GdyOYBlXu3fPHaALMYfy9Tb9o7Tu9/view?usp=sharing">here</a>.</em>
+<em>You will also need to download the following datasets:</em></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://drive.google.com/file/d/1d78J0MhMYQj2BpqFwXldZVbonzkTrKCI/view?usp=sharing"><em>Healthcare dataset</em></a></p></li>
+<li><p><a class="reference external" href="https://drive.google.com/file/d/1CIxMafo6EVWo_Nk0efmfN4m44_gs217A/view?usp=sharing"><em>Diamonds dataset</em></a></p></li>
+</ul>
+<p>All Introduction to R (2024) course materials are available <a class="reference internal" href="#course-materials"><span class="xref myst">here</span></a>.</p>
+<section id="day-1-project">
+<h2>Day 1 Project<a class="headerlink" href="#day-1-project" title="Link to this heading">#</a></h2>
+<p>For this mini guided project, we will be working with a dataset quantifying water quality that is publicly available at: <a class="reference external" href="https://www.kaggle.com/datasets/adityakadiwal/water-potability?resource=download">https://www.kaggle.com/datasets/adityakadiwal/water-potability?resource=download</a></p>
+<p>Here is some description of the data:</p>
+<p>Access to safe drinking-water is essential to health, a basic human right and a component of effective policy for health protection. This is important as a health and development issue at a national, regional and local level. In some regions, it has been shown that investments in water supply and sanitation can yield a net economic benefit, since the reductions in adverse health effects and health care costs outweigh the costs of undertaking the interventions.
+Content</p>
+<p>The water_potability.csv file contains water quality metrics for 3276 different water bodies. More information about each of the columns can be found in the link above</p>
+<p>pH value
+Hardness
+Solids (Total dissolved solids - TDS)
+Chloramines
+Sulfate
+Conductivity
+Organic_carbon
+Trihalomethanes
+Turbidity
+Potability</p>
+<p>Insert a code chunk underneath each step to carry out the instruction.</p>
+<ol class="arabic simple">
+<li><p>Read in the “water_potability.csv” data into an object called data Check the object you created by printing out the first 10 rows and applying the summary function.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read.csv</span><span class="p">(</span><span class="s">&quot;datasets/water_potability.csv&quot;</span><span class="p">)</span>
+
+<span class="nf">head</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="o">=</span><span class="m">10</span><span class="p">)</span>
+
+<span class="n">data</span><span class="p">[</span><span class="m">1</span><span class="o">:</span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A data.frame: 10 × 10</caption>
+<thead>
+	<tr><th></th><th scope=col>ph</th><th scope=col>Hardness</th><th scope=col>Solids</th><th scope=col>Chloramines</th><th scope=col>Sulfate</th><th scope=col>Conductivity</th><th scope=col>Organic_carbon</th><th scope=col>Trihalomethanes</th><th scope=col>Turbidity</th><th scope=col>Potability</th></tr>
+	<tr><th></th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;int&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>1</th><td>       NA</td><td>204.8905</td><td>20791.32</td><td>7.300212</td><td>368.5164</td><td>564.3087</td><td>10.379783</td><td> 86.99097</td><td>2.963135</td><td>0</td></tr>
+	<tr><th scope=row>2</th><td> 3.716080</td><td>129.4229</td><td>18630.06</td><td>6.635246</td><td>      NA</td><td>592.8854</td><td>15.180013</td><td> 56.32908</td><td>4.500656</td><td>0</td></tr>
+	<tr><th scope=row>3</th><td> 8.099124</td><td>224.2363</td><td>19909.54</td><td>9.275884</td><td>      NA</td><td>418.6062</td><td>16.868637</td><td> 66.42009</td><td>3.055934</td><td>0</td></tr>
+	<tr><th scope=row>4</th><td> 8.316766</td><td>214.3734</td><td>22018.42</td><td>8.059332</td><td>356.8861</td><td>363.2665</td><td>18.436524</td><td>100.34167</td><td>4.628771</td><td>0</td></tr>
+	<tr><th scope=row>5</th><td> 9.092223</td><td>181.1015</td><td>17978.99</td><td>6.546600</td><td>310.1357</td><td>398.4108</td><td>11.558279</td><td> 31.99799</td><td>4.075075</td><td>0</td></tr>
+	<tr><th scope=row>6</th><td> 5.584087</td><td>188.3133</td><td>28748.69</td><td>7.544869</td><td>326.6784</td><td>280.4679</td><td> 8.399735</td><td> 54.91786</td><td>2.559708</td><td>0</td></tr>
+	<tr><th scope=row>7</th><td>10.223862</td><td>248.0717</td><td>28749.72</td><td>7.513408</td><td>393.6634</td><td>283.6516</td><td>13.789695</td><td> 84.60356</td><td>2.672989</td><td>0</td></tr>
+	<tr><th scope=row>8</th><td> 8.635849</td><td>203.3615</td><td>13672.09</td><td>4.563009</td><td>303.3098</td><td>474.6076</td><td>12.363817</td><td> 62.79831</td><td>4.401425</td><td>0</td></tr>
+	<tr><th scope=row>9</th><td>       NA</td><td>118.9886</td><td>14285.58</td><td>7.804174</td><td>268.6469</td><td>389.3756</td><td>12.706049</td><td> 53.92885</td><td>3.595017</td><td>0</td></tr>
+	<tr><th scope=row>10</th><td>11.180284</td><td>227.2315</td><td>25484.51</td><td>9.077200</td><td>404.0416</td><td>563.8855</td><td>17.927806</td><td> 71.97660</td><td>4.370562</td><td>0</td></tr>
+</tbody>
+</table>
+</div><div class="output text_html"><table class="dataframe">
+<caption>A data.frame: 10 × 10</caption>
+<thead>
+	<tr><th></th><th scope=col>ph</th><th scope=col>Hardness</th><th scope=col>Solids</th><th scope=col>Chloramines</th><th scope=col>Sulfate</th><th scope=col>Conductivity</th><th scope=col>Organic_carbon</th><th scope=col>Trihalomethanes</th><th scope=col>Turbidity</th><th scope=col>Potability</th></tr>
+	<tr><th></th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;int&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>1</th><td>       NA</td><td>204.8905</td><td>20791.32</td><td>7.300212</td><td>368.5164</td><td>564.3087</td><td>10.379783</td><td> 86.99097</td><td>2.963135</td><td>0</td></tr>
+	<tr><th scope=row>2</th><td> 3.716080</td><td>129.4229</td><td>18630.06</td><td>6.635246</td><td>      NA</td><td>592.8854</td><td>15.180013</td><td> 56.32908</td><td>4.500656</td><td>0</td></tr>
+	<tr><th scope=row>3</th><td> 8.099124</td><td>224.2363</td><td>19909.54</td><td>9.275884</td><td>      NA</td><td>418.6062</td><td>16.868637</td><td> 66.42009</td><td>3.055934</td><td>0</td></tr>
+	<tr><th scope=row>4</th><td> 8.316766</td><td>214.3734</td><td>22018.42</td><td>8.059332</td><td>356.8861</td><td>363.2665</td><td>18.436524</td><td>100.34167</td><td>4.628771</td><td>0</td></tr>
+	<tr><th scope=row>5</th><td> 9.092223</td><td>181.1015</td><td>17978.99</td><td>6.546600</td><td>310.1357</td><td>398.4108</td><td>11.558279</td><td> 31.99799</td><td>4.075075</td><td>0</td></tr>
+	<tr><th scope=row>6</th><td> 5.584087</td><td>188.3133</td><td>28748.69</td><td>7.544869</td><td>326.6784</td><td>280.4679</td><td> 8.399735</td><td> 54.91786</td><td>2.559708</td><td>0</td></tr>
+	<tr><th scope=row>7</th><td>10.223862</td><td>248.0717</td><td>28749.72</td><td>7.513408</td><td>393.6634</td><td>283.6516</td><td>13.789695</td><td> 84.60356</td><td>2.672989</td><td>0</td></tr>
+	<tr><th scope=row>8</th><td> 8.635849</td><td>203.3615</td><td>13672.09</td><td>4.563009</td><td>303.3098</td><td>474.6076</td><td>12.363817</td><td> 62.79831</td><td>4.401425</td><td>0</td></tr>
+	<tr><th scope=row>9</th><td>       NA</td><td>118.9886</td><td>14285.58</td><td>7.804174</td><td>268.6469</td><td>389.3756</td><td>12.706049</td><td> 53.92885</td><td>3.595017</td><td>0</td></tr>
+	<tr><th scope=row>10</th><td>11.180284</td><td>227.2315</td><td>25484.51</td><td>9.077200</td><td>404.0416</td><td>563.8855</td><td>17.927806</td><td> 71.97660</td><td>4.370562</td><td>0</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Notice that the pH column contains a couple hundred NA values. NA are special values in R (like how “pi” is preset to a value of 3.14159…) to indicate that there is missing data, or it is not available. There are also some NAs in the Sulfate and Trihalomethanes columns.</p></li>
+</ol>
+<p>Create new object called water_df that only contains complete observations.</p>
+<p>Hint: take a look at the function called <code class="docutils literal notranslate"><span class="pre">na.omit()</span></code>. In most cases, someone’s already done what you’ve wanted to do so there may already be code or functions that you can adapt and use!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">water_df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">na.omit</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="nf">summary</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="nf">summary</span><span class="p">(</span><span class="n">water_df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       ph            Hardness          Solids         Chloramines    
+ Min.   : 0.000   Min.   : 47.43   Min.   :  320.9   Min.   : 0.352  
+ 1st Qu.: 6.093   1st Qu.:176.85   1st Qu.:15666.7   1st Qu.: 6.127  
+ Median : 7.037   Median :196.97   Median :20927.8   Median : 7.130  
+ Mean   : 7.081   Mean   :196.37   Mean   :22014.1   Mean   : 7.122  
+ 3rd Qu.: 8.062   3rd Qu.:216.67   3rd Qu.:27332.8   3rd Qu.: 8.115  
+ Max.   :14.000   Max.   :323.12   Max.   :61227.2   Max.   :13.127  
+ NA&#39;s   :491                                                         
+    Sulfate       Conductivity   Organic_carbon  Trihalomethanes  
+ Min.   :129.0   Min.   :181.5   Min.   : 2.20   Min.   :  0.738  
+ 1st Qu.:307.7   1st Qu.:365.7   1st Qu.:12.07   1st Qu.: 55.845  
+ Median :333.1   Median :421.9   Median :14.22   Median : 66.622  
+ Mean   :333.8   Mean   :426.2   Mean   :14.28   Mean   : 66.396  
+ 3rd Qu.:360.0   3rd Qu.:481.8   3rd Qu.:16.56   3rd Qu.: 77.337  
+ Max.   :481.0   Max.   :753.3   Max.   :28.30   Max.   :124.000  
+ NA&#39;s   :781                                     NA&#39;s   :162      
+   Turbidity       Potability    
+ Min.   :1.450   Min.   :0.0000  
+ 1st Qu.:3.440   1st Qu.:0.0000  
+ Median :3.955   Median :0.0000  
+ Mean   :3.967   Mean   :0.3901  
+ 3rd Qu.:4.500   3rd Qu.:1.0000  
+ Max.   :6.739   Max.   :1.0000  
+                                 
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       ph             Hardness          Solids         Chloramines    
+ Min.   : 0.2275   Min.   : 73.49   Min.   :  320.9   Min.   : 1.391  
+ 1st Qu.: 6.0897   1st Qu.:176.74   1st Qu.:15615.7   1st Qu.: 6.139  
+ Median : 7.0273   Median :197.19   Median :20933.5   Median : 7.144  
+ Mean   : 7.0860   Mean   :195.97   Mean   :21917.4   Mean   : 7.134  
+ 3rd Qu.: 8.0530   3rd Qu.:216.44   3rd Qu.:27182.6   3rd Qu.: 8.110  
+ Max.   :14.0000   Max.   :317.34   Max.   :56488.7   Max.   :13.127  
+    Sulfate       Conductivity   Organic_carbon  Trihalomethanes  
+ Min.   :129.0   Min.   :201.6   Min.   : 2.20   Min.   :  8.577  
+ 1st Qu.:307.6   1st Qu.:366.7   1st Qu.:12.12   1st Qu.: 55.953  
+ Median :332.2   Median :423.5   Median :14.32   Median : 66.542  
+ Mean   :333.2   Mean   :426.5   Mean   :14.36   Mean   : 66.401  
+ 3rd Qu.:359.3   3rd Qu.:482.4   3rd Qu.:16.68   3rd Qu.: 77.292  
+ Max.   :481.0   Max.   :753.3   Max.   :27.01   Max.   :124.000  
+   Turbidity       Potability    
+ Min.   :1.450   Min.   :0.0000  
+ 1st Qu.:3.443   1st Qu.:0.0000  
+ Median :3.968   Median :0.0000  
+ Mean   :3.970   Mean   :0.4033  
+ 3rd Qu.:4.514   3rd Qu.:1.0000  
+ Max.   :6.495   Max.   :1.0000  
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">dim</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="nf">dim</span><span class="p">(</span><span class="n">water_df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>3276</li><li>10</li></ol>
+</div><div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>2011</li><li>10</li></ol>
+</div></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>The Potability column has two possible values: 1 means Potable and 0 means Not potable.</p></li>
+</ol>
+<p>It is read in by default as a character vector. Convert this column to a factor.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">water_df</span><span class="o">$</span><span class="n">Potability</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">as.factor</span><span class="p">(</span><span class="n">water_df</span><span class="o">$</span><span class="n">Potability</span><span class="p">)</span>
+<span class="nf">head</span><span class="p">(</span><span class="n">water_df</span><span class="p">)</span>
+<span class="nf">table</span><span class="p">(</span><span class="n">water_df</span><span class="o">$</span><span class="n">Potability</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A data.frame: 6 × 10</caption>
+<thead>
+	<tr><th></th><th scope=col>ph</th><th scope=col>Hardness</th><th scope=col>Solids</th><th scope=col>Chloramines</th><th scope=col>Sulfate</th><th scope=col>Conductivity</th><th scope=col>Organic_carbon</th><th scope=col>Trihalomethanes</th><th scope=col>Turbidity</th><th scope=col>Potability</th></tr>
+	<tr><th></th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;fct&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>4</th><td> 8.316766</td><td>214.3734</td><td>22018.42</td><td>8.059332</td><td>356.8861</td><td>363.2665</td><td>18.436524</td><td>100.34167</td><td>4.628771</td><td>0</td></tr>
+	<tr><th scope=row>5</th><td> 9.092223</td><td>181.1015</td><td>17978.99</td><td>6.546600</td><td>310.1357</td><td>398.4108</td><td>11.558279</td><td> 31.99799</td><td>4.075075</td><td>0</td></tr>
+	<tr><th scope=row>6</th><td> 5.584087</td><td>188.3133</td><td>28748.69</td><td>7.544869</td><td>326.6784</td><td>280.4679</td><td> 8.399735</td><td> 54.91786</td><td>2.559708</td><td>0</td></tr>
+	<tr><th scope=row>7</th><td>10.223862</td><td>248.0717</td><td>28749.72</td><td>7.513408</td><td>393.6634</td><td>283.6516</td><td>13.789695</td><td> 84.60356</td><td>2.672989</td><td>0</td></tr>
+	<tr><th scope=row>8</th><td> 8.635849</td><td>203.3615</td><td>13672.09</td><td>4.563009</td><td>303.3098</td><td>474.6076</td><td>12.363817</td><td> 62.79831</td><td>4.401425</td><td>0</td></tr>
+	<tr><th scope=row>10</th><td>11.180284</td><td>227.2315</td><td>25484.51</td><td>9.077200</td><td>404.0416</td><td>563.8855</td><td>17.927806</td><td> 71.97660</td><td>4.370562</td><td>0</td></tr>
+</tbody>
+</table>
+</div><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   0    1 
+1200  811 
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>WHO has recommended maximum permissible limit of pH in drinking water from 6.5 to 8.5.</p></li>
+</ol>
+<p>Create a new column within the <code class="docutils literal notranslate"><span class="pre">water_df</span></code> object called <code class="docutils literal notranslate"><span class="pre">ph_category</span></code> in which:</p>
+<ul class="simple">
+<li><p>Observations with a pH less than 6.5 have a value of <code class="docutils literal notranslate"><span class="pre">acidic</span></code> in the <code class="docutils literal notranslate"><span class="pre">ph_category</span></code></p></li>
+<li><p>Observations with a pH betwee 6.5 - 8.5 have a value of <code class="docutils literal notranslate"><span class="pre">permissible</span></code> in the <code class="docutils literal notranslate"><span class="pre">ph_category</span></code></p></li>
+<li><p>Observations with a pH greater than 8.5 have a value of <code class="docutils literal notranslate"><span class="pre">basic</span></code> in the <code class="docutils literal notranslate"><span class="pre">ph_category</span></code></p></li>
+</ul>
+<p>There are multiple ways to do this, give it a go! You can’t break the object - if you ever feel like you need a reset, you can always repeat step 1 to read in the object again.</p>
+<p>Use <code class="docutils literal notranslate"><span class="pre">table()</span></code> or <code class="docutils literal notranslate"><span class="pre">summary()</span></code> to check the values in the <code class="docutils literal notranslate"><span class="pre">ph_category</span></code> column</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">water_df</span><span class="o">$</span><span class="n">ph_category</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s">&quot;permissible&quot;</span>
+
+<span class="n">water_df</span><span class="o">$</span><span class="n">ph_category</span><span class="p">[</span><span class="n">water_df</span><span class="o">$</span><span class="n">ph</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">6.5</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s">&quot;acidic&quot;</span>
+
+<span class="n">water_df</span><span class="o">$</span><span class="n">ph_category</span><span class="p">[</span><span class="n">water_df</span><span class="o">$</span><span class="n">ph</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">8.5</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s">&quot;basic&quot;</span>
+
+<span class="nf">table</span><span class="p">(</span><span class="n">water_df</span><span class="o">$</span><span class="n">ph_category</span><span class="p">)</span>
+<span class="nf">nrow</span><span class="p">(</span><span class="n">water_df</span><span class="p">[</span><span class="n">water_df</span><span class="o">$</span><span class="n">ph</span><span class="w"> </span><span class="o">&lt;</span><span class="m">6.5</span><span class="p">,</span><span class="w"> </span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     acidic       basic permissible 
+        692         358         961 
+</pre></div>
+</div>
+<div class="output text_html">692</div></div>
+</div>
+<ol class="arabic simple" start="5">
+<li><p>Create a plot to double check if the annotations in the <code class="docutils literal notranslate"><span class="pre">ph_category</span></code> column were applied correctly. Make sure to represent both the <code class="docutils literal notranslate"><span class="pre">ph</span></code> and <code class="docutils literal notranslate"><span class="pre">ph_category</span></code> columns.</p></li>
+</ol>
+<p>You’re welcome to use base R or ggplot functions. There are multiple ways of representing these two columns. ggplot is slightly preferred because of its increased customization so it’s good to get some practice with it!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>
+<span class="nf">ggplot</span><span class="p">(</span><span class="n">water_df</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">ph_category</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="n">ph</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_boxplot</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="_images/7274fa8b1586a41fd947e40edb8ad9a9d9e64dcd7c670eec4aaff7ade1fbf1f4.png"><img alt="_images/7274fa8b1586a41fd947e40edb8ad9a9d9e64dcd7c670eec4aaff7ade1fbf1f4.png" src="_images/7274fa8b1586a41fd947e40edb8ad9a9d9e64dcd7c670eec4aaff7ade1fbf1f4.png" style="width: 420px; height: 420px;" /></a>
+</div>
+</div>
+<ol class="arabic simple" start="6">
+<li><p>The levels of sulfates and water hardness cause by salts should be minimized in order to be safe for consumption.</p></li>
+</ol>
+<p>Create a plot with the level of water hardness on the x axis and sulphate on the y axis colored by the Potability column.</p>
+<p>Try applying the <code class="docutils literal notranslate"><span class="pre">facet_grid()</span></code> layer to the plot in order to group the plots by a factor. Make sure to use the <code class="docutils literal notranslate"><span class="pre">~</span></code> before the column name!</p>
+<p>(Note - the data is quite messy so don’t worry if the results do not separate as much as you would like - real data is messy!)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">(</span><span class="n">water_df</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Hardness</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Sulfate</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Potability</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_point</span><span class="p">()</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">facet_wrap</span><span class="p">(</span><span class="o">~</span><span class="n">ph_category</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">theme_bw</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="_images/e827dbaa87f3a855c31f57bc76b58fb1f547f5452e784f11d624bbd1119cfd1f.png"><img alt="_images/e827dbaa87f3a855c31f57bc76b58fb1f547f5452e784f11d624bbd1119cfd1f.png" src="_images/e827dbaa87f3a855c31f57bc76b58fb1f547f5452e784f11d624bbd1119cfd1f.png" style="width: 420px; height: 420px;" /></a>
+</div>
+</div>
+</section>
+<section id="review-with-datasaurus-dozen">
+<h2>Review with Datasaurus Dozen<a class="headerlink" href="#review-with-datasaurus-dozen" title="Link to this heading">#</a></h2>
+<p>The Datasaurus Dozen dataset is a handful of data points that complement the <code class="docutils literal notranslate"><span class="pre">dplyr</span></code> package. Aside from functions, packages can also import objects.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1">#install.packages(&quot;datasauRus&quot;)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">datasauRus</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">tidyverse</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Attaching core tidyverse packages</span> ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── tidyverse 2.0.0 ──
+<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">dplyr    </span> 1.1.4     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">readr    </span> 2.1.5
+<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">forcats  </span> 1.0.0     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">stringr  </span> 1.5.1
+<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">lubridate</span> 1.9.3     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">tibble   </span> 3.2.1
+<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">purrr    </span> 1.0.2     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">tidyr    </span> 1.3.1
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Conflicts</span> ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
+<span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">dplyr</span>::<span class=" -Color -Color-Green">filter()</span> masks <span class=" -Color -Color-Blue">stats</span>::filter()
+<span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">dplyr</span>::<span class=" -Color -Color-Green">lag()</span>    masks <span class=" -Color -Color-Blue">stats</span>::lag()
+<span class=" -Color -Color-Cyan">ℹ</span> Use the conflicted package (<span class=" -Color -Color-Blue">&lt;http://conflicted.r-lib.org/&gt;</span>) to force all conflicts to become errors
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">summary</span><span class="p">(</span><span class="n">datasaurus_dozen</span><span class="p">)</span>
+
+<span class="n">datasaurus_dozen</span><span class="o">$</span><span class="n">dataset</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">as.factor</span><span class="p">(</span><span class="n">datasaurus_dozen</span><span class="o">$</span><span class="n">dataset</span><span class="p">)</span>
+
+<span class="nf">tail</span><span class="p">(</span><span class="n">datasaurus_dozen</span><span class="p">)</span>
+
+<span class="nf">table</span><span class="p">(</span><span class="n">datasaurus_dozen</span><span class="o">$</span><span class="n">dataset</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   dataset                x               y           
+ Length:1846        Min.   :15.56   Min.   : 0.01512  
+ Class :character   1st Qu.:41.07   1st Qu.:22.56107  
+ Mode  :character   Median :52.59   Median :47.59445  
+                    Mean   :54.27   Mean   :47.83510  
+                    3rd Qu.:67.28   3rd Qu.:71.81078  
+                    Max.   :98.29   Max.   :99.69468  
+</pre></div>
+</div>
+<div class="output text_html"><table class="dataframe">
+<caption>A tibble: 6 × 3</caption>
+<thead>
+	<tr><th scope=col>dataset</th><th scope=col>x</th><th scope=col>y</th></tr>
+	<tr><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>wide_lines</td><td>34.73183</td><td>19.60180</td></tr>
+	<tr><td>wide_lines</td><td>33.67444</td><td>26.09049</td></tr>
+	<tr><td>wide_lines</td><td>75.62726</td><td>37.12875</td></tr>
+	<tr><td>wide_lines</td><td>40.61013</td><td>89.13624</td></tr>
+	<tr><td>wide_lines</td><td>39.11437</td><td>96.48175</td></tr>
+	<tr><td>wide_lines</td><td>34.58383</td><td>89.58890</td></tr>
+</tbody>
+</table>
+</div><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      away   bullseye     circle       dino       dots    h_lines high_lines 
+       142        142        142        142        142        142        142 
+slant_down   slant_up       star    v_lines wide_lines    x_shape 
+       142        142        142        142        142        142 
+</pre></div>
+</div>
+</div>
+</div>
+<p>There are 13 different datasets in this one object. We will use tidyverse functions to take an overview look at the object, grouped by the datasets.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">datasaurus_dozen</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">  </span><span class="nf">group_by</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">  </span><span class="nf">summarize</span><span class="p">(</span><span class="n">mean_x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">mean</span><span class="p">(</span><span class="n">x</span><span class="p">),</span>
+<span class="w">            </span><span class="n">mean_y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">mean</span><span class="p">(</span><span class="n">y</span><span class="p">),</span>
+<span class="w">            </span><span class="n">std_dev_x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">sd</span><span class="p">(</span><span class="n">x</span><span class="p">),</span>
+<span class="w">            </span><span class="n">std_dev_y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">sd</span><span class="p">(</span><span class="n">y</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A tibble: 13 × 5</caption>
+<thead>
+	<tr><th scope=col>dataset</th><th scope=col>mean_x</th><th scope=col>mean_y</th><th scope=col>std_dev_x</th><th scope=col>std_dev_y</th></tr>
+	<tr><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>away      </td><td>54.26610</td><td>47.83472</td><td>16.76982</td><td>26.93974</td></tr>
+	<tr><td>bullseye  </td><td>54.26873</td><td>47.83082</td><td>16.76924</td><td>26.93573</td></tr>
+	<tr><td>circle    </td><td>54.26732</td><td>47.83772</td><td>16.76001</td><td>26.93004</td></tr>
+	<tr><td>dino      </td><td>54.26327</td><td>47.83225</td><td>16.76514</td><td>26.93540</td></tr>
+	<tr><td>dots      </td><td>54.26030</td><td>47.83983</td><td>16.76774</td><td>26.93019</td></tr>
+	<tr><td>h_lines   </td><td>54.26144</td><td>47.83025</td><td>16.76590</td><td>26.93988</td></tr>
+	<tr><td>high_lines</td><td>54.26881</td><td>47.83545</td><td>16.76670</td><td>26.94000</td></tr>
+	<tr><td>slant_down</td><td>54.26785</td><td>47.83590</td><td>16.76676</td><td>26.93610</td></tr>
+	<tr><td>slant_up  </td><td>54.26588</td><td>47.83150</td><td>16.76885</td><td>26.93861</td></tr>
+	<tr><td>star      </td><td>54.26734</td><td>47.83955</td><td>16.76896</td><td>26.93027</td></tr>
+	<tr><td>v_lines   </td><td>54.26993</td><td>47.83699</td><td>16.76996</td><td>26.93768</td></tr>
+	<tr><td>wide_lines</td><td>54.26692</td><td>47.83160</td><td>16.77000</td><td>26.93790</td></tr>
+	<tr><td>x_shape   </td><td>54.26015</td><td>47.83972</td><td>16.76996</td><td>26.93000</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<p>All of the datasets have roughly the same mean and standard deviation along both the x and y axis.</p>
+<p>Let’s take a look the data graphically. We will use <code class="docutils literal notranslate"><span class="pre">filter</span></code> to extract the rows belonging to one dataset and then pipe that directly into a ggplot. Both dplyr and ggplot are developed within “the Tidyverse” and can use pipes, but you may not be able to pipe in base R functions or functions from different packages.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">datasaurus_dozen</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">  </span><span class="nf">filter</span><span class="p">(</span><span class="n">dataset</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;star&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">  </span><span class="nf">ggplot</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="c1"># PLUS SIGN, NOT PIPE FOR THIS ONE</span>
+<span class="w">  </span><span class="nf">geom_point</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="_images/adb1d58440bf74460ee7ef08af7f941aa2b84eeb6205737e24bb5afda9766b24.png"><img alt="_images/adb1d58440bf74460ee7ef08af7f941aa2b84eeb6205737e24bb5afda9766b24.png" src="_images/adb1d58440bf74460ee7ef08af7f941aa2b84eeb6205737e24bb5afda9766b24.png" style="width: 420px; height: 420px;" /></a>
+</div>
+</div>
+<p>Tidyverse’s data wranging packages use the pipe <code class="docutils literal notranslate"><span class="pre">%&gt;%</span></code> to move the previous output to the next line, where as ggplot uses the plus sign <code class="docutils literal notranslate"><span class="pre">+</span></code></p>
+<p>Try editing the code above to display different datasets. Notice how different groups of data points can all give similar statistical summaries - so it’s always a good choice to visualize your data rather than relying on just numbers.</p>
+<p>If we wanted to take a look at all of the datasets at once, we can also use the <code class="docutils literal notranslate"><span class="pre">facet_wrap()</span></code> function.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">datasaurus_dozen</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">  </span><span class="c1">#filter(dataset == &quot;star&quot;) %&gt;%  REMOVE THIS ROW</span>
+<span class="w">  </span><span class="nf">ggplot</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_point</span><span class="p">()</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">facet_wrap</span><span class="p">(</span><span class="o">~</span><span class="n">dataset</span><span class="p">)</span><span class="o">+</span><span class="w"> </span><span class="nf">theme_void</span><span class="p">()</span><span class="w"> </span><span class="c1"># ADD THIS LINE</span>
+
+<span class="nf">head</span><span class="p">(</span><span class="n">datasaurus_dozen</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A tibble: 6 × 3</caption>
+<thead>
+	<tr><th scope=col>dataset</th><th scope=col>x</th><th scope=col>y</th></tr>
+	<tr><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>dino</td><td>55.3846</td><td>97.1795</td></tr>
+	<tr><td>dino</td><td>51.5385</td><td>96.0256</td></tr>
+	<tr><td>dino</td><td>46.1538</td><td>94.4872</td></tr>
+	<tr><td>dino</td><td>42.8205</td><td>91.4103</td></tr>
+	<tr><td>dino</td><td>40.7692</td><td>88.3333</td></tr>
+	<tr><td>dino</td><td>38.7179</td><td>84.8718</td></tr>
+</tbody>
+</table>
+</div><a class="reference internal image-reference" href="_images/8f29c041c0cc58cbd125ed0104277f09854aab4ca7db9764e2754ba8bbe8840c.png"><img alt="_images/8f29c041c0cc58cbd125ed0104277f09854aab4ca7db9764e2754ba8bbe8840c.png" src="_images/8f29c041c0cc58cbd125ed0104277f09854aab4ca7db9764e2754ba8bbe8840c.png" style="width: 420px; height: 420px;" /></a>
+</div>
+</div>
+<section id="genearlizable-code">
+<h3>Genearlizable code<a class="headerlink" href="#genearlizable-code" title="Link to this heading">#</a></h3>
+<p>A major strength of programming is the ability to automate repetitive tasks. As a general rule of thumb, if you need to do a task more than three times (ex. analyzing multiple PCR plates or integrating clinical data from multiple days), it is worth it to invest time to write generalizable code or a custom function.</p>
+<p>Now that we’re getting comfortable writing code, we will spend some time revisiting code that we wrote to make them generalizable and even better! Generalizable means that the code is flexible and can be applied to multiple similar objects. For example, if we’re running a clinical study and we have patient demographic data from multiple sites, we want to check that the mean patient demographic is comparable between sites by creating similar plots of each hospital site to compare. If we write code for one location and then copy and paste it into another code chunk to apply to the next location, the code may require some modification before it works.</p>
+<p>Generalizable code begins at data collection. Depending on your workflow, you may or may not be able to influence this stage of the analysis. If possible, it is best practice to keep the column names and entries for categorical variables consistent. For example, when recording the age of patients, “6”, “6 “, “six”, and “Six” are all considered different levels of the factor so you will need to either make sure data collection is consistent or check and correct these inconsistencies in your code. Get into a habit of checking your work. Whether it is code you’ve written yourself, code you you’ve been sent by a collaborator, or published data from a biobank - never assume the data is as you predicted.</p>
+</section>
+</section>
+<section id="generalizable-plots">
+<h2>Generalizable plots<a class="headerlink" href="#generalizable-plots" title="Link to this heading">#</a></h2>
+<p>Remember when we edited our code to test out multiple datasets in the datasaurus dozen object? Perhaps you copy and pasted the code several time and changed the column name? This is not optimal because if you need to change the code in one instance (for example changing the x-axis label), you’ll need to revisit ever instance that you copy and pasted to code to. This approach leads you vulnerable to errors when copy and pasting.</p>
+<p>One way to make your code robust is to bring all the factors that need editing to the start of the data. This may seem cumbersome for such a simple example where we are only changing the dataset name, but we’ll return to this concept later with more complicated examples.</p>
+<p>Let’s grab the code we used to make one plot earlier and modify it to be more generalizable</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">levels</span><span class="p">(</span><span class="n">datasaurus_dozen</span><span class="o">$</span><span class="n">dataset</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>'away'</li><li>'bullseye'</li><li>'circle'</li><li>'dino'</li><li>'dots'</li><li>'h_lines'</li><li>'high_lines'</li><li>'slant_down'</li><li>'slant_up'</li><li>'star'</li><li>'v_lines'</li><li>'wide_lines'</li><li>'x_shape'</li></ol>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">dataset_name</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s">&quot;dino&quot;</span><span class="w"> </span><span class="c1"># ADD THIS LINE</span>
+
+<span class="n">datasaurus_dozen</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">  </span><span class="nf">filter</span><span class="p">(</span><span class="n">dataset</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">dataset_name</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="c1"># Remove comment # CHANGE VARIABLE NAME</span>
+<span class="w">  </span><span class="nf">ggplot</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_point</span><span class="p">()</span><span class="w"> </span><span class="c1"># REMOVE THE + at the end of the line</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="_images/c585a7d32b0bf45d368a1cc8b0a870f0dd3c1df4fe05ed64f6f0c552e661e223.png"><img alt="_images/c585a7d32b0bf45d368a1cc8b0a870f0dd3c1df4fe05ed64f6f0c552e661e223.png" src="_images/c585a7d32b0bf45d368a1cc8b0a870f0dd3c1df4fe05ed64f6f0c552e661e223.png" style="width: 420px; height: 420px;" /></a>
+</div>
+</div>
+<p>Once we have converted our code to a generalized format, we can convert it into a more versatile custom function!</p>
+<p>Curly brackets are used for inputting multiple lines of code. It is generally attached to the function that proceeds it.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># dataset_name &lt;- &quot;dino&quot; # ADD THIS LINE</span>
+
+<span class="n">dino_plot</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">function</span><span class="p">(</span><span class="n">data_name</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">datasaurus_dozen</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">    </span><span class="nf">filter</span><span class="p">(</span><span class="n">dataset</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">data_name</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="c1"># CHANGE ARGUMENT NAME</span>
+
+<span class="w">    </span><span class="nf">ggplot</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">    </span><span class="nf">geom_point</span><span class="p">()</span><span class="w"> </span><span class="o">+</span>
+<span class="w">    </span><span class="nf">theme_bw</span><span class="p">()</span>
+<span class="p">}</span>
+
+<span class="nf">dino_plot</span><span class="p">(</span><span class="s">&quot;dino&quot;</span><span class="p">)</span>
+<span class="nf">dino_plot</span><span class="p">(</span><span class="s">&quot;circle&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="_images/eed43517565a4ab6c40dfc7216488fa7a25a595f1e98a1a9ea4088e9d630b42f.png"><img alt="_images/eed43517565a4ab6c40dfc7216488fa7a25a595f1e98a1a9ea4088e9d630b42f.png" src="_images/eed43517565a4ab6c40dfc7216488fa7a25a595f1e98a1a9ea4088e9d630b42f.png" style="width: 420px; height: 420px;" /></a>
+<a class="reference internal image-reference" href="_images/4f56c33906232f2b25628b3ea92811c91210fde534c0c1d74408cf70ef53e536.png"><img alt="_images/4f56c33906232f2b25628b3ea92811c91210fde534c0c1d74408cf70ef53e536.png" src="_images/4f56c33906232f2b25628b3ea92811c91210fde534c0c1d74408cf70ef53e536.png" style="width: 420px; height: 420px;" /></a>
+</div>
+</div>
+<section id="exercise">
+<h3>Exercise<a class="headerlink" href="#exercise" title="Link to this heading">#</a></h3>
+<p>We’ve now encountered round brackets <code class="docutils literal notranslate"><span class="pre">()</span></code>, square brackets <code class="docutils literal notranslate"><span class="pre">[]</span></code>, and curly brackets<code class="docutils literal notranslate"><span class="pre">{}</span></code> - each have their own distinct functions! Take a few moments to chat with your neighbors and outline cases in which we’ve used each bracket and what is their role in R syntax.</p>
+<p>round brackets ()
+come after a function, function will apply to whatever is in the brackets
+functionName(what is being acted on)</p>
+<p>square brackets []
+Indexing, locations
+object[position]
+dataframe[rows, cols]</p>
+<p>curly brackets {}
+Used in function, indicate multiple lines of related code
+Rmd – indicates language in code chunk</p>
+</section>
+<section id="dataset-heart-stroke-preduction">
+<h3>Dataset - Heart Stroke Preduction<a class="headerlink" href="#dataset-heart-stroke-preduction" title="Link to this heading">#</a></h3>
+<p>The dataset we will be working with for today’s workshop contains clinical data collected with the aim of predicting whether a patient is likely to suffer a stroke.</p>
+<p>The dataset can be found: <a class="reference external" href="https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset">https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset</a></p>
+<p>Here is some more information about the columns in this dataset:</p>
+<ol class="arabic simple">
+<li><p>id: unique identifier</p></li>
+<li><p>gender: “Male”, “Female” or “Other”</p></li>
+<li><p>age: age of the patient</p></li>
+<li><p>hypertension: 0 if the patient doesn’t have hypertension, 1 if the patient has hypertension</p></li>
+<li><p>heart_disease: 0 if the patient doesn’t have any heart diseases, 1 if the patient has a heart disease</p></li>
+<li><p>ever_married: “No” or “Yes”</p></li>
+<li><p>work_type: “children”, “Govt_jov”, “Never_worked”, “Private” or “Self-employed”</p></li>
+<li><p>Residence_type: “Rural” or “Urban”</p></li>
+<li><p>avg_glucose_level: average glucose level in blood</p></li>
+<li><p>bmi: body mass index</p></li>
+<li><p>smoking_status: “formerly smoked”, “never smoked”, “smokes” or “Unknown”*</p></li>
+<li><p>stroke: 1 if the patient had a stroke or 0 if not
+*Note: “Unknown” in smoking_status means that the information is unavailable for this patient</p></li>
+</ol>
+<p>Let’s get started!</p>
+</section>
+<section id="id1">
+<h3>Exercise<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<p>Reading in the dataset can be an intimidating step when you’re just starting out with programming. Since this is a csv file, we can use the appropriately named <code class="docutils literal notranslate"><span class="pre">read.csv()</span></code> function. In cases when you have other file types such as .txt or .tab files that are tab deliminated, there is also a <code class="docutils literal notranslate"><span class="pre">read.table()</span></code> function that is more universal (but requires more parameters to let R know how your data is stored).</p>
+<p>Read in the <code class="docutils literal notranslate"><span class="pre">healthcare-dataset-stroke-data.csv</span></code> into an object called <code class="docutils literal notranslate"><span class="pre">heart</span></code>. Check your object using head and/or summary functions. Toggle a parameter called <code class="docutils literal notranslate"><span class="pre">stringsAsFactors</span></code> to <code class="docutils literal notranslate"><span class="pre">TRUE</span></code> in order to automatically import character values as factors rather than characters</p>
+<p>Hint: make sure the dataset is in the same directory or folder as this .Rmd file for ease of import</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">heart</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read.csv</span><span class="p">(</span><span class="s">&quot;datasets/healthcare-dataset-stroke-data.csv&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">stringsAsFactors</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
+
+<span class="nf">head</span><span class="p">(</span><span class="n">heart</span><span class="p">)</span>
+<span class="nf">str</span><span class="p">(</span><span class="n">heart</span><span class="p">)</span>
+
+<span class="c1"># Hypertension has values that are typos, need to be removed</span>
+<span class="nf">table</span><span class="p">(</span><span class="n">heart</span><span class="o">$</span><span class="n">hypertension</span><span class="p">)</span>
+
+<span class="c1"># Stroke and heart.disease need to be categorical</span>
+<span class="nf">summary</span><span class="p">(</span><span class="n">heart</span><span class="o">$</span><span class="n">stroke</span><span class="p">)</span>
+
+<span class="c1"># Gender has some variability</span>
+<span class="nf">table</span><span class="p">(</span><span class="n">heart</span><span class="o">$</span><span class="n">gender</span><span class="p">)</span>
+
+<span class="c1"># Abnormal BMI value AND convert from factor to numeric</span>
+<span class="nf">summary</span><span class="p">(</span><span class="n">heart</span><span class="o">$</span><span class="n">bmi</span><span class="p">)</span>
+
+<span class="c1"># Age, very low value of 0.08</span>
+<span class="nf">str</span><span class="p">(</span><span class="n">heart</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A data.frame: 6 × 12</caption>
+<thead>
+	<tr><th></th><th scope=col>id</th><th scope=col>gender</th><th scope=col>age</th><th scope=col>hypertension</th><th scope=col>heart_disease</th><th scope=col>ever_married</th><th scope=col>work_type</th><th scope=col>Residence_type</th><th scope=col>avg_glucose_level</th><th scope=col>bmi</th><th scope=col>smoking_status</th><th scope=col>stroke</th></tr>
+	<tr><th></th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;int&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>1</th><td> 9046</td><td>Male  </td><td>67</td><td>0</td><td>1</td><td>Yes</td><td>Private      </td><td>Urban</td><td>228.69</td><td>36.6</td><td>formerly smoked</td><td>1</td></tr>
+	<tr><th scope=row>2</th><td>51676</td><td>Female</td><td>61</td><td>0</td><td>0</td><td>Yes</td><td>Self-employed</td><td>Rural</td><td>202.21</td><td>N/A </td><td>never smoked   </td><td>1</td></tr>
+	<tr><th scope=row>3</th><td>31112</td><td>Male  </td><td>80</td><td>0</td><td>1</td><td>Yes</td><td>Private      </td><td>Rural</td><td>105.92</td><td>32.5</td><td>never smoked   </td><td>1</td></tr>
+	<tr><th scope=row>4</th><td>60182</td><td>Female</td><td>49</td><td>0</td><td>0</td><td>Yes</td><td>Private      </td><td>Urban</td><td>171.23</td><td>34.4</td><td>smokes         </td><td>1</td></tr>
+	<tr><th scope=row>5</th><td> 1665</td><td>Female</td><td>79</td><td>1</td><td>0</td><td>Yes</td><td>Self-employed</td><td>Rural</td><td>174.12</td><td>24  </td><td>never smoked   </td><td>1</td></tr>
+	<tr><th scope=row>6</th><td>56669</td><td>Male  </td><td>81</td><td>0</td><td>0</td><td>Yes</td><td>Private      </td><td>Urban</td><td>186.21</td><td>29  </td><td>formerly smoked</td><td>1</td></tr>
+</tbody>
+</table>
+</div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;data.frame&#39;:	5110 obs. of  12 variables:
+ $ id               : int  9046 51676 31112 60182 1665 56669 53882 10434 27419 60491 ...
+ $ gender           : Factor w/ 6 levels &quot;female&quot;,&quot;Female&quot;,..: 4 2 4 2 2 4 4 2 2 2 ...
+ $ age              : num  67 61 80 49 79 81 74 69 59 78 ...
+ $ hypertension     : Factor w/ 4 levels &quot;0&quot;,&quot;1&quot;,&quot;10&quot;,&quot;10+D4972&quot;: 1 1 1 1 2 1 2 1 1 1 ...
+ $ heart_disease    : int  1 0 1 0 0 0 1 0 0 0 ...
+ $ ever_married     : Factor w/ 2 levels &quot;No&quot;,&quot;Yes&quot;: 2 2 2 2 2 2 2 1 2 2 ...
+ $ work_type        : Factor w/ 8 levels &quot;children&quot;,&quot;Govt_job&quot;,..: 5 7 5 5 7 5 5 5 5 5 ...
+ $ Residence_type   : Factor w/ 2 levels &quot;Rural&quot;,&quot;Urban&quot;: 2 1 1 2 1 2 1 2 1 2 ...
+ $ avg_glucose_level: num  229 202 106 171 174 ...
+ $ bmi              : Factor w/ 419 levels &quot;10.3&quot;,&quot;11.3&quot;,..: 240 419 199 218 114 164 148 102 419 116 ...
+ $ smoking_status   : Factor w/ 4 levels &quot;formerly smoked&quot;,..: 1 2 2 3 2 1 2 2 4 4 ...
+ $ stroke           : int  1 1 1 1 1 1 1 1 1 1 ...
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       0        1       10 10+D4972 
+    4612      493        4        1 
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+0.00000 0.00000 0.00000 0.04873 0.00000 1.00000 
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>female Female   male   Male   meal  Other 
+     7   2987      6   2108      1      1 
+</pre></div>
+</div>
+<div class="output text_html"><style>
+.dl-inline {width: auto; margin:0; padding: 0}
+.dl-inline>dt, .dl-inline>dd {float: none; width: auto; display: inline-block}
+.dl-inline>dt::after {content: ":\0020"; padding-right: .5ex}
+.dl-inline>dt:not(:first-of-type) {padding-left: .5ex}
+</style><dl class=dl-inline><dt>N/A</dt><dd>201</dd><dt>28.7</dt><dd>41</dd><dt>28.4</dt><dd>38</dd><dt>26.1</dt><dd>37</dd><dt>26.7</dt><dd>37</dd><dt>27.6</dt><dd>37</dd><dt>27.7</dt><dd>37</dd><dt>23.4</dt><dd>36</dd><dt>27.3</dt><dd>36</dd><dt>27</dt><dd>35</dd><dt>25.1</dt><dd>34</dd><dt>26.4</dt><dd>34</dd><dt>26.9</dt><dd>34</dd><dt>25.5</dt><dd>33</dd><dt>23.5</dt><dd>31</dd><dt>24.8</dt><dd>31</dd><dt>28.9</dt><dd>31</dd><dt>22.2</dt><dd>30</dd><dt>26.5</dt><dd>30</dd><dt>28.3</dt><dd>30</dd><dt>29.4</dt><dd>30</dd><dt>30.3</dt><dd>30</dd><dt>31.4</dt><dd>30</dd><dt>24.2</dt><dd>29</dd><dt>26.6</dt><dd>29</dd><dt>27.5</dt><dd>29</dd><dt>28.1</dt><dd>29</dd><dt>29.1</dt><dd>29</dd><dt>24</dt><dd>28</dd><dt>24.1</dt><dd>28</dd><dt>25.3</dt><dd>28</dd><dt>27.1</dt><dd>28</dd><dt>27.9</dt><dd>28</dd><dt>28</dt><dd>28</dd><dt>32.3</dt><dd>28</dd><dt>21.5</dt><dd>27</dd><dt>23</dt><dd>27</dd><dt>24.9</dt><dd>27</dd><dt>25</dt><dd>27</dd><dt>26.2</dt><dd>27</dd><dt>28.5</dt><dd>27</dd><dt>28.6</dt><dd>27</dd><dt>29.7</dt><dd>27</dd><dt>30</dt><dd>27</dd><dt>30.9</dt><dd>27</dd><dt>31.5</dt><dd>27</dd><dt>24.3</dt><dd>26</dd><dt>24.5</dt><dd>26</dd><dt>25.4</dt><dd>26</dd><dt>28.8</dt><dd>26</dd><dt>29</dt><dd>26</dd><dt>29.2</dt><dd>26</dd><dt>29.5</dt><dd>26</dd><dt>29.6</dt><dd>26</dd><dt>29.9</dt><dd>26</dd><dt>30.1</dt><dd>26</dd><dt>31.1</dt><dd>26</dd><dt>20.1</dt><dd>25</dd><dt>22.7</dt><dd>25</dd><dt>22.8</dt><dd>25</dd><dt>26</dt><dd>25</dd><dt>28.2</dt><dd>25</dd><dt>32.8</dt><dd>25</dd><dt>33.1</dt><dd>25</dd><dt>23.6</dt><dd>24</dd><dt>23.9</dt><dd>24</dd><dt>25.8</dt><dd>24</dd><dt>25.9</dt><dd>24</dd><dt>27.2</dt><dd>24</dd><dt>30.5</dt><dd>24</dd><dt>31.8</dt><dd>24</dd><dt>32.1</dt><dd>24</dd><dt>35.8</dt><dd>24</dd><dt>20.4</dt><dd>23</dd><dt>24.4</dt><dd>23</dd><dt>26.3</dt><dd>23</dd><dt>27.8</dt><dd>23</dd><dt>29.8</dt><dd>23</dd><dt>30.7</dt><dd>23</dd><dt>33.5</dt><dd>23</dd><dt>21.4</dt><dd>22</dd><dt>22.1</dt><dd>22</dd><dt>22.4</dt><dd>22</dd><dt>23.8</dt><dd>22</dd><dt>24.6</dt><dd>22</dd><dt>24.7</dt><dd>22</dd><dt>27.4</dt><dd>22</dd><dt>29.3</dt><dd>22</dd><dt>31</dt><dd>22</dd><dt>31.9</dt><dd>22</dd><dt>19.5</dt><dd>21</dd><dt>21.3</dt><dd>21</dd><dt>23.1</dt><dd>21</dd><dt>25.6</dt><dd>21</dd><dt>26.8</dt><dd>21</dd><dt>30.8</dt><dd>21</dd><dt>31.3</dt><dd>21</dd><dt>31.6</dt><dd>21</dd><dt>32</dt><dd>21</dd><dt>(Other)</dt><dd>2282</dd></dl>
+</div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;data.frame&#39;:	5110 obs. of  12 variables:
+ $ id               : int  9046 51676 31112 60182 1665 56669 53882 10434 27419 60491 ...
+ $ gender           : Factor w/ 6 levels &quot;female&quot;,&quot;Female&quot;,..: 4 2 4 2 2 4 4 2 2 2 ...
+ $ age              : num  67 61 80 49 79 81 74 69 59 78 ...
+ $ hypertension     : Factor w/ 4 levels &quot;0&quot;,&quot;1&quot;,&quot;10&quot;,&quot;10+D4972&quot;: 1 1 1 1 2 1 2 1 1 1 ...
+ $ heart_disease    : int  1 0 1 0 0 0 1 0 0 0 ...
+ $ ever_married     : Factor w/ 2 levels &quot;No&quot;,&quot;Yes&quot;: 2 2 2 2 2 2 2 1 2 2 ...
+ $ work_type        : Factor w/ 8 levels &quot;children&quot;,&quot;Govt_job&quot;,..: 5 7 5 5 7 5 5 5 5 5 ...
+ $ Residence_type   : Factor w/ 2 levels &quot;Rural&quot;,&quot;Urban&quot;: 2 1 1 2 1 2 1 2 1 2 ...
+ $ avg_glucose_level: num  229 202 106 171 174 ...
+ $ bmi              : Factor w/ 419 levels &quot;10.3&quot;,&quot;11.3&quot;,..: 240 419 199 218 114 164 148 102 419 116 ...
+ $ smoking_status   : Factor w/ 4 levels &quot;formerly smoked&quot;,..: 1 2 2 3 2 1 2 2 4 4 ...
+ $ stroke           : int  1 1 1 1 1 1 1 1 1 1 ...
+</pre></div>
+</div>
+</div>
+</div>
+<p>Before we dive into this dataset, we get a very limited indication that the object is read in correctly by checking the Environment panel - you’ll notice the new <code class="docutils literal notranslate"><span class="pre">heart</span></code> appears under Data and it lets us know that there are 5110 observations (number of patients) and 12 variables (number of clinical features with entries). You can also double click the name of the object here to open up a view of the whole dataset - caution that this can cause your machine to stall if the dataset is exceptionally large and/or your machine is running on minimal memory.</p>
+</section>
+<section id="id2">
+<h3>Exercise<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<p>Explore the dataset! Take a look at the columns and identify some potential issues with this dataset that either warrant further investigation or correction.</p>
+<p>There is no universally right or wrong way to do this. Perhaps the only truly incorrect way of doing this is going through the dataset which is thousands of observations line by line.</p>
+</section>
+</section>
+<section id="factors">
+<h2>Factors<a class="headerlink" href="#factors" title="Link to this heading">#</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">stringsAsFactors</span></code> parameter takes care of the character values but we still have some integer values that should be interpreted as factors.</p>
+<p>When deciding on whether a number is a factor or should be kept numeric, consider if decimals/numbers-in-between make sense. The first two entries for <code class="docutils literal notranslate"><span class="pre">avg_glucose_level</span></code> are 229 and 202 - a glucose level in between would be reasonable. In contrast, the first to entries for <code class="docutils literal notranslate"><span class="pre">heart_disease</span></code> are 1 and 0 - as these are coding for having or not having the disorder, an entry of 1.2 does not make sense.</p>
+<p>Recall from the introduction to the dataset from above:
+4) hypertension: 0 if the patient doesn’t have hypertension, 1 if the patient has hypertension
+5) heart_disease: 0 if the patient doesn’t have any heart diseases, 1 if the patient has a heart disease
+12) stroke: 1 if the patient had a stroke or 0 if not</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">heart</span><span class="o">$</span><span class="n">hypertension</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">as.factor</span><span class="p">(</span><span class="n">heart</span><span class="o">$</span><span class="n">hypertension</span><span class="p">)</span>
+<span class="n">heart</span><span class="o">$</span><span class="n">heart_disease</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">as.factor</span><span class="p">(</span><span class="n">heart</span><span class="o">$</span><span class="n">heart_disease</span><span class="p">)</span>
+<span class="n">heart</span><span class="o">$</span><span class="n">stroke</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">as.factor</span><span class="p">(</span><span class="n">heart</span><span class="o">$</span><span class="n">stroke</span><span class="p">)</span>
+
+<span class="nf">summary</span><span class="p">(</span><span class="n">heart</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       id           gender          age          hypertension  heart_disease
+ Min.   :   67   female:   7   Min.   : 0.08   0       :4612   0:4834       
+ 1st Qu.:17741   Female:2987   1st Qu.:25.00   1       : 493   1: 276       
+ Median :36932   male  :   6   Median :45.00   10      :   4                
+ Mean   :36518   Male  :2108   Mean   :43.23   10+D4972:   1                
+ 3rd Qu.:54682   meal  :   1   3rd Qu.:61.00                                
+ Max.   :72940   Other :   1   Max.   :82.00                                
+                                                                            
+ ever_married         work_type    Residence_type avg_glucose_level
+ No :1757     Private      :2921   Rural:2514     Min.   : 55.12   
+ Yes:3353     Self-employed: 818   Urban:2596     1st Qu.: 77.25   
+              children     : 687                  Median : 91.89   
+              Govt_job     : 656                  Mean   :106.15   
+              Never_worked :  22                  3rd Qu.:114.09   
+              Private      :   4                  Max.   :271.74   
+              (Other)      :   2                                   
+      bmi               smoking_status stroke  
+ N/A    : 201   formerly smoked: 885   0:4861  
+ 28.7   :  41   never smoked   :1892   1: 249  
+ 28.4   :  38   smokes         : 789           
+ 26.1   :  37   Unknown        :1544           
+ 26.7   :  37                                  
+ 27.6   :  37                                  
+ (Other):4719                                  
+</pre></div>
+</div>
+</div>
+</div>
+<section id="incomplete-data">
+<h3>Incomplete data<a class="headerlink" href="#incomplete-data" title="Link to this heading">#</a></h3>
+<p>Firstly, we have to make a decision on how to handle missing values. We can either accept that some of the columns are incomplete or eliminate rows that do not have full data. Let’s evaluate which columns this affects</p>
+<p>If you ever encounter missing data when you are entering data, use <code class="docutils literal notranslate"><span class="pre">NA</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">(</span><span class="n">heart</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">smoking_status</span><span class="p">,</span><span class="w"> </span><span class="n">fill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hypertension</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_bar</span><span class="p">()</span>
+
+<span class="nf">prop.table</span><span class="p">(</span><span class="nf">table</span><span class="p">(</span><span class="n">heart</span><span class="o">$</span><span class="n">smoking_status</span><span class="p">,</span><span class="w"> </span><span class="n">heart</span><span class="o">$</span><span class="n">hypertension</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                 
+                             0            1           10     10+D4972
+  formerly smoked 0.1497064579 0.0232876712 0.0001956947 0.0000000000
+  never smoked    0.3248532290 0.0448140900 0.0003913894 0.0001956947
+  smokes          0.1360078278 0.0183953033 0.0000000000 0.0000000000
+  Unknown         0.2919765166 0.0099804305 0.0001956947 0.0000000000
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="_images/f06260ed35dbdc90c25a4e6ee080ef2ce10ae057d7e4012c815ae152e22ed899.png"><img alt="_images/f06260ed35dbdc90c25a4e6ee080ef2ce10ae057d7e4012c815ae152e22ed899.png" src="_images/f06260ed35dbdc90c25a4e6ee080ef2ce10ae057d7e4012c815ae152e22ed899.png" style="width: 420px; height: 420px;" /></a>
+</div>
+</div>
+<p>Let’s use tidyverse to remove the rows in the <code class="docutils literal notranslate"><span class="pre">smoking_status</span></code> column with a value of <code class="docutils literal notranslate"><span class="pre">Unknown</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">dim</span><span class="p">(</span><span class="n">heart</span><span class="p">)</span><span class="w"> </span><span class="c1"># original 5110 rows</span>
+
+<span class="nf">table</span><span class="p">(</span><span class="n">heart</span><span class="o">$</span><span class="n">smoking_status</span><span class="p">)</span><span class="w"> </span><span class="c1">#1544 unknowns</span>
+
+<span class="nf">dim</span><span class="p">(</span><span class="nf">filter</span><span class="p">(</span><span class="n">heart</span><span class="p">,</span><span class="w"> </span><span class="o">!</span><span class="p">(</span><span class="n">smoking_status</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;Unknown&quot;</span><span class="p">)))</span>
+
+<span class="n">heart</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">filter</span><span class="p">(</span><span class="n">heart</span><span class="p">,</span><span class="w"> </span><span class="o">!</span><span class="p">(</span><span class="n">smoking_status</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;Unknown&quot;</span><span class="p">))</span>
+<span class="nf">summary</span><span class="p">(</span><span class="n">heart</span><span class="o">$</span><span class="n">smoking_status</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>5110</li><li>12</li></ol>
+</div><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>formerly smoked    never smoked          smokes         Unknown 
+            885            1892             789            1544 
+</pre></div>
+</div>
+<div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>3566</li><li>12</li></ol>
+</div><div class="output text_html"><style>
+.dl-inline {width: auto; margin:0; padding: 0}
+.dl-inline>dt, .dl-inline>dd {float: none; width: auto; display: inline-block}
+.dl-inline>dt::after {content: ":\0020"; padding-right: .5ex}
+.dl-inline>dt:not(:first-of-type) {padding-left: .5ex}
+</style><dl class=dl-inline><dt>formerly smoked</dt><dd>885</dd><dt>never smoked</dt><dd>1892</dd><dt>smokes</dt><dd>789</dd><dt>Unknown</dt><dd>0</dd></dl>
+</div></div>
+</div>
+<p>After double checking, we can see that the smoking status has an empty level, we’ll clean this up before moving on</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">heart</span><span class="o">$</span><span class="n">smoking_status</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">droplevels</span><span class="p">(</span><span class="n">heart</span><span class="o">$</span><span class="n">smoking_status</span><span class="p">)</span>
+
+<span class="nf">summary</span><span class="p">(</span><span class="n">heart</span><span class="o">$</span><span class="n">smoking_status</span><span class="p">)</span>
+
+<span class="n">heart_checkpoint</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">heart</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+.dl-inline {width: auto; margin:0; padding: 0}
+.dl-inline>dt, .dl-inline>dd {float: none; width: auto; display: inline-block}
+.dl-inline>dt::after {content: ":\0020"; padding-right: .5ex}
+.dl-inline>dt:not(:first-of-type) {padding-left: .5ex}
+</style><dl class=dl-inline><dt>formerly smoked</dt><dd>885</dd><dt>never smoked</dt><dd>1892</dd><dt>smokes</dt><dd>789</dd></dl>
+</div></div>
+</div>
+<p>Great! Now let’s tackle the typos in the gender column.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">table</span><span class="p">(</span><span class="n">heart</span><span class="o">$</span><span class="n">gender</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>female Female   male   Male   meal  Other 
+     5   2153      5   1402      0      1 
+</pre></div>
+</div>
+</div>
+</div>
+<p>We need to fix the typos that happened during data entry and the single observation of <code class="docutils literal notranslate"><span class="pre">Other</span></code> will not be enough data for us to draw any statistical conclusion so we’ll remove this row while we’re at it.</p>
+<p>We can use <code class="docutils literal notranslate"><span class="pre">str_replace_all()</span></code> as a search and replace tool</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">table</span><span class="p">(</span><span class="nf">str_replace_all</span><span class="p">(</span><span class="n">heart</span><span class="o">$</span><span class="n">gender</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;female&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Female&quot;</span><span class="p">))</span>
+<span class="c1"># str_replace_all(data, what we&#39;re search, what to replace with)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Female   male   Male  Other 
+  2158      5   1402      1 
+</pre></div>
+</div>
+</div>
+</div>
+<p>Remember that this only displays the output, it does not replace the columns in the dataset.</p>
+<p>Before we apply it globally, we can set up a quick double check to make sure that the right values are changed.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># document which rows have the error &quot;female&quot;</span>
+<span class="n">wrong_entry</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">which</span><span class="p">(</span><span class="n">heart</span><span class="o">$</span><span class="n">gender</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;female&quot;</span><span class="p">)</span>
+<span class="n">wrong_entry</span>
+<span class="n">heart</span><span class="o">$</span><span class="n">gender</span><span class="p">[</span><span class="n">wrong_entry</span><span class="p">]</span>
+
+<span class="c1"># apply the search and replace</span>
+<span class="n">heart</span><span class="o">$</span><span class="n">gender</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">str_replace_all</span><span class="p">(</span><span class="n">heart</span><span class="o">$</span><span class="n">gender</span><span class="p">,</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;female&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Female&quot;</span><span class="p">,</span>
+<span class="w">                                                </span><span class="s">&quot;male&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Male&quot;</span><span class="p">,</span>
+<span class="w">                                                </span><span class="s">&quot;meal&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Male&quot;</span><span class="p">))</span>
+
+<span class="n">heart</span><span class="o">$</span><span class="n">gender</span><span class="p">[</span><span class="n">wrong_entry</span><span class="p">]</span>
+
+<span class="nf">table</span><span class="p">(</span><span class="n">heart</span><span class="o">$</span><span class="n">gender</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>127</li><li>271</li><li>941</li><li>1930</li><li>3021</li></ol>
+</div><div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>female</li><li>female</li><li>female</li><li>female</li><li>female</li></ol>
+
+<details>
+	<summary style=display:list-item;cursor:pointer>
+		<strong>Levels</strong>:
+	</summary>
+	<style>
+	.list-inline {list-style: none; margin:0; padding: 0}
+	.list-inline>li {display: inline-block}
+	.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+	</style>
+	<ol class=list-inline><li>'female'</li><li>'Female'</li><li>'male'</li><li>'Male'</li><li>'meal'</li><li>'Other'</li></ol>
+</details></div><div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>'FeMale'</li><li>'FeMale'</li><li>'FeMale'</li><li>'FeMale'</li><li>'FeMale'</li></ol>
+</div><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>FeMale   Male  Other 
+  2158   1407      1 
+</pre></div>
+</div>
+</div>
+</div>
+<p>There’s an issue with the “male” search grabbing from the “female” word!! Good thing we made a checkpoint earlier. Let’s bring this back to our main heart object - it’s a good habit to make some objects to checkpoint your work. In case you have not had this set up, you can always back track in your code and re-read in the object and re-run some earlier code to catch up.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">heart</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">heart_checkpoint</span>
+
+<span class="nf">table</span><span class="p">(</span><span class="n">heart</span><span class="o">$</span><span class="n">gender</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>female Female   male   Male   meal  Other 
+     5   2153      5   1402      0      1 
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s try this again:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># From previous code</span>
+
+<span class="c1"># add ^ (carrot) to the start of the search term to make sure it&#39;s only found at the start of the word</span>
+<span class="n">heart</span><span class="o">$</span><span class="n">gender</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">str_replace_all</span><span class="p">(</span><span class="n">heart</span><span class="o">$</span><span class="n">gender</span><span class="p">,</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;^female&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Female&quot;</span><span class="p">,</span>
+<span class="w">                                                </span><span class="s">&quot;^male&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Male&quot;</span><span class="p">,</span>
+<span class="w">                                                </span><span class="s">&quot;^meal&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Male&quot;</span><span class="p">))</span>
+
+<span class="n">heart</span><span class="o">$</span><span class="n">gender</span><span class="p">[</span><span class="n">wrong_entry</span><span class="p">]</span>
+
+<span class="nf">table</span><span class="p">(</span><span class="n">heart</span><span class="o">$</span><span class="n">gender</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>'Female'</li><li>'Female'</li><li>'Female'</li><li>'Female'</li><li>'Female'</li></ol>
+</div><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Female   Male  Other 
+  2158   1407      1 
+</pre></div>
+</div>
+</div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">^</span></code> is a special character that indicates the start of a word.</p>
+<p>Lastly, we’ll the one <code class="docutils literal notranslate"><span class="pre">Other</span></code> entry</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">heart</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">heart</span><span class="p">[</span><span class="o">!</span><span class="n">heart</span><span class="o">$</span><span class="n">gender</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;Other&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="c1"># object[rows, col]</span>
+<span class="nf">table</span><span class="p">(</span><span class="n">heart</span><span class="o">$</span><span class="n">gender</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Female   Male 
+  2158   1407 
+</pre></div>
+</div>
+</div>
+</div>
+<p>Overall, the data is looking much cleaner than when we started!</p>
+</section>
+<section id="id3">
+<h3>Exercise<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<p>Investigate the <code class="docutils literal notranslate"><span class="pre">work_type</span></code> column and correct the data entry problems! Also, remove any “N/A” entries under <code class="docutils literal notranslate"><span class="pre">bmi</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">table</span><span class="p">(</span><span class="n">heart</span><span class="o">$</span><span class="n">work_type</span><span class="p">)</span>
+<span class="nf">levels</span><span class="p">(</span><span class="n">heart</span><span class="o">$</span><span class="n">work_type</span><span class="p">)</span>
+
+<span class="n">heart</span><span class="o">$</span><span class="n">work_type</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">str_replace_all</span><span class="p">(</span><span class="n">heart</span><span class="o">$</span><span class="n">work_type</span><span class="p">,</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;Govt_job &quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Govt_job&quot;</span><span class="p">,</span>
+<span class="w">                                                      </span><span class="s">&quot;Private &quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Private&quot;</span><span class="p">,</span>
+<span class="w">                                                      </span><span class="s">&quot;Self-employed &quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Self-employed&quot;</span><span class="p">))</span>
+
+<span class="nf">class</span><span class="p">(</span><span class="n">heart</span><span class="o">$</span><span class="n">work_type</span><span class="p">)</span>
+
+<span class="n">heart</span><span class="o">$</span><span class="n">work_type</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">as.factor</span><span class="p">(</span><span class="n">heart</span><span class="o">$</span><span class="n">work_type</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      children       Govt_job      Govt_job    Never_worked        Private 
+            69            534              1             14           2281 
+      Private   Self-employed Self-employed  
+             3            662              1 
+</pre></div>
+</div>
+<div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>'children'</li><li>'Govt_job'</li><li>'Govt_job '</li><li>'Never_worked'</li><li>'Private'</li><li>'Private '</li><li>'Self-employed'</li><li>'Self-employed '</li></ol>
+</div><div class="output text_html">'character'</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">summary</span><span class="p">(</span><span class="n">heart</span><span class="o">$</span><span class="n">bmi</span><span class="p">)</span>
+
+<span class="n">heart</span><span class="o">$</span><span class="n">bmi</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">as.numeric</span><span class="p">(</span><span class="n">heart</span><span class="o">$</span><span class="n">bmi</span><span class="p">)</span>
+<span class="nf">summary</span><span class="p">(</span><span class="n">heart</span><span class="o">$</span><span class="n">bmi</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+.dl-inline {width: auto; margin:0; padding: 0}
+.dl-inline>dt, .dl-inline>dd {float: none; width: auto; display: inline-block}
+.dl-inline>dt::after {content: ":\0020"; padding-right: .5ex}
+.dl-inline>dt:not(:first-of-type) {padding-left: .5ex}
+</style><dl class=dl-inline><dt>N/A</dt><dd>140</dd><dt>28.4</dt><dd>32</dd><dt>28.7</dt><dd>32</dd><dt>27</dt><dd>30</dd><dt>27.6</dt><dd>30</dd><dt>25.5</dt><dd>28</dd><dt>27.3</dt><dd>28</dd><dt>26.1</dt><dd>26</dd><dt>26.7</dt><dd>26</dd><dt>26.9</dt><dd>26</dd><dt>32.3</dt><dd>26</dd><dt>25.1</dt><dd>25</dd><dt>25.3</dt><dd>25</dd><dt>26.4</dt><dd>25</dd><dt>26.5</dt><dd>25</dd><dt>27.7</dt><dd>25</dd><dt>28.3</dt><dd>25</dd><dt>28.9</dt><dd>24</dd><dt>29</dt><dd>24</dd><dt>29.6</dt><dd>24</dd><dt>30.3</dt><dd>24</dd><dt>30.9</dt><dd>24</dd><dt>31.4</dt><dd>24</dd><dt>23.4</dt><dd>23</dd><dt>28</dt><dd>23</dd><dt>28.1</dt><dd>23</dd><dt>28.6</dt><dd>23</dd><dt>29.4</dt><dd>23</dd><dt>23.5</dt><dd>22</dd><dt>26.6</dt><dd>22</dd><dt>27.1</dt><dd>22</dd><dt>27.5</dt><dd>22</dd><dt>28.2</dt><dd>22</dd><dt>28.5</dt><dd>22</dd><dt>29.5</dt><dd>22</dd><dt>31.1</dt><dd>22</dd><dt>22.2</dt><dd>21</dd><dt>24.5</dt><dd>21</dd><dt>25</dt><dd>21</dd><dt>26.2</dt><dd>21</dd><dt>27.9</dt><dd>21</dd><dt>29.2</dt><dd>21</dd><dt>29.9</dt><dd>21</dd><dt>30</dt><dd>21</dd><dt>30.5</dt><dd>21</dd><dt>30.7</dt><dd>21</dd><dt>31.5</dt><dd>21</dd><dt>32.1</dt><dd>21</dd><dt>24</dt><dd>20</dd><dt>24.1</dt><dd>20</dd><dt>24.2</dt><dd>20</dd><dt>24.3</dt><dd>20</dd><dt>24.8</dt><dd>20</dd><dt>26</dt><dd>20</dd><dt>27.2</dt><dd>20</dd><dt>30.1</dt><dd>20</dd><dt>33.1</dt><dd>20</dd><dt>35.8</dt><dd>20</dd><dt>24.9</dt><dd>19</dd><dt>25.4</dt><dd>19</dd><dt>28.8</dt><dd>19</dd><dt>29.7</dt><dd>19</dd><dt>31.3</dt><dd>19</dd><dt>32.8</dt><dd>19</dd><dt>24.4</dt><dd>18</dd><dt>26.3</dt><dd>18</dd><dt>27.8</dt><dd>18</dd><dt>33.7</dt><dd>18</dd><dt>21.5</dt><dd>17</dd><dt>22.8</dt><dd>17</dd><dt>23.1</dt><dd>17</dd><dt>23.8</dt><dd>17</dd><dt>27.4</dt><dd>17</dd><dt>29.3</dt><dd>17</dd><dt>31</dt><dd>17</dd><dt>31.6</dt><dd>17</dd><dt>31.8</dt><dd>17</dd><dt>34.7</dt><dd>17</dd><dt>21.3</dt><dd>16</dd><dt>22.1</dt><dd>16</dd><dt>22.7</dt><dd>16</dd><dt>23</dt><dd>16</dd><dt>23.9</dt><dd>16</dd><dt>24.6</dt><dd>16</dd><dt>24.7</dt><dd>16</dd><dt>25.8</dt><dd>16</dd><dt>25.9</dt><dd>16</dd><dt>26.8</dt><dd>16</dd><dt>29.1</dt><dd>16</dd><dt>29.8</dt><dd>16</dd><dt>30.2</dt><dd>16</dd><dt>30.8</dt><dd>16</dd><dt>31.2</dt><dd>16</dd><dt>31.9</dt><dd>16</dd><dt>32.4</dt><dd>16</dd><dt>33.5</dt><dd>16</dd><dt>34.5</dt><dd>16</dd><dt>23.6</dt><dd>15</dd><dt>32.2</dt><dd>15</dd><dt>(Other)</dt><dd>1414</dd></dl>
+</div><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+    3.0   128.0   168.0   185.6   223.0   419.0 
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="loops">
+<h3>Loops<a class="headerlink" href="#loops" title="Link to this heading">#</a></h3>
+<p>“For loops” allow R to apply highly automated tasks. It will cycle through a range of inputs and “for” each of them, it will carry out your custom task.</p>
+<p>Here’s a very simple example to show you the structure of for loops</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">fruits</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;strawberry&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;banana&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;orange&quot;</span><span class="p">)</span>
+
+<span class="nf">for</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">fruits</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nf">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1] &quot;strawberry&quot;
+[1] &quot;banana&quot;
+[1] &quot;orange&quot;
+</pre></div>
+</div>
+</div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">for()</span></code> function accepts firstly the name of a temporary object that exists only within the curly brackets of the for loop, the <code class="docutils literal notranslate"><span class="pre">in</span></code> is a special R syntax specification, and <code class="docutils literal notranslate"><span class="pre">fruit</span></code> is the object that we are applying the for loop on.</p>
+<p>The for loop will take each entry of the fruits object, store it in the temporary object <code class="docutils literal notranslate"><span class="pre">x</span></code>, and apply the code written written within the curly bracket before repeating with the next entry.</p>
+<p>I recommend testing your code outside the <code class="docutils literal notranslate"><span class="pre">for()</span></code> loop before moving it into the loop to make sure it is robust and if you are applying the loop to a long vector or large dataset, consider trying it on a truncated version first as a proof of principle.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">levels</span><span class="p">(</span><span class="n">heart</span><span class="o">$</span><span class="n">smoking_status</span><span class="p">)</span>
+
+<span class="n">heart</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">  </span><span class="nf">filter</span><span class="p">(</span><span class="n">smoking_status</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;never smoked&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">  </span><span class="nf">ggplot</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">avg_glucose_level</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="n">bmi</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_point</span><span class="p">()</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">ggtitle</span><span class="p">(</span><span class="s">&quot;never smoked&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">theme_classic</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>'formerly smoked'</li><li>'never smoked'</li><li>'smokes'</li></ol>
+</div><a class="reference internal image-reference" href="_images/e9d48ade71aac83f9bfcb323fc679ba1964cf0697aea47f3f6621d4a47c71373.png"><img alt="_images/e9d48ade71aac83f9bfcb323fc679ba1964cf0697aea47f3f6621d4a47c71373.png" src="_images/e9d48ade71aac83f9bfcb323fc679ba1964cf0697aea47f3f6621d4a47c71373.png" style="width: 420px; height: 420px;" /></a>
+</div>
+</div>
+<p>If we wanted to save a pdf of every category of <code class="docutils literal notranslate"><span class="pre">smoking_status</span></code>, we can convert our code into a loop. When working on a larger section of code, it is helpful to sketch out the steps you need to do with <code class="docutils literal notranslate"><span class="pre">#</span></code> comments to keep you focused.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">smoke_cat</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">levels</span><span class="p">(</span><span class="n">heart</span><span class="o">$</span><span class="n">smoking_status</span><span class="p">)</span>
+<span class="n">smoke_cat</span>
+
+<span class="nf">getwd</span><span class="p">()</span><span class="w"> </span><span class="c1"># get working directory</span>
+
+<span class="nf">for</span><span class="p">(</span><span class="n">cat</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">smoke_cat</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">  </span><span class="c1"># Specify file name</span>
+<span class="w">  </span><span class="n">filename_cat</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">paste0</span><span class="p">(</span><span class="s">&quot;bmi_glucose_&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">cat</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;.png&quot;</span><span class="p">)</span>
+<span class="w">  </span><span class="nf">print</span><span class="p">(</span><span class="n">filename_cat</span><span class="p">)</span>
+
+<span class="w">  </span><span class="c1"># Making plot (based on code from above)</span>
+
+<span class="w">  </span><span class="n">plot_cat</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">heart</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="c1"># SAVE OUTPUT TO OBJECT</span>
+<span class="w">  </span><span class="nf">filter</span><span class="p">(</span><span class="n">smoking_status</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">cat</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="c1"># CHANGE TO cat</span>
+<span class="w">  </span><span class="nf">ggplot</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">avg_glucose_level</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="n">bmi</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_point</span><span class="p">()</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">ggtitle</span><span class="p">(</span><span class="n">cat</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="c1"># CHANGE TO cat</span>
+<span class="w">  </span><span class="nf">theme_classic</span><span class="p">()</span>
+
+<span class="w">  </span><span class="c1">#print(plot_cat) # PRINT OUT PLOT</span>
+
+<span class="w">  </span><span class="c1"># Saving the plot to file</span>
+<span class="w">  </span><span class="nf">png</span><span class="p">(</span><span class="n">filename_cat</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">700</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="o">=</span><span class="w"> </span><span class="m">500</span><span class="p">,</span><span class="w"> </span><span class="n">res</span><span class="o">=</span><span class="m">120</span><span class="p">)</span><span class="w"> </span><span class="c1"># Start saving whatever I make now to this file</span>
+<span class="w">  </span><span class="nf">print</span><span class="p">(</span><span class="n">plot_cat</span><span class="p">)</span>
+<span class="w">  </span><span class="nf">dev.off</span><span class="p">()</span><span class="w"> </span><span class="c1"># Stop saving</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>'formerly smoked'</li><li>'never smoked'</li><li>'smokes'</li></ol>
+</div><div class="output text_html">'/Users/jqiu/Documents/CBWgithub/cbw-dev-test-pages/jupyter-book/INR-2024-Recreate-JB'</div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1] &quot;bmi_glucose_formerly smoked.png&quot;
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1] &quot;bmi_glucose_never smoked.png&quot;
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1] &quot;bmi_glucose_smokes.png&quot;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id4">
+<h3>Exercise<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<p>Copy and paste the loop from  above and modify it so that the range of values on the x and y axis are the same for all plots.</p>
+<p>Hint: the limits of the x axis can be specified by adding a layer called <code class="docutils literal notranslate"><span class="pre">xlim(lower,</span> <span class="pre">upper)</span></code> where it takes two numbers - the lower limit followed by the upper limit. These numbers can be stored in objects or inputted directly . Similarly, there is a parallel function called <code class="docutils literal notranslate"><span class="pre">ylim()</span></code> which also takes the same two parameters</p>
+<p>When working through the code, you can temporarily remove the code removing the axis labels by commenting out the lines with a hashtag.</p>
+<p>Great! Now the y-axis does not change between the plots and they are directly comparable.</p>
+</section>
+<section id="conditional-for-loops">
+<h3>Conditional for loops<a class="headerlink" href="#conditional-for-loops" title="Link to this heading">#</a></h3>
+<p>Boolean statements can be used to write conditional statements. If we do not want the loop to be applied to every item, we can add a condition.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">food</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s">&quot;pineapple&quot;</span>
+
+<span class="nf">if</span><span class="p">(</span><span class="n">food</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;pineapple&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nf">print</span><span class="p">(</span><span class="s">&quot;This indeed is a pineapple.&quot;</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1] &quot;This indeed is a pineapple.&quot;
+</pre></div>
+</div>
+</div>
+</div>
+<p>This will only output if the condition is met. We can also modify this statement to do something in case the condition is not met.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">food</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s">&quot;orange&quot;</span>
+
+<span class="nf">if</span><span class="p">(</span><span class="n">food</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;pineapple&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nf">print</span><span class="p">(</span><span class="s">&quot;This indeed is a pineapple.&quot;</span><span class="p">)</span>
+<span class="p">}</span><span class="w"> </span><span class="n">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nf">print</span><span class="p">(</span><span class="s">&quot;This is NOT a pineapple.&quot;</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1] &quot;This is NOT a pineapple.&quot;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Using <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">else</span></code> statements will allow more customizability in our code. Let’s use this to add a new column called <code class="docutils literal notranslate"><span class="pre">ever_smoked</span></code> based on the value in the <code class="docutils literal notranslate"><span class="pre">smoking_status</span></code> column.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">table</span><span class="p">(</span><span class="n">heart</span><span class="o">$</span><span class="n">stroke</span><span class="p">)</span>
+
+<span class="n">heart</span><span class="o">$</span><span class="n">stroke_history</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kc">NA</span>
+<span class="nf">head</span><span class="p">(</span><span class="n">heart</span><span class="p">)</span>
+
+<span class="nf">for</span><span class="p">(</span><span class="n">row</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="nf">nrow</span><span class="p">(</span><span class="n">heart</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nf">if</span><span class="p">(</span><span class="n">heart</span><span class="o">$</span><span class="n">stroke</span><span class="p">[</span><span class="n">row</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;1&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">heart</span><span class="o">$</span><span class="n">stroke_history</span><span class="p">[</span><span class="n">row</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s">&quot;confirmed_stroke&quot;</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="n">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">heart</span><span class="o">$</span><span class="n">stroke_history</span><span class="p">[</span><span class="n">row</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s">&quot;no_history&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="c1"># else &gt;&gt; &quot;no_history&quot;</span>
+
+<span class="p">}</span>
+<span class="nf">table</span><span class="p">(</span><span class="n">heart</span><span class="o">$</span><span class="n">stroke</span><span class="p">,</span><span class="w"> </span><span class="n">heart</span><span class="o">$</span><span class="n">stroke_history</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   0    1 
+3363  202 
+</pre></div>
+</div>
+<div class="output text_html"><table class="dataframe">
+<caption>A data.frame: 6 × 13</caption>
+<thead>
+	<tr><th></th><th scope=col>id</th><th scope=col>gender</th><th scope=col>age</th><th scope=col>hypertension</th><th scope=col>heart_disease</th><th scope=col>ever_married</th><th scope=col>work_type</th><th scope=col>Residence_type</th><th scope=col>avg_glucose_level</th><th scope=col>bmi</th><th scope=col>smoking_status</th><th scope=col>stroke</th><th scope=col>stroke_history</th></tr>
+	<tr><th></th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;lgl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>1</th><td> 9046</td><td>Male  </td><td>67</td><td>0</td><td>1</td><td>Yes</td><td>Private      </td><td>Urban</td><td>228.69</td><td>240</td><td>formerly smoked</td><td>1</td><td>NA</td></tr>
+	<tr><th scope=row>2</th><td>51676</td><td>Female</td><td>61</td><td>0</td><td>0</td><td>Yes</td><td>Self-employed</td><td>Rural</td><td>202.21</td><td>419</td><td>never smoked   </td><td>1</td><td>NA</td></tr>
+	<tr><th scope=row>3</th><td>31112</td><td>Male  </td><td>80</td><td>0</td><td>1</td><td>Yes</td><td>Private      </td><td>Rural</td><td>105.92</td><td>199</td><td>never smoked   </td><td>1</td><td>NA</td></tr>
+	<tr><th scope=row>4</th><td>60182</td><td>Female</td><td>49</td><td>0</td><td>0</td><td>Yes</td><td>Private      </td><td>Urban</td><td>171.23</td><td>218</td><td>smokes         </td><td>1</td><td>NA</td></tr>
+	<tr><th scope=row>5</th><td> 1665</td><td>Female</td><td>79</td><td>1</td><td>0</td><td>Yes</td><td>Self-employed</td><td>Rural</td><td>174.12</td><td>114</td><td>never smoked   </td><td>1</td><td>NA</td></tr>
+	<tr><th scope=row>6</th><td>56669</td><td>Male  </td><td>81</td><td>0</td><td>0</td><td>Yes</td><td>Private      </td><td>Urban</td><td>186.21</td><td>164</td><td>formerly smoked</td><td>1</td><td>NA</td></tr>
+</tbody>
+</table>
+</div><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   
+    confirmed_stroke no_history
+  0                0       3363
+  1              202          0
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id5">
+<h3>Exercise<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<p>Expected fasting blood glucose concentrations defined by the WHO are between 70 - 100 mg/dL. Create a new column called <code class="docutils literal notranslate"><span class="pre">glucose_WHO</span></code> in which:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">avg_glucose_levels</span></code> less than 70 are annotated as <code class="docutils literal notranslate"><span class="pre">followup</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">avg_glucose_levels</span></code> between 70-100 are annotated as <code class="docutils literal notranslate"><span class="pre">average</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">avg_glucose_levels</span></code> over 100 are annotated as <code class="docutils literal notranslate"><span class="pre">followup</span></code></p></li>
+</ul>
+<p>Hint: conditions can be combined using the <code class="docutils literal notranslate"><span class="pre">&amp;</span></code> for <code class="docutils literal notranslate"><span class="pre">and</span></code> where as <code class="docutils literal notranslate"><span class="pre">|</span></code> is used for <code class="docutils literal notranslate"><span class="pre">or</span></code> statements.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">colnames</span><span class="p">(</span><span class="n">heart</span><span class="p">)</span><span class="w"> </span><span class="c1"># SHOULD BE &#39;avg_glucose_level&#39; WITHOUT THE S AT THE END</span>
+
+<span class="c1"># Sorry!</span>
+
+<span class="n">heart</span><span class="o">$</span><span class="n">glucose_WHO</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kc">NA</span>
+
+<span class="nf">for</span><span class="p">(</span><span class="n">row</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="nf">nrow</span><span class="p">(</span><span class="n">heart</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nf">if</span><span class="p">(</span><span class="n">heart</span><span class="o">$</span><span class="n">avg_glucose_level</span><span class="p">[</span><span class="n">row</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">70</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">heart</span><span class="o">$</span><span class="n">avg_glucose_level</span><span class="p">[</span><span class="n">row</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">100</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">heart</span><span class="o">$</span><span class="n">glucose_WHO</span><span class="p">[</span><span class="n">row</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s">&quot;average&quot;</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="n">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">heart</span><span class="o">$</span><span class="n">glucose_WHO</span><span class="p">[</span><span class="n">row</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s">&quot;followup&quot;</span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nf">table</span><span class="p">(</span><span class="n">heart</span><span class="o">$</span><span class="n">glucose_WHO</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>'id'</li><li>'gender'</li><li>'age'</li><li>'hypertension'</li><li>'heart_disease'</li><li>'ever_married'</li><li>'work_type'</li><li>'Residence_type'</li><li>'avg_glucose_level'</li><li>'bmi'</li><li>'smoking_status'</li><li>'stroke'</li><li>'stroke_history'</li></ol>
+</div><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> average followup 
+    1610     1955 
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="countinous-variables">
+<h3>Countinous variables<a class="headerlink" href="#countinous-variables" title="Link to this heading">#</a></h3>
+<p>In the heart dataset, we have three continuous variables. In R, continuous variables will be <code class="docutils literal notranslate"><span class="pre">numeric</span></code> values. Continuous variable have a wide range of ordered values. For example, the <code class="docutils literal notranslate"><span class="pre">age</span></code> values have a range of 10 to 82 - any value in between is possible.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1">#heart$bmi &lt;- as.numeric(heart$bmi)</span>
+
+<span class="nf">ggplot</span><span class="p">(</span><span class="n">heart</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">bmi</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_histogram</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="_images/5a432904f63136ed52ebfba97b391653a8b1ae081dc26481b09c9145e19eea6d.png"><img alt="_images/5a432904f63136ed52ebfba97b391653a8b1ae081dc26481b09c9145e19eea6d.png" src="_images/5a432904f63136ed52ebfba97b391653a8b1ae081dc26481b09c9145e19eea6d.png" style="width: 420px; height: 420px;" /></a>
+</div>
+</div>
+<p>Staticians commonly prefer working with normally distributed data because this is a heavily studied and predictable distribution. Confirming that the variable is normally distributed opens up options for robust statistical approaches to be applied.</p>
+<p>Is this heart dataset normally distributed?</p>
+<p>QQ plots, or quantile-quantile plots, are unique scatterplots that help us determine the distribution. Rather than black and white diagnostic tool, this is a visualization tool for inform our analysis. The <code class="docutils literal notranslate"><span class="pre">qqnorm()</span></code> sorts the values in the vector and compares it to a theoretical normal distribution (the <code class="docutils literal notranslate"><span class="pre">norm</span></code> part of <code class="docutils literal notranslate"><span class="pre">qqnorm</span></code>).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">qqnorm</span><span class="p">(</span><span class="n">heart</span><span class="o">$</span><span class="n">bmi</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="_images/09f9f1373aa2ab92368be466137cb1c5efa096fc5adaa1e7d53eb97c4f339217.png"><img alt="_images/09f9f1373aa2ab92368be466137cb1c5efa096fc5adaa1e7d53eb97c4f339217.png" src="_images/09f9f1373aa2ab92368be466137cb1c5efa096fc5adaa1e7d53eb97c4f339217.png" style="width: 420px; height: 420px;" /></a>
+</div>
+</div>
+<p>For a normal distribution, we ideally want a straight diagonal line. Notice the slight curve on the right end, we can see the tail is also on the right side of this histogram. Curves indicate deviation away from normality. This looks faily normal, we can check to see if a transformation improves the distribution.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">(</span><span class="n">heart</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">log2</span><span class="p">(</span><span class="n">bmi</span><span class="p">)))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_histogram</span><span class="p">()</span>
+
+<span class="nf">qqnorm</span><span class="p">(</span><span class="nf">log2</span><span class="p">(</span><span class="n">heart</span><span class="o">$</span><span class="n">bmi</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="_images/be217ae51e88a5c5bceb6cb7bed959671eb30fc21361d5b05a3773171a7b3cbc.png"><img alt="_images/be217ae51e88a5c5bceb6cb7bed959671eb30fc21361d5b05a3773171a7b3cbc.png" src="_images/be217ae51e88a5c5bceb6cb7bed959671eb30fc21361d5b05a3773171a7b3cbc.png" style="width: 420px; height: 420px;" /></a>
+<a class="reference internal image-reference" href="_images/069815e7c551ac6178bbd97ef8a42c5625e48dd358492bb57a97a7c3e88abd1c.png"><img alt="_images/069815e7c551ac6178bbd97ef8a42c5625e48dd358492bb57a97a7c3e88abd1c.png" src="_images/069815e7c551ac6178bbd97ef8a42c5625e48dd358492bb57a97a7c3e88abd1c.png" style="width: 420px; height: 420px;" /></a>
+</div>
+</div>
+<p>The tail is exaggerated. Since all transformations add some artificial noise, we avoid applying them when it does not significantly improve the shape of our data.</p>
+<p>We will proceed with the non-transformed data.</p>
+</section>
+<section id="linear-models">
+<h3>Linear models<a class="headerlink" href="#linear-models" title="Link to this heading">#</a></h3>
+<p>Linear regression models allow us to investigate the relationship between two continuous variables. For simple linear models, we have one independent and one dependent variable. The independent variable is the one that is being controlled or manipulated in the experiment, and the dependent variable will change respectively.</p>
+<p>For example, if we are investigating if a high fat diet affects sleep quality, the diet is the independent variable (changing or is different between participants) while the sleep quality is the dependent variable (depending on the diet, the sleep quality will change).</p>
+<p>Here, we are investigating the relation between bmi and avg_glucose_level</p>
+<p>We’ll first visualize the two variables</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">(</span><span class="n">heart</span><span class="p">)</span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_point</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">bmi</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="n">avg_glucose_level</span><span class="p">,</span><span class="w"> </span><span class="n">alpha</span><span class="o">=</span><span class="m">0.3</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="_images/b14a37a6033ad94423515bb75ab947853a8180e994378d3afac4121044ad586d.png"><img alt="_images/b14a37a6033ad94423515bb75ab947853a8180e994378d3afac4121044ad586d.png" src="_images/b14a37a6033ad94423515bb75ab947853a8180e994378d3afac4121044ad586d.png" style="width: 420px; height: 420px;" /></a>
+</div>
+</div>
+<p>Notice here the aes is specified in the <code class="docutils literal notranslate"><span class="pre">geom_point()</span></code> call rather than the parent <code class="docutils literal notranslate"><span class="pre">ggplot()</span></code> call. This is helpful if your plots have multiple layers and you want the aes to apply only to one layer. Parameters in the <code class="docutils literal notranslate"><span class="pre">ggplot()</span></code> call will apply to all layers in the plot where as parameters specified in the <code class="docutils literal notranslate"><span class="pre">geom_point()</span></code> will only affect this specific layer.</p>
+<p>For this plot with only one layer, this has no functional impact on the plot made, but this will be important if you make more complex and layered plots.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">fit</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">lm</span><span class="p">(</span><span class="n">avg_glucose_level</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">bmi</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">heart</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>This can be read as <code class="docutils literal notranslate"><span class="pre">avg_glucose_level</span></code> as a function of <code class="docutils literal notranslate"><span class="pre">bmi</span></code></p>
+<p>Use the function summary() on fit1 object to obtain more details of the model.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">summary</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><pre class=language-r><code>function (object, ...) 
+UseMethod("summary")</code></pre></div></div>
+</div>
+<p>This overall looks like a good model. The p-value is very low and statistically significant. However, the Multiple R-squared values is small and the slope of bmi is low.</p>
+<p>From the results, we could conclude that changes in bmi are associated to the average glucose level as the p-value is less than 0.05. We can also state that as bmi increases, there will be an increase in the average glucose level as the slope is weakly positive 0.11.</p>
+<p>Now that our model has given us the intercept and slope, we can use this information to build a formula in the format of</p>
+<blockquote>
+<div><p>dependent = (m)(independent) + b</p>
+</div></blockquote>
+<blockquote>
+<div><p>avg_glucose_level = (0.097800)(bmi) + 90.823324</p>
+</div></blockquote>
+<p>We can use our knowledge of writing functions to calculate the predict the glucose level from the patient’s bmi</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">calc_gluc</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">function</span><span class="p">(</span><span class="n">bmi_value</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="p">(</span><span class="m">0.097800</span><span class="o">*</span><span class="n">bmi_value</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">90.823324</span><span class="w"> </span><span class="c1"># Change from brackets to * for multiply, bmi to bmi_value</span>
+<span class="p">}</span>
+
+<span class="n">heart</span><span class="p">[</span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;bmi&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;avg_glucose_level&quot;</span><span class="p">)]</span>
+<span class="nf">calc_gluc</span><span class="p">(</span><span class="m">119</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A data.frame: 1 × 2</caption>
+<thead>
+	<tr><th></th><th scope=col>bmi</th><th scope=col>avg_glucose_level</th></tr>
+	<tr><th></th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>3</th><td>199</td><td>105.92</td></tr>
+</tbody>
+</table>
+</div><div class="output text_html">102.461524</div></div>
+</div>
+<p>Next, let’s visualize this using ggplot</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># Start with code from previous point plot</span>
+
+<span class="nf">ggplot</span><span class="p">(</span><span class="n">heart</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">bmi</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="n">avg_glucose_level</span><span class="p">,</span><span class="w"> </span><span class="n">alpha</span><span class="o">=</span><span class="m">0.3</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">stroke</span><span class="p">))</span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_point</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="c1"># ADD PLUS SIGN</span>
+<span class="w">  </span><span class="nf">geom_abline</span><span class="p">(</span><span class="n">intercept</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">90.823324</span><span class="p">,</span><span class="w"> </span><span class="n">slope</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.097800</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;purple&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1"># ADD THIS LINE</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="_images/a7211fbfd41b66d83e09a9a2d9407d38018ae572d7ed75510f3984affa3263d3.png"><img alt="_images/a7211fbfd41b66d83e09a9a2d9407d38018ae572d7ed75510f3984affa3263d3.png" src="_images/a7211fbfd41b66d83e09a9a2d9407d38018ae572d7ed75510f3984affa3263d3.png" style="width: 420px; height: 420px;" /></a>
+</div>
+</div>
+</section>
+<section id="id6">
+<h3>Exercise<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<p>Hmm, this looks like there are two densities of data in this image. Let’s try to investigate if we can figure it out.</p>
+<p>I’ve started you off by creating two new objects, an object called <code class="docutils literal notranslate"><span class="pre">heart_stroke</span></code> that contains only patents who experienced a stroke (stroke == 1) and a second object called <code class="docutils literal notranslate"><span class="pre">heart_nostroke</span></code> that contains only patents who have not experienced a stroke (stroke == 0).</p>
+<p>Next, create two separate linear models called <code class="docutils literal notranslate"><span class="pre">fit_stroke</span></code> and <code class="docutils literal notranslate"><span class="pre">fit_nostroke</span></code> - are they different? How will you visualize the data?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">heart_stroke</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">filter</span><span class="p">(</span><span class="n">heart</span><span class="p">,</span><span class="w"> </span><span class="n">stroke</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">1</span><span class="p">)</span>
+<span class="nf">table</span><span class="p">(</span><span class="n">heart_stroke</span><span class="o">$</span><span class="n">stroke</span><span class="p">)</span>
+
+<span class="n">heart_nostroke</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">filter</span><span class="p">(</span><span class="n">heart</span><span class="p">,</span><span class="w"> </span><span class="n">stroke</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
+<span class="nf">table</span><span class="p">(</span><span class="n">heart_nostroke</span><span class="o">$</span><span class="n">stroke</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0   1 
+  0 202 
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   0    1 
+3363    0 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># From above:</span>
+<span class="c1"># fit &lt;- lm(avg_glucose_level ~ bmi, data = heart)</span>
+
+<span class="n">fit_stroke</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">lm</span><span class="p">(</span><span class="n">avg_glucose_level</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">bmi</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">heart_stroke</span><span class="p">)</span>
+<span class="n">fit_nostroke</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">lm</span><span class="p">(</span><span class="n">avg_glucose_level</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">bmi</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">heart_nostroke</span><span class="p">)</span>
+
+<span class="nf">summary</span><span class="p">(</span><span class="n">fit_stroke</span><span class="p">)</span>
+
+<span class="nf">summary</span><span class="p">(</span><span class="n">fit_nostroke</span><span class="p">)</span>
+<span class="n">fit_nostroke</span><span class="o">$</span><span class="n">coefficients</span>
+
+<span class="nf">ggplot</span><span class="p">(</span><span class="n">heart</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">bmi</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="n">avg_glucose_level</span><span class="p">,</span><span class="w"> </span><span class="n">alpha</span><span class="o">=</span><span class="m">0.3</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">stroke</span><span class="p">))</span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_point</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="c1"># ADD PLUS SIGN</span>
+<span class="w">  </span><span class="nf">geom_abline</span><span class="p">(</span><span class="n">intercept</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">90.823324</span><span class="p">,</span><span class="w"> </span><span class="n">slope</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.097800</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;purple&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_abline</span><span class="p">(</span><span class="n">intercept</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fit_nostroke</span><span class="o">$</span><span class="n">coefficients</span><span class="p">[</span><span class="m">1</span><span class="p">],</span><span class="w"> </span><span class="n">slope</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fit_nostroke</span><span class="o">$</span><span class="n">coefficients</span><span class="p">[</span><span class="m">2</span><span class="p">],</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;red&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">xlim</span><span class="p">(</span><span class="m">100</span><span class="p">,</span><span class="w"> </span><span class="m">200</span><span class="p">)</span><span class="o">+</span>
+<span class="w">  </span><span class="nf">ylim</span><span class="p">(</span><span class="m">100</span><span class="p">,</span><span class="w"> </span><span class="m">200</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Call:
+lm(formula = avg_glucose_level ~ bmi, data = heart_stroke)
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-92.34 -51.38 -27.21  60.90 138.98 
+
+Coefficients:
+             Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept) 118.92281   10.59306  11.226   &lt;2e-16 ***
+bmi           0.07479    0.04670   1.602    0.111    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 62.75 on 200 degrees of freedom
+Multiple R-squared:  0.01266,	Adjusted R-squared:  0.007726 
+F-statistic: 2.565 on 1 and 200 DF,  p-value: 0.1108
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Call:
+lm(formula = avg_glucose_level ~ bmi, data = heart_nostroke)
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-72.67 -30.43 -13.96  10.36 164.40 
+
+Coefficients:
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept) 89.92299    1.96082  45.860   &lt;2e-16 ***
+bmi          0.09507    0.00972   9.781   &lt;2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 46.2 on 3361 degrees of freedom
+Multiple R-squared:  0.02768,	Adjusted R-squared:  0.02739 
+F-statistic: 95.68 on 1 and 3361 DF,  p-value: &lt; 2.2e-16
+</pre></div>
+</div>
+<div class="output text_html"><style>
+.dl-inline {width: auto; margin:0; padding: 0}
+.dl-inline>dt, .dl-inline>dd {float: none; width: auto; display: inline-block}
+.dl-inline>dt::after {content: ":\0020"; padding-right: .5ex}
+.dl-inline>dt:not(:first-of-type) {padding-left: .5ex}
+</style><dl class=dl-inline><dt>(Intercept)</dt><dd>89.922986766756</dd><dt>bmi</dt><dd>0.0950738494079051</dd></dl>
+</div><div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning message:
+“Removed 2951 rows containing missing values or values outside the scale range (`geom_point()`).”
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="_images/e29d0d91eab435937beffd3d8285575dfcb679d18b8dcc433b6f3f93c4d14897.png"><img alt="_images/e29d0d91eab435937beffd3d8285575dfcb679d18b8dcc433b6f3f93c4d14897.png" src="_images/e29d0d91eab435937beffd3d8285575dfcb679d18b8dcc433b6f3f93c4d14897.png" style="width: 420px; height: 420px;" /></a>
+</div>
+</div>
+</section>
+<section id="demo-detour-to-function-for-lm-plots">
+<h3>Demo detour to function for lm plots<a class="headerlink" href="#demo-detour-to-function-for-lm-plots" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># The variables</span>
+<span class="n">which_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">heart_stroke</span>
+<span class="n">variable_call</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s">&quot;avg_glucose_level ~ bmi&quot;</span>
+<span class="n">custom_col</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s">&quot;blue&quot;</span>
+
+
+
+<span class="c1"># The actual task</span>
+
+<span class="n">lm_gluc_bmi</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">function</span><span class="p">(</span><span class="n">which_data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">heart_stroke</span><span class="p">,</span><span class="w"> </span><span class="n">variable_call</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;avg_glucose_level ~ bmi&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">custom_col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;blue&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">  </span><span class="c1"># Run liner model</span>
+
+<span class="w">  </span><span class="c1"># Make plot</span>
+
+<span class="n">fit_stroke</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">lm</span><span class="p">(</span><span class="n">variable_call</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">which_data</span><span class="p">)</span>
+
+<span class="nf">ggplot</span><span class="p">(</span><span class="n">heart</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">bmi</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="n">avg_glucose_level</span><span class="p">,</span><span class="w"> </span><span class="n">alpha</span><span class="o">=</span><span class="m">0.3</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">stroke</span><span class="p">))</span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_point</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="c1"># ADD PLUS SIGN</span>
+<span class="w">  </span><span class="nf">geom_abline</span><span class="p">(</span><span class="n">intercept</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fit_nostroke</span><span class="o">$</span><span class="n">coefficients</span><span class="p">[</span><span class="m">1</span><span class="p">],</span><span class="w"> </span><span class="n">slope</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fit_nostroke</span><span class="o">$</span><span class="n">coefficients</span><span class="p">[</span><span class="m">2</span><span class="p">],</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">custom_col</span><span class="p">)</span>
+
+<span class="p">}</span>
+
+<span class="nf">lm_gluc_bmi</span><span class="p">(</span><span class="n">custom_col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;green3&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="_images/9cbbb4957b304a9af6b89f7bd675622f381ce790a4bf9f25b4094d3180dc631c.png"><img alt="_images/9cbbb4957b304a9af6b89f7bd675622f381ce790a4bf9f25b4094d3180dc631c.png" src="_images/9cbbb4957b304a9af6b89f7bd675622f381ce790a4bf9f25b4094d3180dc631c.png" style="width: 420px; height: 420px;" /></a>
+</div>
+</div>
+</section>
+<section id="notes-on-data-types">
+<h3>Notes on data types<a class="headerlink" href="#notes-on-data-types" title="Link to this heading">#</a></h3>
+<p>Numeric
+-dbl doublets, int integers</p>
+<p>Character
+-char or fact factor
+- characters are independent words
+- factors have relations between identical entries</p>
+<p>-categorical
+- require factor</p>
+<p>Logical</p>
+<blockquote>
+<div><blockquote>
+<div><p>Differences are apparent when using a summary call</p>
+</div></blockquote>
+</div></blockquote>
+</section>
+</section>
+<section id="day-2-project">
+<h2>Day 2 project<a class="headerlink" href="#day-2-project" title="Link to this heading">#</a></h2>
+<p>For this mini guided project, we will be working with a dataset that contains the prices and other attributes of almost 54,000 diamonds and is publicly available at: <a class="reference external" href="https://www.kaggle.com/datasets/shivam2503/diamonds">https://www.kaggle.com/datasets/shivam2503/diamonds</a></p>
+<p>Here is some more information about each column:</p>
+<p>price price in US dollars ($326–$18,823)
+carat weight of the diamond (0.2–5.01)
+cut quality of the cut (Fair, Good, Very Good, Premium, Ideal)
+color diamond colour, from J (worst) to D (best)
+clarity a measurement of how clear the diamond is (I1 (worst), SI2, SI1, VS2, VS1, VVS2, VVS1, IF (best))
+x length in mm (0–10.74)
+y width in mm (0–58.9)
+z depth in mm (0–31.8)
+depth total depth percentage = z / mean(x, y) = 2 * z / (x + y) (43–79)
+table width of top of diamond relative to widest point (43–95)</p>
+<p>Insert a code chunk underneath each step to carry out the instruction.</p>
+<ol class="arabic simple">
+<li><p>Read in the “diamonds.csv” data into an object called data. Use the <code class="docutils literal notranslate"><span class="pre">strongAsFactors</span></code> parameter to automatically import the character values as a factor. Check the object you created by printing out the first 10 rows and applying the summary function.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">diamonds</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read.csv</span><span class="p">(</span><span class="s">&quot;datasets/diamonds.csv&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">header</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="bp">T</span><span class="p">,</span><span class="w"> </span><span class="n">stringsAsFactors</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="bp">T</span><span class="p">)</span>
+
+<span class="nf">head</span><span class="p">(</span><span class="n">diamonds</span><span class="p">)</span>
+<span class="nf">summary</span><span class="p">(</span><span class="n">diamonds</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A data.frame: 6 × 11</caption>
+<thead>
+	<tr><th></th><th scope=col>X</th><th scope=col>carat</th><th scope=col>cut</th><th scope=col>color</th><th scope=col>clarity</th><th scope=col>depth</th><th scope=col>table</th><th scope=col>price</th><th scope=col>x</th><th scope=col>y</th><th scope=col>z</th></tr>
+	<tr><th></th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>1</th><td>1</td><td>0.23</td><td>Ideal    </td><td>E</td><td>SI2 </td><td>61.5</td><td>55</td><td>326</td><td>3.95</td><td>3.98</td><td>2.43</td></tr>
+	<tr><th scope=row>2</th><td>2</td><td>0.21</td><td>Premium  </td><td>E</td><td>SI1 </td><td>59.8</td><td>61</td><td>326</td><td>3.89</td><td>3.84</td><td>2.31</td></tr>
+	<tr><th scope=row>3</th><td>3</td><td>0.23</td><td>Good     </td><td>E</td><td>VS1 </td><td>56.9</td><td>65</td><td>327</td><td>4.05</td><td>4.07</td><td>2.31</td></tr>
+	<tr><th scope=row>4</th><td>4</td><td>0.29</td><td>Premium  </td><td>I</td><td>VS2 </td><td>62.4</td><td>58</td><td>334</td><td>4.20</td><td>4.23</td><td>2.63</td></tr>
+	<tr><th scope=row>5</th><td>5</td><td>0.31</td><td>Good     </td><td>J</td><td>SI2 </td><td>63.3</td><td>58</td><td>335</td><td>4.34</td><td>4.35</td><td>2.75</td></tr>
+	<tr><th scope=row>6</th><td>6</td><td>0.24</td><td>Very Good</td><td>J</td><td>VVS2</td><td>62.8</td><td>57</td><td>336</td><td>3.94</td><td>3.96</td><td>2.48</td></tr>
+</tbody>
+</table>
+</div><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       X             carat               cut        color        clarity     
+ Min.   :    1   Min.   :0.2000   Fair     : 1610   D: 6775   SI1    :13065  
+ 1st Qu.:13486   1st Qu.:0.4000   Good     : 4906   E: 9797   VS2    :12258  
+ Median :26970   Median :0.7000   Ideal    :21551   F: 9542   SI2    : 9194  
+ Mean   :26970   Mean   :0.7979   Premium  :13791   G:11292   VS1    : 8171  
+ 3rd Qu.:40455   3rd Qu.:1.0400   Very Good:12082   H: 8304   VVS2   : 5066  
+ Max.   :53940   Max.   :5.0100                     I: 5422   VVS1   : 3655  
+                                                    J: 2808   (Other): 2531  
+     depth           table           price             x         
+ Min.   :43.00   Min.   :43.00   Min.   :  326   Min.   : 0.000  
+ 1st Qu.:61.00   1st Qu.:56.00   1st Qu.:  950   1st Qu.: 4.710  
+ Median :61.80   Median :57.00   Median : 2401   Median : 5.700  
+ Mean   :61.75   Mean   :57.46   Mean   : 3933   Mean   : 5.731  
+ 3rd Qu.:62.50   3rd Qu.:59.00   3rd Qu.: 5324   3rd Qu.: 6.540  
+ Max.   :79.00   Max.   :95.00   Max.   :18823   Max.   :10.740  
+                                                                 
+       y                z         
+ Min.   : 0.000   Min.   : 0.000  
+ 1st Qu.: 4.720   1st Qu.: 2.910  
+ Median : 5.710   Median : 3.530  
+ Mean   : 5.735   Mean   : 3.539  
+ 3rd Qu.: 6.540   3rd Qu.: 4.040  
+ Max.   :58.900   Max.   :31.800  
+                                  
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>We’ll start investigating the relationship between different variables with price. Create a boxplot using ggplot with the cut on the x axis and the price on the y axis.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">(</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">diamonds</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cut</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">price</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_boxplot</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="_images/5c0d567922fd0b355d647c780fa88862c031bce63376df1c60ad6a2d5cc5fa0d.png"><img alt="_images/5c0d567922fd0b355d647c780fa88862c031bce63376df1c60ad6a2d5cc5fa0d.png" src="_images/5c0d567922fd0b355d647c780fa88862c031bce63376df1c60ad6a2d5cc5fa0d.png" style="width: 420px; height: 420px;" /></a>
+</div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Using the code in the previous step as foundation, create an object called <code class="docutils literal notranslate"><span class="pre">diamonds_categorical</span></code> that contains the name of all the categorical columns. Then, write a loop to print out a separate plot with each of the different categorical variables on the x axis and price on the y-axis.</p></li>
+</ol>
+<p>Hint: remember how aes can be specified in both the <code class="docutils literal notranslate"><span class="pre">ggplot()</span></code> or <code class="docutils literal notranslate"><span class="pre">geom_xx()</span></code> layer? You will need to use this because we are string the name of a column as a variable in our loop and in order for R to know that it is looking for a column name rather than an object, you will need to use the <code class="docutils literal notranslate"><span class="pre">aes_string()</span></code> parameter for just the <code class="docutils literal notranslate"><span class="pre">geom_boxplot()</span></code> layer to specify the changing x axis. The y axis can remain with <code class="docutils literal notranslate"><span class="pre">aes()</span></code> in the parent <code class="docutils literal notranslate"><span class="pre">ggplot()</span></code> layer.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">str</span><span class="p">(</span><span class="n">diamonds</span><span class="p">)</span>
+
+<span class="n">diamonds_categorical</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;cut&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;color&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;clarity&quot;</span><span class="p">)</span>
+
+<span class="nf">for</span><span class="p">(</span><span class="n">cat</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">diamonds_categorical</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">diaplot</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">ggplot</span><span class="p">(</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">diamonds</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">price</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">    </span><span class="nf">geom_boxplot</span><span class="p">(</span><span class="nf">aes_string</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cat</span><span class="p">))</span>
+
+<span class="w">  </span><span class="nf">print</span><span class="p">(</span><span class="n">diaplot</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;data.frame&#39;:	53940 obs. of  11 variables:
+ $ X      : int  1 2 3 4 5 6 7 8 9 10 ...
+ $ carat  : num  0.23 0.21 0.23 0.29 0.31 0.24 0.24 0.26 0.22 0.23 ...
+ $ cut    : Factor w/ 5 levels &quot;Fair&quot;,&quot;Good&quot;,..: 3 4 2 4 2 5 5 5 1 5 ...
+ $ color  : Factor w/ 7 levels &quot;D&quot;,&quot;E&quot;,&quot;F&quot;,&quot;G&quot;,..: 2 2 2 6 7 7 6 5 2 5 ...
+ $ clarity: Factor w/ 8 levels &quot;I1&quot;,&quot;IF&quot;,&quot;SI1&quot;,..: 4 3 5 6 4 8 7 3 6 5 ...
+ $ depth  : num  61.5 59.8 56.9 62.4 63.3 62.8 62.3 61.9 65.1 59.4 ...
+ $ table  : num  55 61 65 58 58 57 57 55 61 61 ...
+ $ price  : int  326 326 327 334 335 336 336 337 337 338 ...
+ $ x      : num  3.95 3.89 4.05 4.2 4.34 3.94 3.95 4.07 3.87 4 ...
+ $ y      : num  3.98 3.84 4.07 4.23 4.35 3.96 3.98 4.11 3.78 4.05 ...
+ $ z      : num  2.43 2.31 2.31 2.63 2.75 2.48 2.47 2.53 2.49 2.39 ...
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning message:
+“`aes_string()` was deprecated in ggplot2 3.0.0.
+<span class=" -Color -Color-Cyan">ℹ</span> Please use tidy evaluation idioms with `aes()`.
+<span class=" -Color -Color-Cyan">ℹ</span> See also `vignette(&quot;ggplot2-in-packages&quot;)` for more information.”
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="_images/5c0d567922fd0b355d647c780fa88862c031bce63376df1c60ad6a2d5cc5fa0d.png"><img alt="_images/5c0d567922fd0b355d647c780fa88862c031bce63376df1c60ad6a2d5cc5fa0d.png" src="_images/5c0d567922fd0b355d647c780fa88862c031bce63376df1c60ad6a2d5cc5fa0d.png" style="width: 420px; height: 420px;" /></a>
+<a class="reference internal image-reference" href="_images/0c41b89e8113ac4ef9761a4d7a53f2645e422086965a0b1f6c69764774f7b0b0.png"><img alt="_images/0c41b89e8113ac4ef9761a4d7a53f2645e422086965a0b1f6c69764774f7b0b0.png" src="_images/0c41b89e8113ac4ef9761a4d7a53f2645e422086965a0b1f6c69764774f7b0b0.png" style="width: 420px; height: 420px;" /></a>
+<a class="reference internal image-reference" href="_images/41a4f4d4aba867162dceb851faa3d9824d742b8af8b92ec1e40378aef0315749.png"><img alt="_images/41a4f4d4aba867162dceb851faa3d9824d742b8af8b92ec1e40378aef0315749.png" src="_images/41a4f4d4aba867162dceb851faa3d9824d742b8af8b92ec1e40378aef0315749.png" style="width: 420px; height: 420px;" /></a>
+</div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>Write a function called <code class="docutils literal notranslate"><span class="pre">diamond_continous</span></code> that allows you to make a scatterplot that accepts one variable to plot on the x-axis as well as another variable to color the plot by as the inputs. Price will remain on the y-axis.</p></li>
+</ol>
+<p>Hint: Start out by making one plot, make it generalized, and then convert this into a function.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">diamond_continous</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">function</span><span class="p">(</span><span class="n">contV</span><span class="p">,</span><span class="w"> </span><span class="n">colV</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">  </span><span class="n">diaPlot</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">ggplot</span><span class="p">(</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">diamonds</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">price</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">    </span><span class="nf">geom_point</span><span class="p">(</span><span class="nf">aes_string</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">contV</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">colV</span><span class="p">),</span><span class="w"> </span><span class="n">alpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.4</span><span class="p">)</span>
+
+<span class="w">  </span><span class="nf">print</span><span class="p">(</span><span class="n">diaPlot</span><span class="p">)</span>
+
+<span class="p">}</span>
+
+<span class="nf">diamond_continous</span><span class="p">(</span><span class="s">&quot;carat&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;clarity&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="_images/9e062d5286b35814bd789c69d72dd250867c9fa307f06cb9e7478b2a44e6a20c.png"><img alt="_images/9e062d5286b35814bd789c69d72dd250867c9fa307f06cb9e7478b2a44e6a20c.png" src="_images/9e062d5286b35814bd789c69d72dd250867c9fa307f06cb9e7478b2a44e6a20c.png" style="width: 420px; height: 420px;" /></a>
+</div>
+</div>
+<ol class="arabic simple" start="5">
+<li><p>Based on your plots from the previous step, pick a continuous variable to compare with price and create a linear model. Make sure the price is the dependent variable. Add a layer to your plot generated by the function to include the equation of the line.</p></li>
+</ol>
+<p>Is the relationship significant?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">fit_diamond</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">lm</span><span class="p">(</span><span class="n">price</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">carat</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">diamonds</span><span class="p">)</span>
+
+<span class="n">fit_diamond</span><span class="o">$</span><span class="n">coefficients</span>
+
+<span class="nf">diamond_continous</span><span class="p">(</span><span class="s">&quot;carat&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;clarity&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_abline</span><span class="p">(</span><span class="n">intercept</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fit_diamond</span><span class="o">$</span><span class="n">coefficients</span><span class="p">[</span><span class="m">1</span><span class="p">],</span><span class="w"> </span><span class="n">slope</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fit_diamond</span><span class="o">$</span><span class="n">coefficients</span><span class="p">[</span><span class="m">2</span><span class="p">],</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;red&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+.dl-inline {width: auto; margin:0; padding: 0}
+.dl-inline>dt, .dl-inline>dd {float: none; width: auto; display: inline-block}
+.dl-inline>dt::after {content: ":\0020"; padding-right: .5ex}
+.dl-inline>dt:not(:first-of-type) {padding-left: .5ex}
+</style><dl class=dl-inline><dt>(Intercept)</dt><dd>-2256.36058004894</dd><dt>carat</dt><dd>7756.42561797005</dd></dl>
+</div><div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning message:
+“Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+<span class=" -Color -Color-Cyan">ℹ</span> Please use `linewidth` instead.”
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="_images/9e062d5286b35814bd789c69d72dd250867c9fa307f06cb9e7478b2a44e6a20c.png"><img alt="_images/9e062d5286b35814bd789c69d72dd250867c9fa307f06cb9e7478b2a44e6a20c.png" src="_images/9e062d5286b35814bd789c69d72dd250867c9fa307f06cb9e7478b2a44e6a20c.png" style="width: 420px; height: 420px;" /></a>
+<a class="reference internal image-reference" href="_images/d575b700a33d0a4bfb955afac40c761b68674b09efa4bcf9b4de6136ca978b29.png"><img alt="_images/d575b700a33d0a4bfb955afac40c761b68674b09efa4bcf9b4de6136ca978b29.png" src="_images/d575b700a33d0a4bfb955afac40c761b68674b09efa4bcf9b4de6136ca978b29.png" style="width: 420px; height: 420px;" /></a>
+</div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -402,16 +2125,16 @@
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "python"
+            mode: "r"
         },
         kernelOptions: {
-            name: "python3",
+            name: "ir",
             path: "./."
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'python3'</script>
+    <script>kernelName = 'ir'</script>
 
                 </article>
               
@@ -447,6 +2170,48 @@
             </div>
             
             
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#day-1-project">Day 1 Project</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#review-with-datasaurus-dozen">Review with Datasaurus Dozen</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#genearlizable-code">Genearlizable code</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generalizable-plots">Generalizable plots</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise">Exercise</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-heart-stroke-preduction">Dataset - Heart Stroke Preduction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Exercise</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Exercise</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#factors">Factors</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#incomplete-data">Incomplete data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Exercise</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#loops">Loops</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Exercise</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conditional-for-loops">Conditional for loops</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Exercise</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#countinous-variables">Countinous variables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-models">Linear models</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Exercise</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#demo-detour-to-function-for-lm-plots">Demo detour to function for lm plots</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#notes-on-data-types">Notes on data types</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#day-2-project">Day 2 project</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

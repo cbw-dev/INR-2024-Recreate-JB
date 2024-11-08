@@ -182,8 +182,12 @@ Notice when we open the abalone dataset that the first row holds the column name
 ```{r}
 #abalone <- read.csv("anotherfolder//abalone.csv", header = TRUE)
 #abalone <- read.csv("C:/Users/Frances/Downloads/BioinformaticsWorkshop_INR_June2024-20240611T023701Z-001/BioinformaticsWorkshop_INR_June2024/abalone.csv")
-
 #abalone <- read.csv("datasets/abalone.csv", header = TRUE)
+
+# Ok so all of these works, since we're building to the _build/html,
+# it doesn't matter, but the one below works in the R session,
+# so I think it will just depend on what we chose what the instructor will do
+
 abalone <- read.csv("/Users/jqiu/Documents/CBWgithub/cbw-dev-test-pages/jupyter-book/INR-2024-Recreate-JB/datasets/abalone.csv", header = TRUE)
 
 #abalone - commented out since it is a massive file
