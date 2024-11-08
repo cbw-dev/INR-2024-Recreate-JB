@@ -9,6 +9,11 @@ jupyter:
 (file-types:custom)=
 # yipppppeeeeee
 
+```r
+x <- 4
+x
+```
+
 You can designate additional file types to be converted to notebooks and then executed/parsed in the same manner as regular notebooks.
 
 :::{tip}
