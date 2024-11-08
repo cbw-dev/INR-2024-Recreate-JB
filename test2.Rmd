@@ -6,7 +6,7 @@ jupyter:
     name: ir
 ---
 
-# test 2
+# Executing R Code in Rmd
 
 ```{r echo=TRUE}
 print("Hallo I'm an RMarkdown block!")

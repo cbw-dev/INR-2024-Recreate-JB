@@ -12,7 +12,7 @@ kernelspec:
   name: ir
 ---
 
-# My simple notebook
+# MyST md file that Executes R
 
 Some **intro Markdown**!
 
