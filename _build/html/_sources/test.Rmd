@@ -7,12 +7,7 @@ jupyter:
 ---
 
 (file-types:custom)=
-# yipppppeeeeee
-
-```r
-x <- 4
-x
-```
+# Executing Python Code in an Rmd
 
 You can designate additional file types to be converted to notebooks and then executed/parsed in the same manner as regular notebooks.
 
