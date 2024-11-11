@@ -896,8 +896,3 @@ fit_diamond$coefficients
 diamond_continous("carat", "clarity") +
   geom_abline(intercept = fit_diamond$coefficients[1], slope = fit_diamond$coefficients[2], color = "red", size = 2)
 ```
-
-
-
-
-

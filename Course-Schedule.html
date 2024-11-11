@@ -172,6 +172,7 @@
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Meet-Your-Faculty.html">Meet Your Faculty</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Course Schedule</a></li>
+
 <li class="toctree-l1 has-children"><a class="reference internal" href="Course-Materials.html">Course Materials</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="Day-1-Data.html">Day 1 Data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Day-2-Data.html">Day 2 Data</a></li>
@@ -301,7 +302,7 @@
       
       
       
-      <li><a href="_sources/Course-Schedule.md" target="_blank"
+      <li><a href="_sources/Course-Schedule.Rmd" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -311,7 +312,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.Rmd</span>
 </a>
 </li>
       
@@ -387,8 +388,10 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#toastui-here">ToastUI here ????</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Course Schedule</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#toastui-schedule">ToastUI Schedule ?</a></li>
 </ul>
+
             </nav>
         </div>
     </div>
@@ -516,9 +519,42 @@
 </tbody>
 </table>
 </div>
-<section id="toastui-here">
-<h2>ToastUI here ????<a class="headerlink" href="#toastui-here" title="Link to this heading">#</a></h2>
 </section>
+<section class="tex2jax_ignore mathjax_ignore" id="toastui-schedule">
+<h1>ToastUI Schedule ?<a class="headerlink" href="#toastui-schedule" title="Link to this heading">#</a></h1>
+<div class="cell tag_remove_input docutils container">
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
+    <span class="n">calendar</span><span class="p">(</span><span class="n">cal_demo_data</span><span class="p">(</span><span class="s2">&quot;week&quot;</span><span class="p">),</span> <span class="n">view</span> <span class="o">=</span> <span class="s2">&quot;week&quot;</span><span class="p">,</span> <span class="n">height</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">)</span> <span class="o">%&gt;%</span>
+                                                                   <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid syntax
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove_input docutils container">
+</div>
+<div class="cell tag_remove_input docutils container">
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">library</span><span class="p">(</span><span class="n">toastui</span><span class="p">)</span>
+<span class="n">library</span><span class="p">(</span><span class="n">readxl</span><span class="p">)</span>
+
+<span class="n">my_data</span> <span class="o">&lt;-</span> <span class="n">read_excel</span><span class="p">(</span><span class="s2">&quot;sample_toastui_excel.xlsx&quot;</span><span class="p">,</span> <span class="n">sheet</span> <span class="o">=</span> <span class="s2">&quot;Sheet1&quot;</span><span class="p">)</span>
+
+<span class="n">my_data</span>
+
+<span class="n">calendar</span><span class="p">(</span><span class="n">my_data</span><span class="p">,</span> <span class="n">view</span> <span class="o">=</span> <span class="s2">&quot;week&quot;</span><span class="p">,</span> <span class="n">height</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">,</span> <span class="n">defaultDate</span> <span class="o">=</span> <span class="s2">&quot;2024-10-18&quot;</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+<span class="n">cal_week_options</span><span class="p">(</span>
+  <span class="n">startDayOfWeek</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="n">workweek</span> <span class="o">=</span> <span class="n">TRUE</span>
+<span class="p">)</span> <span class="o">%&gt;%</span> 
+<span class="n">cal_props</span><span class="p">(</span><span class="n">cal_demo_props</span><span class="p">())</span> 
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -586,8 +622,10 @@
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#toastui-here">ToastUI here ????</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Course Schedule</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#toastui-schedule">ToastUI Schedule ?</a></li>
 </ul>
+
   </nav></div>
 
 </div></div>
