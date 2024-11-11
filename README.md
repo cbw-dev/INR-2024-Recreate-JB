@@ -11,3 +11,9 @@ Almost Done, pretty much everything implemented
 ## Current Bugs
 - Primary sidebar toggle button does not work well (the way it works defeats its point)
 - To-do list markdown not formatting correctly
+
+## Helpful Links
+- [Docs](https://jupyterbook.org/en/stable/file-types/jupytext.html)
+- [Docs GitHub, helpful code!](https://github.com/jupyter-book/jupyter-book/blob/main/docs/file-types/jupytext.Rmd)
+- [Example of a done/complex well-formatted Jupyter Book](https://faircookbook.elixir-europe.org/content/recipes/findability/identifiers-minids.html)
+- [Sidebar toggle issue?](https://github.com/jupyter-book/jupyter-book/issues/2160)
