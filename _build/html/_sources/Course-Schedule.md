@@ -1,3 +1,18 @@
+---
+jupytext:
+  cell_metadata_filter: -all
+  formats: md:myst
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.13
+    jupytext_version: 1.16.4
+kernelspec:
+  display_name: R
+  language: R
+  name: ir
+---
+
 # Course Schedule
 
 | CBW’s Introduction to R workshop (INR) 2024 |                                                     |            |                                                       |   |
@@ -20,5 +35,65 @@
 |                    15:30                    |               Review and Short project              |    17:00   |                Survey & Closing Remarks               |   |
 |                    17:30                    |                       Finished                      |    17:30   |                        Finished                       |   |
 
++++
 
-## ToastUI here ????
+# ToastUI Schedule ?
+
+```{r, echo=FALSE}
+library(toastui)
+
+calendar(cal_demo_data("week"), view = "week", height = 1000) %>% 
+cal_week_options(
+  startDayOfWeek = 1,
+  workweek = TRUE
+) %>% 
+cal_props(cal_demo_props())
+
+# defaultDate = "2024-06-11"
+# height - sorta hardcoding it so that it looks nice on a regular screen size
+
+# detail popup has edit/delete buttons, but also gives a description, but we probably don't want to have edit and delete buttons, but nice to have a description (to remove, add useDetailPopup = FALSE, TRUE is default)
+```
+
+```{r, echo=FALSE}
+library(toastui)
+cal_demo_data()
+cal_demo_data("week")
+```
+```{r, echo=FALSE}
+library(toastui)
+
+Data_Frame <- data.frame (
+  calendarID = c(1, 2, 3, 2),
+  title = c("A", "B", "C", "D"),
+  body = c("aaaaa", "bbbb", "cccccc", "dddddd"),
+  start = c("2024-10-14 8:00:00", "2024-10-14 14:00:00", "2024-10-16 08:00:00", "2024-10-17 08:00:00"),
+  end = c("2024-10-14 12:00:00", "2024-10-14 18:00:00", "2024-10-16 11:00:00", "2024-10-17 19:00:00"),
+  category = c("time", "time", "time", "time")
+)
+
+# Print the data frame
+Data_Frame
+
+calendar(Data_Frame, view = "week", height = 1000, defaultDate = "2024-10-18") %>% 
+cal_week_options(
+  startDayOfWeek = 1,
+  workweek = TRUE
+) %>% 
+cal_props(cal_demo_props()) 
+```
+```{r}
+library(toastui)
+library(readxl)
+
+my_data <- read_excel("sample_toastui_excel.xlsx", sheet = "Sheet1")
+
+my_data
+
+calendar(my_data, view = "week", height = 1000, defaultDate = "2024-10-18") %>% 
+cal_week_options(
+  startDayOfWeek = 1,
+  workweek = TRUE
+) %>% 
+cal_props(cal_demo_props()) 
+```
