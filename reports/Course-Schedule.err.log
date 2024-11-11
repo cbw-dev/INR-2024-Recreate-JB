@@ -29,24 +29,34 @@ Traceback (most recent call last):
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
 library(toastui)
+library(readxl)
 
-calendar(cal_demo_data("week"), view = "week", height = 1000) %>% 
+my_data <- read_excel("sample_toastui_excel.xlsx", sheet = "Sheet1")
+
+my_data
+
+calendar(my_data, view = "week", height = 1000, defaultDate = "2024-10-18") %>% 
 cal_week_options(
   startDayOfWeek = 1,
   workweek = TRUE
 ) %>% 
-cal_props(cal_demo_props())
-
-# defaultDate = "2024-06-11"
-# height - sorta hardcoding it so that it looks nice on a regular screen size
-
-# detail popup has edit/delete buttons, but also gives a description, but we probably don't want to have edit and delete buttons, but nice to have a description (to remove, add useDetailPopup = FALSE, TRUE is default)
+cal_props(cal_demo_props()) 
 ------------------
 
 
-[0;36m  Cell [0;32mIn[1], line 3[0;36m[0m
-[0;31m    calendar(cal_demo_data("week"), view = "week", height = 1000) %>%[0m
-[0m                                                                   ^[0m
-[0;31mSyntaxError[0m[0;31m:[0m invalid syntax
+Error: `path` does not exist: ‘sample_toastui_excel.xlsx’
+Traceback:
 
+1. check_file(path)
+2. stop("`path` does not exist: ", sQuote(path), call. = FALSE)
+3. .handleSimpleError(function (cnd) 
+ . {
+ .     watcher$capture_plot_and_output()
+ .     cnd <- sanitize_call(cnd)
+ .     watcher$push(cnd)
+ .     switch(on_error, continue = invokeRestart("eval_continue"), 
+ .         stop = invokeRestart("eval_stop"), error = invokeRestart("eval_error", 
+ .             cnd))
+ . }, "`path` does not exist: ‘sample_toastui_excel.xlsx’", 
+ .     base::quote(NULL))
 

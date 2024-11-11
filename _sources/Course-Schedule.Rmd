@@ -1,16 +1,9 @@
 ---
-jupytext:
-  cell_metadata_filter: -all
-  formats: md:myst
-  text_representation:
-    extension: .md
-    format_name: myst
-    format_version: 0.13
-    jupytext_version: 1.16.4
-kernelspec:
-  display_name: R
-  language: R
-  name: ir
+jupyter:
+  kernelspec:
+    display_name: R
+    language: R
+    name: ir
 ---
 
 # Course Schedule
@@ -37,12 +30,21 @@ kernelspec:
 
 +++
 
+```{r}
+#install.packages("tidyverse")
+
+library(tidyverse)
+```
+
 # ToastUI Schedule ?
 
-```{r, echo=FALSE}
+```{r}
 library(toastui)
+library(tidyverse)
+```
 
-calendar(cal_demo_data("week"), view = "week", height = 1000) %>% 
+```{r, echo=FALSE}
+calendar(cal_demo_data("week"), view = "week", height = 1000) %>%
 cal_week_options(
   startDayOfWeek = 1,
   workweek = TRUE
@@ -72,9 +74,6 @@ Data_Frame <- data.frame (
   category = c("time", "time", "time", "time")
 )
 
-# Print the data frame
-Data_Frame
-
 calendar(Data_Frame, view = "week", height = 1000, defaultDate = "2024-10-18") %>% 
 cal_week_options(
   startDayOfWeek = 1,
@@ -86,9 +85,7 @@ cal_props(cal_demo_props())
 library(toastui)
 library(readxl)
 
-my_data <- read_excel("sample_toastui_excel.xlsx", sheet = "Sheet1")
-
-my_data
+my_data <- read_excel("datasets/sample_toastui_excel.xlsx", sheet = "Sheet1")
 
 calendar(my_data, view = "week", height = 1000, defaultDate = "2024-10-18") %>% 
 cal_week_options(
