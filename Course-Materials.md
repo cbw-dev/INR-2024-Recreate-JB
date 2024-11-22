@@ -13,8 +13,12 @@ BUG !!! (the formatting below)
 
 ------
 
-<iframe src="IDE_2024_Module1.pdf" width="100%" height="900px">
+<iframe src="_images/IDE_2024_Module1.pdf" width="100%" height="600px">
   Your browser does not support PDFs.
 </iframe>
+
+<a href="_images/IDE_2024_Module1.pdf" target="_blank">Open PDF in new tab</a>
+
+/Users/jqiu/Documents/CBWgithub/cbw-dev-test-pages/jupyter-book/INR-2024-Recreate-JB/_build/html/IDE_2024_Module1.pdf
 
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTRfhIjyWerEUmI3uTfMSCb50vE4ZnucmeOC9AZC2iXOmHX_RqLT8ohmoG8TBVTsQ/embed?start=false&loop=false&delayms=60000" frameborder=“0" width=100% height=470 allowfullscreen=“true” mozallowfullscreen=“true” webkitallowfullscreen=“true”></iframe>
