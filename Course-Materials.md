@@ -5,3 +5,16 @@ Do your [pre-work](https://forms.gle/xba2wVbLXtC1E1Dx9)! Then download the cours
 BUG !!! (the formatting below)
 
 - [ ] To Do List
+
+
+## PDF + Slidedeck
+
+![Alt text](IDE_2024_Module1.pdf){width=100% height=900}
+
+------
+
+<iframe src="IDE_2024_Module1.pdf" width="100%" height="900px">
+  Your browser does not support PDFs.
+</iframe>
+
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTRfhIjyWerEUmI3uTfMSCb50vE4ZnucmeOC9AZC2iXOmHX_RqLT8ohmoG8TBVTsQ/embed?start=false&loop=false&delayms=60000" frameborder=“0" width=100% height=470 allowfullscreen=“true” mozallowfullscreen=“true” webkitallowfullscreen=“true”></iframe>
