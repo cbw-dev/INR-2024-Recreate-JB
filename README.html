@@ -365,7 +365,9 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -381,6 +383,20 @@
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Notes</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#current-status">Current Status</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#current-bugs">Current Bugs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#helpful-links">Helpful Links</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -395,6 +411,30 @@
 <ul class="simple">
 <li><p>Maybe for all workshops, let’s try to force images/files created by the code in a specific folder in main folder (for example, an image produced should be directed to ./images and should not be produced and left in the main folder - see Day-1.Rmd vs Day-2.Rmd)</p></li>
 </ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="current-status">
+<h1>Current Status<a class="headerlink" href="#current-status" title="Link to this heading">#</a></h1>
+<p>Almost Done, pretty much everything implemented</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> double check everything is formatted correctly and works ?</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> fix small bugs (below)</p></li>
+</ul>
+<section id="current-bugs">
+<h2>Current Bugs<a class="headerlink" href="#current-bugs" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Primary sidebar toggle button does not work well (the way it works defeats its point)</p></li>
+<li><p>To-do list markdown not formatting correctly</p></li>
+</ul>
+</section>
+<section id="helpful-links">
+<h2>Helpful Links<a class="headerlink" href="#helpful-links" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://jupyterbook.org/en/stable/file-types/jupytext.html">Docs</a></p></li>
+<li><p><a class="reference external" href="https://github.com/jupyter-book/jupyter-book/blob/main/docs/file-types/jupytext.Rmd">Docs GitHub, helpful code!</a></p></li>
+<li><p><a class="reference external" href="https://faircookbook.elixir-europe.org/content/recipes/findability/identifiers-minids.html">Example of a done/complex well-formatted Jupyter Book</a></p></li>
+<li><p><a class="reference external" href="https://github.com/jupyter-book/jupyter-book/issues/2160">Sidebar toggle issue?</a></p></li>
+</ul>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -433,6 +473,28 @@
             </div>
             
             
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Notes</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#current-status">Current Status</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#current-bugs">Current Bugs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#helpful-links">Helpful Links</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
               
             
           </div>
